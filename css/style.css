@@ -102,7 +102,7 @@ body{
 .image-text a{
     color: #EE7100;
     background-color: white;
-    padding: 8px 10px;
+    padding: 12px 16px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
@@ -342,6 +342,7 @@ body{
     margin: 0;
     font-size: 20px;
     font-weight: 900;
+    margin-right: auto;
 }
 
 .header-4 .profile-picture{
@@ -354,10 +355,10 @@ body{
 
 .header-4 a {
     background-color: #ededed;
-    color: #508EC7;
+    color: #274b84;
     font-weight: 600;
     width: fit-content;
-    padding: 8px 10px;
+    padding: 12px 16px;
     border-radius: 5px;
     display: flex;
     gap: 10px;
