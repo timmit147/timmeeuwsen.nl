@@ -68,7 +68,7 @@ body{
 /* Start image-text */
 
 .image-text{
-    background-color: #EE7100;
+    background-color: #ff881c;
     height: 100vh;
     width: 100%;
     color: white;
@@ -167,6 +167,16 @@ body{
 }
 
 .moduloo a{
+    background-color: #332C2F;
+    color: white;
+}
+
+.smolke{
+    background-color: #EE7100;
+    color: #332C2F;
+}
+
+.smolke a{
     background-color: #332C2F;
     color: white;
 }
