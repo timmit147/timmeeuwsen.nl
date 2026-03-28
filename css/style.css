@@ -126,8 +126,8 @@ body{
     background-color: black;
     border: 5px solid white;
     width: 100%;
-    max-height: 300px;   /* maximale hoogte */
-    height: 300px;       /* zorgt dat de container altijd 300px hoog is */
+    max-height: 100px;   /* maximale hoogte */
+    height: 100px;       /* zorgt dat de container altijd 300px hoog is */
     object-fit: cover;   /* afbeelding vult container en behoudt verhouding */
     border-radius: 5px;
     box-sizing: border-box;
