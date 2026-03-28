@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://www.multii.nl/</loc>
+        <loc>https://www.timmeeuwsen.nl/</loc>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://www.multii.nl/#projecten</loc>
+        <loc>https://www.timmeeuwsen.nl/#projecten</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.multii.nl/#faq</loc>
+        <loc>https://www.timmeeuwsen.nl/#faq</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://www.multii.nl/#contact</loc>
+        <loc>https://www.timmeeuwsen.nl/#contact</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
