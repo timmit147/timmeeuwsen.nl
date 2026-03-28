@@ -316,6 +316,10 @@ body{
     object-position: bottom;
     box-sizing: border-box;
     border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    height: 500px;
+    object-position: 0px -60px;
 }
 
 .header-4 .content {
