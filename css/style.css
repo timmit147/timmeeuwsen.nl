@@ -320,6 +320,8 @@ body{
     object-fit: cover;
     height: 500px;
     object-position: 0px -60px;
+    aspect-ratio: 1;
+    height: auto;
 }
 
 .header-4 .content {
@@ -477,7 +479,6 @@ body{
 
     .header-4 img {
     width: 100%;
-    height: 350px;
     object-fit: cover;
     object-position: top;
     display: block;
