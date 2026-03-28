@@ -472,15 +472,18 @@ body{
         font-size: 30px;
     }
 
-    .header-4 img{
-        height: 100%;
-        padding-right: unset;
-        max-height: 300px;
-    }
-    
-    .header-4 picture{
-        overflow: hidden;
-    }
+    .header-4 img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+}
+
+.header-4 picture {
+    overflow: hidden;
+    display: block;
+}
 
     .image-text .container{
         grid-template-columns: 1fr;
