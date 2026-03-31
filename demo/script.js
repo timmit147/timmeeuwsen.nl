@@ -1,16 +1,11 @@
-window.addEventListener('DOMContentLoaded', () => {
-    // We gebruiken de Performance Navigation Timing API
-    const [perf] = performance.getEntriesByType("navigation");
+window.addEventListener('load', () => {
+    // Gebruik de moderne PerformanceNavigationTiming API
+    const perfData = window.performance.getEntriesByType("navigation")[0];
+    const loadTime = Math.round(perfData.loadEventEnd);
     
-    // Bereken de tijd tot DOM interactief is (in ms)
-    const loadTime = Math.round(perf.domInteractive);
-    
-    const counterElement = document.getElementById('speed-counter');
-    
-    if (counterElement) {
-        // Laat de tijd zien met een kleine vertraging voor effect
-        setTimeout(() => {
-            counterElement.innerText = `Geladen in ${loadTime}ms`;
-        }, 500);
+    const badge = document.getElementById('speed-badge');
+    if (badge) {
+        badge.innerText = `Pagina geladen in ${loadTime}ms`;
+        badge.style.color = "#008a76"; // Maak de tekst groen bij succes
     }
 });
