@@ -1,11 +1,17 @@
 /* Start general */
 
-body{
-    margin: 0px;
-    font-family: sans-serif;
+* {
+    box-sizing: border-box;
 }
 
-.container{
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
     max-width: 1080px;
     margin: 0 auto;
     padding: 20px 40px;
@@ -24,14 +30,14 @@ body{
     left: 0;
 }
 
-.menu-4 .container{
+.menu-4 .container {
     display: grid;
     grid-template-columns: 1fr 2fr;
     align-items: center;
     gap: 20px;
 }
 
-.menu-4 .current{
+.menu-4 .current {
     font-weight: 900;
 }
 
@@ -57,7 +63,7 @@ body{
     display: none;
 }
 
-.menu-4  .hamburger-menu .bar {
+.menu-4 .hamburger-menu .bar {
     width: 25px;
     height: 3px;
     background-color: black;
@@ -67,42 +73,44 @@ body{
 
 /* Start image-text */
 
-.image-text{
-    background-color: #ff881c;
-    height: 100vh;
+.image-text {
+    background-color: #ff881c; /* Default kleur voor smolke/algemeen */
+    min-height: 100vh;
     width: 100%;
     color: white;
-    align-content: center;
-    box-sizing: border-box;
+    display: flex;
+    align-items: center;
     position: relative;
     overflow: hidden;
+    padding: 80px 0;
 }
 
-.image-text .container{
+.image-text .container {
     grid-template-columns: 4fr 3fr;
     display: grid;
     gap: 80px;
+    align-items: center;
 }
 
-.image-text .text{
-    align-content: center;
+.image-text .text {
     z-index: 1;
 }
 
-.image-text p{
+.image-text p {
     max-width: 400px;
+    margin-bottom: 20px;
 }
 
-.image-text h2{
+.image-text h2 {
     font-size: 30px;
     font-weight: 900;
-    margin: 0px;
+    margin-bottom: 15px;
 }
 
-.image-text a{
+.image-text a {
     color: #EE7100;
     background-color: white;
-    padding: 12px 16px;
+    padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
@@ -110,16 +118,9 @@ body{
     transition: 0.5s;
 }
 
-
-
-.image-text a:hover{
+.image-text a:hover {
     background-color: #332C2F;
     color: white;
-}
-
-.image-text.flip a:hover{
-    color: #332C2F;
-    background-color: white;
 }
 
 .image-text .image {
@@ -127,13 +128,13 @@ body{
     border: 5px solid white;
     width: 100%;
     border-radius: 5px;
-    box-sizing: border-box;
     z-index: 1;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 .image-text .circle {
     background-color: white;
-    opacity: 40%;
+    opacity: 20%;
     position: absolute;
     height: 80%;
     aspect-ratio: 1;
@@ -143,16 +144,16 @@ body{
     border-radius: 50%;
 }
 
-.image-text.flip .container{
+.image-text.flip .container {
     grid-template-columns: 3fr 4fr;
 }
 
-.image-text.flip .text{
-    order: 1;
+.image-text.flip .text {
+    order: 2;
 }
 
-.image-text.flip .image{
-    order: 2;
+.image-text.flip .image {
+    order: 1;
 }
 
 .image-text.flip .circle {
@@ -161,120 +162,105 @@ body{
     transform: translate(50%, -50%);
 }
 
-.moduloo{
+/* PROJECT SPECIFIEKE CLASSES */
+
+.domstad {
+    background-color: #0f172a;
+    color: white;
+}
+
+.domstad a {
+    background-color: #00d1b2;
+    color: #0f172a;
+}
+
+.domstad .circle {
+    background-color: #00d1b2;
+    opacity: 15%;
+}
+
+.moduloo {
     background-color: #B6E6F4;
     color: #332C2F;
 }
 
-.moduloo a{
+.moduloo a {
     background-color: #332C2F;
     color: white;
 }
 
-.smolke{
+.smolke {
     background-color: #EE7100;
-    color: #332C2F;
+    color: white;
 }
 
-.smolke a{
+.smolke a {
     background-color: #332C2F;
     color: white;
 }
 
-.rodewinkel{
+.rodewinkel {
     background-color: #E22A37;
+    color: white;
 }
 
-.rodewinkel a{
+.rodewinkel a {
     color: #E22A37;
+    background-color: white;
 }
 
-.energievanzelf{
+.energievanzelf {
     background-color: #C7D75B;
     color: #332C2F;
 }
 
-.energievanzelf a{
+.energievanzelf a {
     background-color: #332C2F;
     color: white;
-}
-
-/* Start header-6 */
-
-.header-6{
-    background-color: red;
 }
 
 /* Start header-5  */
 .header-5 {
     background-color: #E22A37;
-    padding: 150px 0px;
-    box-sizing: border-box;
+    padding: 100px 0px;
     color: white;
-    height: 100vh;
-    align-content: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
 }
-
 
 .header-5 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 20px;
 }
 
 .header-5 h2 {
     font-size: 40px;
     margin: 0px;
+    font-weight: 900;
 }
 
-.header-5 p {
-    max-width: 500px;
-    margin: 0;
-}
-
-.header-5  .buttons{
+.header-5 .buttons {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
 }
 
-.header-5 img{
-    height: 20px;
-}
-
-
 .header-5 a {
     color: black;
     background-color: white;
-    padding: 10px 15px;
-    width: fit-content;
+    padding: 12px 20px;
     font-weight: 900;
     border-radius: 10px;
-    display: flex;
-    gap: 10px;
-    place-items: center;
     text-decoration: none;
-    font-size: 14px;
     transition: 0.5s;
 }
 
-
-.header-5 a:hover{
+.header-5 a:hover {
     background-color: black;
     color: white;
-    cursor: pointer;
 }
-
-.header-5 a.whatsapp {
-    animation: changeColor 0.5s ease 5s forwards; /* Delay of 5 seconds */
-  }
-  
-
-.header-5 strong{
-    font-weight: 700;
-}
-
 
 /* Start header-4 */
 
@@ -282,11 +268,14 @@ body{
     background-color: #2a508b;
     overflow: hidden;
     position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-.header-4  .circle {
+.header-4 .circle {
     background-color: white;
-    opacity: 40%;
+    opacity: 20%;
     position: absolute;
     height: 80%;
     aspect-ratio: 1;
@@ -296,71 +285,44 @@ body{
     border-radius: 50%;
 }
 
-.header-4 .container{
-    position: relative;
-    justify-content: center;
-    gap: 20px;
+.header-4 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     color: white;
-    height: 100vh;
-    align-content: center;
+    gap: 40px;
+    align-items: center;
 }
 
 .header-4 h1 {
-    font-size: 40px;
+    font-size: clamp(25px, 5vw, 40px);
     margin: 0px;
     font-weight: 900;
     line-height: 1.2em;
 }
 
-.header-4 picture {
-    display: flex;
-    height: 100%;
-    align-items: end;
-    justify-content: center;
-}
-
-.header-4 img{
-    object-fit: contain;
-    object-position: bottom;
-    box-sizing: border-box;
-    border-radius: 10px;
+.header-4 img {
     width: 100%;
-    object-fit: cover;
-    height: 500px;
-    object-position: 0px -60px;
-    aspect-ratio: 1;
-    height: auto;
+    max-width: 450px;
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
 
 .header-4 .content {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    color: #ededed;
+    gap: 25px;
 }
 
-.header-4 .content p {
-    max-width: 400px;
-    margin: 0;
+.header-4 .profile-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
 }
 
-.header-4 .name{
-    text-align: left;
-    margin: 0;
+.header-4 .name {
     font-size: 20px;
     font-weight: 900;
-    margin-right: auto;
-}
-
-.header-4 .profile-picture{
-    display: flex;
-    align-items: end;
-    gap: 10px;
-    align-self: center;
-    flex-direction: column;
 }
 
 .header-4 a {
@@ -368,242 +330,94 @@ body{
     color: #274b84;
     font-weight: 600;
     width: fit-content;
-    padding: 12px 16px;
+    padding: 14px 24px;
     border-radius: 5px;
-    display: flex;
-    gap: 10px;
-    place-items: center;
     text-decoration: none;
     transition: 0.5s;
 }
 
-
-.header-4 a:hover{
+.header-4 a:hover {
     background-color: black;
     color: white;
-    cursor: pointer;
-}
-
-
-.header-4 strong{
-    font-weight: 700;
 }
 
 /* Start faq */
-.faq{
+.faq {
     background-color: #8829b4;
-    padding: 150px 0px;
-    color:white;
+    padding: 100px 0px;
+    color: white;
 }
 
-.faq .container{
+.faq .container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 25px;
 }
 
-.faq details{
-    max-width: 500px;
+.faq details {
+    max-width: 600px;
+    width: 100%;
 }
 
-.faq summary{
+.faq summary {
+    cursor: pointer;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 15px;
+    font-weight: 700;
     list-style: none;
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    border: 1px solid;
-    padding: 10px;
-    display: flex;
-    gap: 10px;
-    place-content: space-between;
+    transition: 0.3s;
 }
 
-.faq summary:hover{
-    background-color: black;
+.faq summary:hover {
+    background-color: rgba(0,0,0,0.2);
 }
-
-.faq summary::after {
-    content: '';
-    cursor: pointer;
-    background-repeat: no-repeat;
-    height: 20px;
-    aspect-ratio: 1;
-    background-size: contain;
-  }
-  
-  .faq details[open] summary::after {
-    background-image: url("../images/minus.svg");
-  }
-  
-  .faq details summary::after {
-    background-image: url("../images/plus.svg");
-  }
 
 .faq p {
-    margin-bottom: 0px;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.1);
 }
 
-.faq a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    border-bottom: 1px solid;
-}
-
-.faq a:hover {
-    color: orange;
-}
-
-.faq .container > p{
-    margin: 0px;
-    max-width: 400px;
-}
-
-.faq h2{
-    margin: 0px;
+.faq h2 {
     font-size: 40px;
+    margin-bottom: 10px;
 }
-
 
 /* Start Responsive */
-@media screen and (max-width: 1000px) {
-
-    .header-4 h1 {
-        font-size: 30px;
-    }
-    .header-4 .circle {
-        height: 50%;
-        top: 20%;
-    }
-}
 
 @media screen and (max-width: 800px) {
-    .header-5 {
-        flex-direction: column;
-        padding: 80px 0px;
-    }
-
-    .header-4 h1{
-        font-size: 30px;
-    }
-
-    .header-4 img {
-    width: 100%;
-    object-fit: cover;
-    object-position: top;
-    display: block;
-}
-
-.header-4 picture {
-    overflow: hidden;
-    display: block;
-}
-
-    .image-text .container{
-        grid-template-columns: 1fr;
-        gap: 20px;
+    .container {
         padding: 20px;
     }
-    .image-text.flip .container{
-        grid-template-columns: 1fr;
-        gap: 20px;
+
+    .header-4 .container, 
+    .image-text .container {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+        gap: 40px;
     }
-    .image-text.flip .text{
+
+    .image-text {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .image-text .text, .header-4 .content {
         order: 2;
-    }
-    
-    .image-text.flip .image{
-        order: 1;
-    }
-    
-}
-
-
-@media screen and (max-width: 768px) {
-
-    .slider{
-        margin: 80px 0px;
-    }
-
-    .slider picture {
-        width: 90vw;
-    }
-
-    .faq h2{
-        font-size: 30px;
-    }
-
-    .faq{
-        padding: 80px 0px;
-    }
-
-    .menu-4 nav {
-        display: none;
-        width: 100%;
-        justify-content: center;
-    }
-
-    .menu-4  .hamburger-menu {
-        display: block;
-        cursor: pointer;
-        justify-self: right;
-        font-size: 35px;
-    }
-
-    .menu-4.active nav {
         display: flex;
         flex-direction: column;
-        padding-top: 20px;
-        grid-column: span 2;
-        justify-content: left;
-        align-items: baseline;
-    }
-    .menu-4.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
+        align-items: center;
     }
 
-    .menu-4.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .menu-4.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    .header-4 h1 {
-        font-size: 25px;
-    }
-}
-
-
-
-@media screen and (max-width: 600px) {
-    .header-4 .container {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    
-    .header-4 .content{
-        order: 2;
-    }
-
-    .header-4 picture{
-        justify-content: left;
+    .image-text .image, .header-4 .profile-picture {
         order: 1;
     }
-    
-    
-    .header-4 .profile-picture{
-        align-items: baseline;
+
+    .image-text p, .header-4 .content p {
+        max-width: 100%;
     }
 
-    .header-4 .name {
-        font-weight: 100;
-    }
-
-    .header-4 img {
-        max-width: 400px;
+    .header-4 {
+        height: auto;
+        padding: 100px 0 60px;
     }
 }
-
