@@ -3,103 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bouwbedrijf De Domstad | Kwaliteitsbouw in Utrecht</title>
-    <meta name="description" content="Aannemer in Utrecht voor uw verbouwing, renovatie en dakkapel. Bekijk onze projecten en vraag een offerte aan.">
+    <title>Bouwbedrijf De Domstad | Exclusieve Verbouw Utrecht</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar" id="main-nav">
-        <div class="logo">De <span>Domstad</span></div>
+    <nav class="navbar">
+        <div class="logo">DE <span>DOMSTAD</span></div>
         <div class="nav-links">
-            <a href="#diensten">Diensten</a>
-            <a href="#projecten">Projecten</a>
-            <a href="#contact" class="btn-small-nav">Offerte</a>
+            <a href="#projecten">Portfolio</a>
+            <a href="#contact" class="nav-cta">Offerte aanvragen</a>
         </div>
     </nav>
 
-    <header class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('img/photo-1600585154340-be6161a56a0c.jpeg');">
-        <div class="hero-card">
-            <div class="badge" id="speed-badge">Pagina geladen in ...</div>
-            <h1>Kwaliteit en vakmanschap voor uw verbouwing in Utrecht.</h1>
-            <p>Van fundering tot dakkapel, wij realiseren uw project met oog voor detail en strakke planning.</p>
-            <div class="cta-group">
-                <a href="#contact" class="btn-black">Bespreek uw project</a>
-                <a href="#diensten" class="btn-outline">Bekijk diensten</a>
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="glass-card">
+                <span class="speed-tag" id="speed-counter">Meten...</span>
+                <h1>Architecturale <span>Perfectie</span> in Utrecht.</h1>
+                <p>Wij transformeren woningen tot moderne meesterwerken. Razendsnel, duurzaam en tot in het kleinste detail afgewerkt.</p>
+                <div class="cta-wrapper">
+                    <a href="#contact" class="btn-main">Plan een gesprek</a>
+                    <a href="#projecten" class="btn-sub">Bekijk werk</a>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="diensten" class="container">
-        <h2 class="section-title">Onze Diensten</h2>
-        <div class="services-grid">
-            <article class="service-item">
-                <div class="icon">🏗️</div>
-                <h3>Nieuwbouw</h3>
-                <p>Maatwerk woningen gebouwd met de modernste technieken en materialen.</p>
-            </article>
-            <article class="service-item">
-                <div class="icon">🖌️</div>
-                <h3>Renovatie</h3>
-                <p>Wij geven uw bestaande woning een tweede leven met behoud van karakter.</p>
-            </article>
-            <article class="service-item">
-                <div class="icon">🏠</div>
-                <h3>Aanbouw</h3>
-                <p>Meer leefruimte nodig? Wij realiseren uw uitbouw of dakkapel binnen 6 weken.</p>
-            </article>
-        </div>
-    </section>
-
     <section id="projecten" class="container">
-        <h2 class="section-title">Projecten Gallery</h2>
+        <h2 class="section-title">Geselecteerde Projecten</h2>
         <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="img/photo-1628592102751-ba83b0314276.jpeg" alt="Dakkapel Project Lunetten">
-                <p>Dakkapel Project - Lunetten</p>
+            <div class="project-card">
+                <div class="img-wrapper"><img src="img/photo-1628592102751-ba83b0314276.jpeg" alt="Dakkapel"></div>
+                <div class="project-meta"><h3>Dakkapel Project</h3><p>Lunetten, Utrecht</p></div>
             </div>
-            <div class="gallery-item">
-                <img src="img/Pexels-photo-2724748.jpeg" alt="Luxe Keuken Renovatie Lombok">
-                <p>Keuken Renovatie - Lombok</p>
+            <div class="project-card">
+                <div class="img-wrapper"><img src="img/Pexels-photo-2724748.jpeg" alt="Keuken"></div>
+                <div class="project-meta"><h3>Luxe Woonkeuken</h3><p>Lombok, Utrecht</p></div>
             </div>
-            <div class="gallery-item">
-                <img src="img/photo-1560185127-6ed189bf02f4.jpeg" alt="Slaapkamer Renovatie Utrecht">
-                <p>Slaapkamer Renovatie - Lunetten</p>
+            <div class="project-card">
+                <div class="img-wrapper"><img src="img/photo-1560185127-6ed189bf02f4.jpeg" alt="Slaapkamer"></div>
+                <div class="project-meta"><h3>Master Bedroom</h3><p>Nieuwegein</p></div>
             </div>
         </div>
     </section>
 
-    <section class="testimonial">
+    <section id="contact" class="contact-section">
         <div class="container">
-            <p>"Bouwbedrijf De Domstad heeft onze woning getransformeerd! Professioneel, punctueel en een prachtig resultaat."</p>
-            <span class="author">- Jan & Lisa, Utrecht</span>
+            <div class="contact-grid">
+                <div class="contact-text">
+                    <h2>Klaar voor een <span>transformatie</span>?</h2>
+                    <p>Laat uw gegevens achter voor een vrijblijvende opname op locatie.</p>
+                </div>
+                <form class="pro-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Uw naam" required>
+                        <input type="email" placeholder="E-mailadres" required>
+                    </div>
+                    <select required>
+                        <option value="">Wat wilt u laten doen?</option>
+                        <option value="renovatie">Complete Renovatie</option>
+                        <option value="aanbouw">Aanbouw / Dakkapel</option>
+                        <option value="anders">Anders</option>
+                    </select>
+                    <textarea placeholder="Vertel kort iets over uw wensen..."></textarea>
+                    <button type="submit" class="btn-submit">Aanvraag Versturen</button>
+                </form>
+            </div>
         </div>
-    </section>
-
-    <section id="contact" class="container contact-section">
-        <h3>Contact & Offerte Aanvragen</h3>
-        <form class="contact-form">
-            <input type="text" placeholder="Naam" required>
-            <select required>
-                <option value="">Project Type</option>
-                <option value="nieuwbouw">Nieuwbouw</option>
-                <option value="renovatie">Renovatie</option>
-                <option value="aanbouw">Aanbouw / Dakkapel</option>
-            </select>
-            <input type="email" placeholder="E-mailadres" required>
-            <button type="submit" class="btn-black">Verstuur Aanvraag</button>
-        </form>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Bouwbedrijf De Domstad. Alle rechten voorbehouden.</p>
-            <p class="developer-credit">
-                Deze razendsnelle <a href="https://timmeeuwsen.nl" target="_blank">maatwerk website in Utrecht</a> is ontwikkeld door Tim Meeuwsen.
-            </p>
-        </div>
+        <p>&copy; 2026 Bouwbedrijf De Domstad | <a href="https://timmeeuwsen.nl">Ontwikkeld door Tim Meeuwsen</a></p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
+
