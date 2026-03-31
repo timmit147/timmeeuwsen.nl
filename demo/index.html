@@ -3,42 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo | High-End Webdesign door Tim Meeuwsen</title>
+    
+    <title>Bouwbedrijf De Domstad | Aannemer & Verbouw in Utrecht</title>
+    <meta name="description" content="Dé betrouwbare aannemer in de regio Utrecht en Houten voor nieuwbouw, renovatie en aanbouw. Vakmanschap en heldere afspraken. Vraag direct een offerte aan!">
+    
+    <meta property="og:title" content="Bouwbedrijf De Domstad | Aannemer Utrecht">
+    <meta property="og:description" content="Betrouwbaar vakmanschap voor uw verbouwing in regio Utrecht.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200">
+
     <link rel="stylesheet" href="style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "GeneralContractor",
+      "name": "Bouwbedrijf De Domstad",
+      "description": "Aannemersbedrijf gespecialiseerd in renovatie en aanbouw in de provincie Utrecht.",
+      "telephone": "+31301234567",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Oudegracht 1",
+        "addressLocality": "Utrecht",
+        "postalCode": "3511 AA",
+        "addressCountry": "NL"
+      },
+      "areaServed": ["Utrecht", "Houten", "Nieuwegein", "Zeist"]
+    }
+    </script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">TM<span>.</span></div>
+
+    <div class="topbar">
+        <span>Direct een vakman spreken? Bel: <a href="tel:0301234567">030 - 123 45 67</a></span>
+    </div>
+
+    <nav id="main-nav" class="navbar">
+        <div class="logo">De Domstad<span>.</span></div>
         <div class="nav-links">
-            <a href="#performance">Snelheid</a>
-            <a href="#lighthouse">Resultaten</a>
-            <a href="https://timmeeuwsen.nl" class="btn-small">Terug naar Tim</a>
+            <a href="#diensten">Diensten</a>
+            <a href="#reviews">Ervaringen</a>
+            <a href="#contact" class="btn-primary">Offerte Aanvragen</a>
         </div>
     </nav>
 
     <header class="hero">
-        <div class="container">
-            <div class="badge" id="speed-badge">Pagina geladen in ...</div>
-            <h1>Wij bouwen digitale <span>meesterwerken</span>.</h1>
-            <p class="lead">Maatwerk code voor ondernemers die geen genoegen nemen met een standaard template.</p>
-            <div class="cta-group">
-                <a href="#lighthouse" class="btn-primary">Bekijk scores</a>
-                <a href="https://timmeeuwsen.nl#contact" class="btn-secondary">Start project</a>
+        <div class="container hero-content">
+            <h1>Kwaliteit en vakmanschap voor uw verbouwing in Utrecht.</h1>
+            <p>Van fundering tot dakkapel, wij realiseren uw project met oog voor detail en strakke planning.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary large">Bespreek uw project</a>
+                <a href="#diensten" class="btn-secondary large">Bekijk diensten</a>
             </div>
         </div>
     </header>
 
-    <section id="lighthouse" class="stats-section">
+    <section id="reviews" class="trust-bar">
         <div class="container">
-            <h2>Lighthouse Scores</h2>
-            <div class="lighthouse-grid">
-                <div class="score-card"><div class="circle">100</div><p>Performance</p></div>
-                <div class="score-card"><div class="circle">100</div><p>Accessibility</p></div>
-                <div class="score-card"><div class="circle">100</div><p>Best Practices</p></div>
-                <div class="score-card"><div class="circle">100</div><p>SEO</p></div>
-            </div>
+            <p>⭐ 4.9/5 op basis van 120+ reviews | Erkend BouwGarant Aannemer</p>
         </div>
     </section>
+
+    <main>
+        <section id="diensten" class="services">
+            <div class="container">
+                <h2>Onze Expertise</h2>
+                <div class="grid-3">
+                    <article class="card">
+                        <h3>Nieuwbouw</h3>
+                        <p>Volledige begeleiding van kavel tot sleuteloverdracht.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Renovatie</h3>
+                        <p>Karakter behouden, wooncomfort moderniseren.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Aanbouw & Opbouw</h3>
+                        <p>Slim meer leefruimte creëren binnen 6 weken.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Bouwbedrijf De Domstad. Alle rechten voorbehouden.</p>
+            <p class="developer-credit">
+                Deze razendsnelle <a href="https://timmeeuwsen.nl" target="_blank" rel="noopener">maatwerk website in Utrecht</a> is ontwikkeld door Tim Meeuwsen.
+            </p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
