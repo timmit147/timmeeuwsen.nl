@@ -3,24 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maatwerk Demo | Tim Meeuwsen</title>
-    <meta name="description" content="Snelheidsdemo van een op maat gemaakte website.">
+    <title>Demo | High-End Webdesign door Tim Meeuwsen</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <main class="hero">
-        <div class="container">
-            <h1>Design dat <span>vliegt</span>.</h1>
-            <p class="subtitle">Geen ballast. Geen trage plugins. Alleen pure code voor maximale conversie.</p>
-            
-            <div class="performance-badge">
-                <span id="speed-counter">Meten...</span>
-            </div>
-
-            <a href="https://timmeeuwsen.nl#contact" class="btn">Start jouw project</a>
+    <nav class="navbar">
+        <div class="logo">TM<span>.</span></div>
+        <div class="nav-links">
+            <a href="#performance">Snelheid</a>
+            <a href="#lighthouse">Resultaten</a>
+            <a href="https://timmeeuwsen.nl" class="btn-small">Terug naar Tim</a>
         </div>
-    </main>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <div class="badge" id="speed-badge">Pagina geladen in ...</div>
+            <h1>Wij bouwen digitale <span>meesterwerken</span>.</h1>
+            <p class="lead">Maatwerk code voor ondernemers die geen genoegen nemen met een standaard template.</p>
+            <div class="cta-group">
+                <a href="#lighthouse" class="btn-primary">Bekijk scores</a>
+                <a href="https://timmeeuwsen.nl#contact" class="btn-secondary">Start project</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="lighthouse" class="stats-section">
+        <div class="container">
+            <h2>Lighthouse Scores</h2>
+            <div class="lighthouse-grid">
+                <div class="score-card"><div class="circle">100</div><p>Performance</p></div>
+                <div class="score-card"><div class="circle">100</div><p>Accessibility</p></div>
+                <div class="score-card"><div class="circle">100</div><p>Best Practices</p></div>
+                <div class="score-card"><div class="circle">100</div><p>SEO</p></div>
+            </div>
+        </div>
+    </section>
 
     <script src="script.js"></script>
 </body>
