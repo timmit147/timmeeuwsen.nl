@@ -3,72 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bouwbedrijf De Domstad | Exclusieve Verbouw Utrecht</title>
+    <title>De Domstad | Exclusieve Renovatie & Architectuur Utrecht</title>
+    <meta name="description" content="Hoogwaardige verbouwingen en renovaties in Utrecht. Maatwerk door De Domstad.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="logo">DE <span>DOMSTAD</span></div>
-        <div class="nav-links">
-            <a href="#projecten">Portfolio</a>
-            <a href="#contact" class="nav-cta">Offerte aanvragen</a>
+    <nav class="navbar" id="navbar">
+        <div class="container nav-wrapper">
+            <div class="logo">DE <span>DOMSTAD</span></div>
+            <div class="nav-links">
+                <a href="#projecten">Portfolio</a>
+                <a href="#contact" class="nav-cta">Offerte Aanvragen</a>
+            </div>
         </div>
     </nav>
 
     <header class="hero">
+        <div class="hero-image" style="background-image: url('img/photo-1600585154340-be6161a56a0c.jpeg');"></div>
         <div class="hero-overlay"></div>
-        <div class="hero-content">
+        <div class="container hero-container">
             <div class="glass-card">
-                <span class="speed-tag" id="speed-counter">Meten...</span>
+                <div class="quality-tag">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                    Gecertificeerd Vakmanschap
+                </div>
                 <h1>Architecturale <span>Perfectie</span> in Utrecht.</h1>
                 <p>Wij transformeren woningen tot moderne meesterwerken. Razendsnel, duurzaam en tot in het kleinste detail afgewerkt.</p>
                 <div class="cta-wrapper">
                     <a href="#contact" class="btn-main">Plan een gesprek</a>
-                    <a href="#projecten" class="btn-sub">Bekijk werk</a>
+                    <a href="#projecten" class="btn-sub">Bekijk portfolio</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="projecten" class="container">
-        <h2 class="section-title">Geselecteerde Projecten</h2>
-        <div class="gallery-grid">
-            <div class="project-card">
-                <div class="img-wrapper"><img src="img/photo-1628592102751-ba83b0314276.jpeg" alt="Dakkapel"></div>
-                <div class="project-meta"><h3>Dakkapel Project</h3><p>Lunetten, Utrecht</p></div>
+    <main class="container">
+        <section id="projecten" class="section">
+            <h2 class="section-title">Geselecteerde Projecten</h2>
+            <div class="gallery-grid">
+                <div class="project-card">
+                    <div class="img-wrapper">
+                        <img src="img/photo-1628592102751-ba83b0314276.jpeg" alt="Dakkapel project">
+                    </div>
+                    <div class="project-info">
+                        <h3>Dakkapel Project</h3>
+                        <p>Lunetten, Utrecht</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="img-wrapper">
+                        <img src="img/Pexels-photo-2724748.jpeg" alt="Woonkeuken">
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxe Woonkeuken</h3>
+                        <p>Lombok, Utrecht</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="img-wrapper">
+                        <img src="img/photo-1560185127-6ed189bf02f4.jpeg" alt="Master bedroom">
+                    </div>
+                    <div class="project-info">
+                        <h3>Master Bedroom</h3>
+                        <p>Nieuwegein, Utrecht</p>
+                    </div>
+                </div>
             </div>
-            <div class="project-card">
-                <div class="img-wrapper"><img src="img/Pexels-photo-2724748.jpeg" alt="Keuken"></div>
-                <div class="project-meta"><h3>Luxe Woonkeuken</h3><p>Lombok, Utrecht</p></div>
-            </div>
-            <div class="project-card">
-                <div class="img-wrapper"><img src="img/photo-1560185127-6ed189bf02f4.jpeg" alt="Slaapkamer"></div>
-                <div class="project-meta"><h3>Master Bedroom</h3><p>Nieuwegein</p></div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-grid">
                 <div class="contact-text">
                     <h2>Klaar voor een <span>transformatie</span>?</h2>
-                    <p>Laat uw gegevens achter voor een vrijblijvende opname op locatie.</p>
+                    <p>Laat uw gegevens achter voor een vrijblijvende opname op locatie. Wij nemen binnen 24 uur contact op.</p>
                 </div>
                 <form class="pro-form">
-                    <div class="form-group">
+                    <div class="form-row">
                         <input type="text" placeholder="Uw naam" required>
                         <input type="email" placeholder="E-mailadres" required>
                     </div>
                     <select required>
-                        <option value="">Wat wilt u laten doen?</option>
+                        <option value="">Type project</option>
                         <option value="renovatie">Complete Renovatie</option>
                         <option value="aanbouw">Aanbouw / Dakkapel</option>
-                        <option value="anders">Anders</option>
+                        <option value="interieur">Interieurontwerp</option>
                     </select>
-                    <textarea placeholder="Vertel kort iets over uw wensen..."></textarea>
+                    <textarea placeholder="Uw wensen en ideeën..."></textarea>
                     <button type="submit" class="btn-submit">Aanvraag Versturen</button>
                 </form>
             </div>
@@ -76,10 +100,12 @@
     </section>
 
     <footer>
-        <p>&copy; 2026 Bouwbedrijf De Domstad | <a href="https://timmeeuwsen.nl">Ontwikkeld door Tim Meeuwsen</a></p>
+        <div class="container footer-content">
+            <p>&copy; 2026 De Domstad. Alle rechten voorbehouden.</p>
+            <p class="credit">Maatwerk website door <a href="https://timmeeuwsen.nl">Tim Meeuwsen</a></p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
