@@ -1,23 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.getElementById('navbar');
+    const nav = document.getElementById('main-nav');
     
-    // Verander navbar stijl bij scrollen
+    // Verander navbar stijl bij scrollen voor de luxe vibe
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
+        if (window.scrollY > 100) {
+            nav.classList.add('navbar-scrolled');
         } else {
-            navbar.classList.remove('scrolled');
+            nav.classList.remove('navbar-scrolled');
         }
     });
 
-    // Subtiele hover animatie voor project kaarten
-    const cards = document.querySelectorAll('.project-card');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', () => {
-            card.querySelector('img').style.transform = 'scale(1.05)';
-        });
-        card.addEventListener('mouseleave', () => {
-            card.querySelector('img').style.transform = 'scale(1)';
-        });
-    });
+    // Subtiele zoom-in animatie voor de hero foto (voor die extra luxe touch)
+    setTimeout(() => {
+        const hero = document.querySelector('.hero');
+        hero.style.transition = 'background-size 1.5s ease';
+        // hero.style.backgroundSize = '105%'; // Optioneel, kan soms prestaties beïnvloeden
+    }, 500);
 });
