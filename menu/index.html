@@ -9,53 +9,92 @@
   <meta name="robots" content="index, follow">
 
   <style>
-    html, body {
-      height: 100%;
+    :root {
+      --bg: #f5f4f0;
+      --text: #0d0d0d;
+      --border: #d8d4cc;
+      --white: #ffffff;
+      --blue: #007bff;
+      --blue-hover: #0069d9;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'DM Sans', Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: 'DM Sans', sans-serif;
-      background: #f5f4f0;
-      color: #0d0d0d;
+      padding: 0;
+    }
+
+    html, body {
+      min-height: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--text);
       display: flex;
       flex-direction: column;
     }
 
-    /* Nav */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
     .menu-4 {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
-      background-color: white;
-      border-bottom: 1px solid #d8d4cc;
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
       z-index: 999;
     }
 
     .menu-4 .container {
-      max-width: 1200px;
+      max-width: 1100px;
       margin: 0 auto;
+      padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1rem 2rem;
+      gap: 1rem;
+      flex-wrap: nowrap;
     }
 
-    .menu-4 .menu-naam {
+    .menu-naam a {
+      font-family: var(--font-display);
       font-weight: 900;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
+      white-space: nowrap;
     }
 
-    .menu-4 .menu-links a {
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      background-color: #1a6b3c; /* Knop kleur zoals de site */
-      color: white;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: background 0.2s;
+    .menu-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: nowrap;
     }
 
-    .menu-4 .menu-links a:hover {
-      background-color: #14532d;
+    .menu-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.75rem 1.1rem;
+      border-radius: 999px;
+      background: var(--blue);
+      color: var(--white);
+      font-weight: 700;
+      line-height: 1;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .menu-cta:hover {
+      background: var(--blue-hover);
+      transform: translateY(-1px);
     }
 
     main {
@@ -63,18 +102,19 @@
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 6rem 2rem 4rem; /* extra top padding zodat nav niet overlapt */
+      padding: 7rem 2rem 4rem;
     }
 
     .menu-container {
-      max-width: 600px;
       width: 100%;
+      max-width: 600px;
     }
 
     h1 {
-      font-family: 'Fraunces', serif;
+      font-family: var(--font-display);
       font-weight: 900;
-      font-size: 2rem;
+      font-size: clamp(2rem, 4vw, 2.6rem);
+      line-height: 1.1;
       margin-bottom: 2rem;
       text-align: left;
     }
@@ -91,10 +131,9 @@
 
     ul.links a {
       font-size: 1.2rem;
-      color: #0d0d0d;
-      text-decoration: none;
+      font-weight: 500;
       border-bottom: 1px solid transparent;
-      transition: border-color .2s;
+      transition: border-color 0.2s ease;
     }
 
     ul.links a:hover {
@@ -107,21 +146,39 @@
       padding: 1.5rem;
       font-size: 0.9rem;
       color: #666;
-      border-top: 1px solid #d8d4cc;
-      background: #f5f4f0;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
+
+    @media (max-width: 600px) {
+      .menu-4 .container {
+        padding: 0.9rem 1rem;
+      }
+
+      main {
+        padding: 6.5rem 1rem 3rem;
+      }
+
+      .menu-naam a {
+        font-size: 1rem;
+      }
+
+      ul.links a {
+        font-size: 1.05rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Nav met Terug knop -->
   <nav class="menu-4">
     <div class="container">
       <span class="menu-naam">
-        <a href="https://timmeeuwsen.nl/" style="text-decoration:none; color:inherit;">Tim Meeuwsen</a>
+        <a href="https://timmeeuwsen.nl/">Tim Meeuwsen</a>
       </span>
+
       <div class="menu-links">
-        <a href="javascript:history.back()">Terug</a>
+        <a href="javascript:history.back()" class="menu-cta">Terug</a>
       </div>
     </div>
   </nav>
