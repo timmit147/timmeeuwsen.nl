@@ -17,7 +17,6 @@ body {
     padding: 20px 40px;
 }
 
-/* Start menu-4 */
 
 .menu-4 {
     position: fixed;
@@ -34,6 +33,7 @@ body {
     align-items: center;
     padding: 15px 30px;
     gap: 20px;
+    flex-wrap: nowrap; /* houdt alles op 1 lijn */
 }
 
 .menu-4 .menu-naam a {
@@ -41,11 +41,12 @@ body {
     font-size: 1.2rem;
     color: black;
     text-decoration: none;
+    white-space: nowrap; /* voorkomt dat logo op meerdere regels komt */
 }
 
 .menu-4 .menu-links {
     display: flex;
-    gap: 25px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -59,16 +60,29 @@ body {
 
 /* CTA styling voor Contact knop */
 .menu-4 .menu-links .menu-cta {
-    background-color: #ff5a5f; /* pas aan naar jouw website kleuren */
+    background-color: #007bff; /* website blauw */
     color: white;
     border-radius: 5px;
     font-weight: 700;
 }
 
+/* Hover effect */
 .menu-4 .menu-links a:hover {
     opacity: 0.8;
 }
 
+/* Mobiel (max 600px) */
+@media (max-width: 600px) {
+
+    .menu-4 .menu-naam a {
+        font-size: 1rem;
+    }
+
+    .menu-4 .menu-links a {
+        padding: 6px 10px;
+        font-size: 0.95rem;
+    }
+}
 
 /* Start image-text */
 
