@@ -1,8 +1,19 @@
 /* ===== RESET ===== */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px 40px;
 }
 
 /* ===== TOKENS ===== */
@@ -15,18 +26,6 @@
   --accent: #111111;
   --radius: 4px;
   --max: 900px;
-}
-
-/* ===== BASE ===== */
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: sans-serif;
-  background: var(--white);
-  color: var(--black);
-  font-size: 1rem;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
 .menu-4 {
