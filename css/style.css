@@ -54,13 +54,12 @@ body {
     color: black;
     text-decoration: none;
     font-weight: 500;
-    padding: 8px 15px;
     transition: background 0.3s, color 0.3s;
 }
 
 /* CTA styling voor Contact knop */
 .menu-4 .menu-links .menu-cta {
-    background-color: #007bff; /* website blauw */
+    background-color: #332C2F;
     color: white;
     border-radius: 5px;
     font-weight: 700;
@@ -79,7 +78,6 @@ body {
     }
 
     .menu-4 .menu-links a {
-        padding: 6px 10px;
         font-size: 0.95rem;
     }
 }
