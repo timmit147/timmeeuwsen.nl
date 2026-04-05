@@ -3,33 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Menu – Tim Meeuwsen | Webdesign Utrecht</title>
-  <meta name="description" content="Overzicht van alle belangrijke pagina's van Tim Meeuwsen – Webdesign Utrecht. Snelle navigatie naar Home, Website laten maken Utrecht, Demo en Contact.">
+  <title>Menu Overzicht – Tim Meeuwsen | Webdesign Utrecht</title>
+  <meta name="description" content="Overzicht van alle belangrijke pagina's van Tim Meeuwsen – Webdesign Utrecht. Snelle toegang tot Home, Website laten maken Utrecht, Demo, Diensten en Contact.">
   <link rel="canonical" href="https://timmeeuwsen.nl/menu.html">
+  <meta name="robots" content="index, follow">
   <style>
-    body { font-family: 'DM Sans', sans-serif; background: #f5f4f0; color: #0d0d0d; margin: 0; padding: 0; }
-    main { padding: 4rem 2rem; max-width: 600px; margin: 0 auto; }
-    h2 { font-family: 'Fraunces', serif; font-weight: 900; font-size: 2rem; margin-bottom: 2rem; text-align: center; }
-    ul.links { list-style: none; padding: 0; }
-    ul.links li { margin-bottom: 1rem; }
-    ul.links a { font-size: 1.2rem; color: #0d0d0d; text-decoration: none; border-bottom: 1px solid transparent; transition: border-color .2s; }
-    ul.links a:hover { border-color: #1a6b3c; }
-    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; border-top: 1px solid #d8d4cc; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background: #f5f4f0;
+      color: #0d0d0d;
+      display: flex;
+      flex-direction: column;
+    }
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 4rem 2rem;
+    }
+    .menu-container {
+      max-width: 600px;
+      width: 100%;
+    }
+    h1 {
+      font-family: 'Fraunces', serif;
+      font-weight: 900;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      text-align: left;
+    }
+    ul.links {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+    ul.links li {
+      margin-bottom: 1rem;
+    }
+    ul.links a {
+      font-size: 1.2rem;
+      color: #0d0d0d;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color .2s;
+    }
+    ul.links a:hover {
+      border-color: #1a6b3c;
+    }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #d8d4cc;
+      background: #f5f4f0;
+    }
   </style>
 </head>
 <body>
 
 <main>
-  <h2>Menu Overzicht</h2>
-  <ul class="links">
-    <li><a href="https://timmeeuwsen.nl/">Home</a></li>
-    <li><a href="https://timmeeuwsen.nl/website-laten-maken-utrecht/">Website laten maken Utrecht</a></li>
-    <li><a href="https://timmeeuwsen.nl/demo/">Demo</a></li>
-    <li><a href="https://timmeeuwsen.nl/#diensten">Diensten</a></li>
-    <li><a href="https://timmeeuwsen.nl/#pricing">Prijzen</a></li>
-    <li><a href="https://timmeeuwsen.nl/#faq">FAQ</a></li>
-    <li><a href="https://timmeeuwsen.nl/#contact">Contact</a></li>
-  </ul>
+  <div class="menu-container">
+    <h1>Menu Overzicht</h1>
+    <ul class="links">
+      <li><a href="https://timmeeuwsen.nl/">Home</a></li>
+      <li><a href="https://timmeeuwsen.nl/website-laten-maken-utrecht/">Website laten maken Utrecht</a></li>
+      <li><a href="https://timmeeuwsen.nl/demo/">Demo</a></li>
+      <li><a href="https://timmeeuwsen.nl/#diensten">Diensten</a></li>
+      <li><a href="https://timmeeuwsen.nl/#pricing">Prijzen</a></li>
+      <li><a href="https://timmeeuwsen.nl/#faq">FAQ</a></li>
+      <li><a href="https://timmeeuwsen.nl/#contact">Contact</a></li>
+    </ul>
+  </div>
 </main>
 
 <footer>
