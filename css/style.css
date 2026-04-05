@@ -53,7 +53,7 @@ body {
 .menu-4 .menu-links a {
     color: black;
     text-decoration: none;
-    padding: 12px 24px;
+    padding: 8px 16px;
     font-weight: 500;
     transition: background 0.3s, color 0.3s;
 }
