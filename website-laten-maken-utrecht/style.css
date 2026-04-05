@@ -29,6 +29,72 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.menu-4 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu-4 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 20px;
+    flex-wrap: nowrap; /* houdt alles op 1 lijn */
+}
+
+.menu-4 .menu-naam a {
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap; /* voorkomt dat logo op meerdere regels komt */
+}
+
+.menu-4 .menu-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu-4 .menu-links a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* CTA styling voor Contact knop */
+.menu-4 .menu-links .menu-cta {
+    background-color: #332C2F;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+/* Hover effect */
+.menu-4 .menu-links a:hover {
+    opacity: 0.8;
+}
+
+/* Mobiel (max 600px) */
+@media (max-width: 600px) {
+
+    .menu-4 .menu-naam a {
+        font-size: 1rem;
+    }
+
+    .menu-4 .menu-links a {
+        font-size: 0.95rem;
+    }
+}
+
+
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; border-radius: var(--radius); }
 
