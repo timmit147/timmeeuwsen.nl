@@ -132,6 +132,10 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+.image-text .image img{
+width: 100%;
+}
+
 .image-text .circle {
     background-color: white;
     opacity: 20%;
@@ -318,6 +322,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    z-index:10;
 }
 
 .header-4 .name {
