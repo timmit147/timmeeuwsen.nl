@@ -92,48 +92,7 @@ body {
         font-size: 0.95rem;
     }
 }
-
-
-a { color: inherit; text-decoration: none; }
-img { display: block; max-width: 100%; border-radius: var(--radius); }
-
-/* ===== NAV ===== */
-nav {
-  border-bottom: 1px solid var(--border);
-  padding: 1.25rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--white);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-
-.nav-logo {
-  font-weight: 700;
-  font-size: 1.1rem;
-  letter-spacing: -.01em;
-}
-
-.nav-cta {
-  background: var(--black);
-  color: var(--white);
-  padding: .55rem 1.25rem;
-  border-radius: 2rem;
-  font-size: .875rem;
-  font-weight: 500;
-  transition: opacity .2s;
-}
-.nav-cta:hover { opacity: .75; }
-
-/* ===== CONTAINER ===== */
-.container {
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
+ 
 /* ===== HERO ===== */
 .hero {
   padding: 5rem 2rem 4rem;
