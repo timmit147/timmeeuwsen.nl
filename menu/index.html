@@ -36,44 +36,71 @@ body {
       flex-direction: column;
     }
 
-    /* Nav */
-    .menu-4 {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background-color: white;
-      border-bottom: 1px solid #d8d4cc;
-      z-index: 999;
-    }
 
-    .menu-4 .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
+.menu-4 {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 999;
+    border-bottom: 1px solid #ddd;
+}
 
-    .menu-4 .menu-naam {
-      font-weight: 900;
-      font-size: 1.2rem;
+.menu-4 .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    gap: 20px;
+    flex-wrap: nowrap; /* houdt alles op 1 lijn */
+}
+
+.menu-4 .menu-naam a {
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap; /* voorkomt dat logo op meerdere regels komt */
+}
+
+.menu-4 .menu-links {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.menu-4 .menu-links a {
+    color: black;
+    text-decoration: none;
+    padding: 8px 16px;
+    font-weight: 500;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* CTA styling voor Contact knop */
+.menu-4 .menu-links .menu-cta {
+    background-color: #332C2F;
+    color: white;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+/* Hover effect */
+.menu-4 .menu-links a:hover {
+    opacity: 0.8;
+}
+
+/* Mobiel (max 600px) */
+@media (max-width: 600px) {
+
+    .menu-4 .menu-naam a {
+        font-size: 1rem;
     }
 
     .menu-4 .menu-links a {
-      text-decoration: none;
-      padding: 0.5rem 1rem;
-      background-color: #1a6b3c; /* Knop kleur zoals de site */
-      color: white;
-      border-radius: 4px;
-      font-weight: 600;
-      transition: background 0.2s;
+        font-size: 0.95rem;
     }
-
-    .menu-4 .menu-links a:hover {
-      background-color: #14532d;
-    }
+}
 
     main {
       flex: 1;
