@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu Overzicht – Tim Meeuwsen | Webdesign Utrecht</title>
-  <meta name="description" content="Overzicht van alle belangrijke pagina's van Tim Meeuwsen – Webdesign Utrecht. Snelle toegang tot Home, Website laten maken Utrecht, Demo, Diensten en Contact.">
+  <meta name="description" content="Overzicht van alle belangrijke pagina's van Tim Meeuwsen – Webdesign Utrecht. Snelle toegang tot Home, Website laten maken Utrecht, Demo en Contact.">
   <link rel="canonical" href="https://timmeeuwsen.nl/menu.html">
   <meta name="robots" content="index, follow">
+
   <style>
     html, body {
       height: 100%;
@@ -17,17 +18,59 @@
       display: flex;
       flex-direction: column;
     }
+
+    /* Nav */
+    .menu-4 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      border-bottom: 1px solid #d8d4cc;
+      z-index: 999;
+    }
+
+    .menu-4 .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    .menu-4 .menu-naam {
+      font-weight: 900;
+      font-size: 1.2rem;
+    }
+
+    .menu-4 .menu-links a {
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background-color: #1a6b3c; /* Knop kleur zoals de site */
+      color: white;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .menu-4 .menu-links a:hover {
+      background-color: #14532d;
+    }
+
     main {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 4rem 2rem;
+      padding: 6rem 2rem 4rem; /* extra top padding zodat nav niet overlapt */
     }
+
     .menu-container {
       max-width: 600px;
       width: 100%;
     }
+
     h1 {
       font-family: 'Fraunces', serif;
       font-weight: 900;
@@ -35,14 +78,17 @@
       margin-bottom: 2rem;
       text-align: left;
     }
+
     ul.links {
       list-style: none;
       padding: 0;
       text-align: left;
     }
+
     ul.links li {
       margin-bottom: 1rem;
     }
+
     ul.links a {
       font-size: 1.2rem;
       color: #0d0d0d;
@@ -50,10 +96,13 @@
       border-bottom: 1px solid transparent;
       transition: border-color .2s;
     }
+
     ul.links a:hover {
       border-color: #1a6b3c;
     }
+
     footer {
+      margin-top: auto;
       text-align: center;
       padding: 1.5rem;
       font-size: 0.9rem;
@@ -65,24 +114,33 @@
 </head>
 <body>
 
-<main>
-  <div class="menu-container">
-    <h1>Menu Overzicht</h1>
-    <ul class="links">
-      <li><a href="https://timmeeuwsen.nl/">Home</a></li>
-      <li><a href="https://timmeeuwsen.nl/website-laten-maken-utrecht/">Website laten maken Utrecht</a></li>
-      <li><a href="https://timmeeuwsen.nl/demo/">Demo</a></li>
-      <li><a href="https://timmeeuwsen.nl/#diensten">Diensten</a></li>
-      <li><a href="https://timmeeuwsen.nl/#pricing">Prijzen</a></li>
-      <li><a href="https://timmeeuwsen.nl/#faq">FAQ</a></li>
-      <li><a href="https://timmeeuwsen.nl/#contact">Contact</a></li>
-    </ul>
-  </div>
-</main>
+  <!-- Nav met Terug knop -->
+  <nav class="menu-4">
+    <div class="container">
+      <span class="menu-naam">
+        <a href="https://timmeeuwsen.nl/" style="text-decoration:none; color:inherit;">Tim Meeuwsen</a>
+      </span>
+      <div class="menu-links">
+        <a href="javascript:history.back()">Terug</a>
+      </div>
+    </div>
+  </nav>
 
-<footer>
-  &copy; 2026 Tim Meeuwsen – Webdesign Utrecht
-</footer>
+  <main>
+    <div class="menu-container">
+      <h1>Menu Overzicht</h1>
+      <ul class="links">
+        <li><a href="https://timmeeuwsen.nl/">Home</a></li>
+        <li><a href="https://timmeeuwsen.nl/website-laten-maken-utrecht/">Website laten maken Utrecht</a></li>
+        <li><a href="https://timmeeuwsen.nl/demo/">Demo</a></li>
+        <li><a href="https://timmeeuwsen.nl/#contact">Contact</a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Tim Meeuwsen – Webdesign Utrecht
+  </footer>
 
 </body>
 </html>
