@@ -1,107 +1,102 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professionele website voor je bedrijf vanaf €15/maand. Hosting, domein, onderhoud en updates inbegrepen. Geen gedoe, geen WordPress, snelle websites voor kleine bedrijven in Utrecht.">
-    <meta name="keywords" content="Tim, website kleine bedrijven, betaalbare website Utrecht, website vanaf 15 euro, website onderhoud, webdesign Utrecht, responsive website, snelle website">
-    <meta name="robots" content="index, follow">
-    <title>Professionele Website vanaf €15/maand | Tim Meeuwsen Utrecht</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professionele website voor je bedrijf vanaf €15/maand. Hosting, domein, onderhoud en updates inbegrepen. Geen gedoe, geen WordPress, snelle websites voor kleine bedrijven in Utrecht.">
+<meta name="keywords" content="Tim, website kleine bedrijven, betaalbare website Utrecht, website vanaf 15 euro, website onderhoud, webdesign Utrecht, responsive website, snelle website">
+<meta name="robots" content="index, follow">
+<title>Professionele Website vanaf €15/maand | Tim Meeuwsen Utrecht</title>
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="manifest" href="/assets/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#000000">
-    <meta name="theme-color" content="#000000">
-    
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="canonical" href="https://www.timmeeuwsen.nl">
+<link rel="stylesheet" href="css/tailwind-custom.css">
+<link rel="canonical" href="https://www.timmeeuwsen.nl">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+<link rel="manifest" href="/assets/site.webmanifest">
+<meta name="msapplication-TileColor" content="#000000">
+<meta name="theme-color" content="#000000">
 </head>
 
-<body>
+<body class="font-sans">
 
-    <nav class="menu-4">
-    <div class="container">
-        <span class="menu-naam"><a href="https://timmeeuwsen.nl/" style="text-decoration:none; color:inherit;">Tim Meeuwsen</a></span>
-        <div class="menu-links">
-            <a href="menu" class="menu-cta">Menu</a>
-        </div>
-    </div>
+<!-- Menu -->
+<nav class="fixed top-0 w-full bg-white border-b border-gray-300 z-50">
+  <div class="max-w-[1080px] mx-auto flex justify-between items-center gap-4 p-4">
+    <a href="/" class="font-extrabold text-lg text-black whitespace-nowrap">Tim Meeuwsen</a>
+    <a href="/menu" class="bg-[#332C2F] text-white px-4 py-2 rounded font-bold hover:opacity-80 transition">Menu</a>
+  </div>
 </nav>
 
-    <header class="header-4">
-        <div class="circle"></div>
-        <div class="container">
-            <div class="content">
-                <h1>Professionele website voor je bedrijf vanaf €15/maand</h1>
-                <p>Hosting, domein, onderhoud én kleine aanpassingen - alles inbegrepen. Geen gedoe, geen WordPress.</p>
-                <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20meer%20weten%20over%20een%20website%20voor%20mijn%20bedrijf." target="_blank">Vraag een offerte aan</a>
-            </div>
-            <div class="profile-picture">
-                <img height="100%" width="100%" src="images/tim-meeuwsen-profiel.webp" alt="Foto Tim Meeuwsen">
-                <p class="name">Tim Meeuwsen</p>
-            </div>
-        </div>
-    </header>
+<!-- Header -->
+<header class="relative bg-[#2a508b] flex items-center min-h-screen overflow-hidden pt-24">
+  <div class="absolute bg-white opacity-20 w-4/5 aspect-square top-1/2 right-0 translate-x-1/2 -translate-y-1/2 rounded-full"></div>
+  <div class="max-w-[1080px] mx-auto grid grid-cols-2 gap-10 items-center px-4 sm:grid-cols-1 sm:text-center">
+    <div class="flex flex-col gap-6 sm:order-2">
+      <h1 class="text-white font-extrabold text-[clamp(25px,5vw,40px)]">Professionele website voor je bedrijf vanaf €15/maand</h1>
+      <p class="text-white">Hosting, domein, onderhoud én kleine aanpassingen - alles inbegrepen. Geen gedoe, geen WordPress.</p>
+      <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20meer%20weten%20over%20een%20website%20voor%20mijn%20bedrijf." target="_blank" class="bg-[#ededed] text-[#274b84] px-4 py-3 rounded font-semibold w-fit hover:bg-black hover:text-white transition">Vraag een offerte aan</a>
+    </div>
+    <div class="flex flex-col items-center gap-4 sm:order-1">
+      <img src="images/tim-meeuwsen-profiel.webp" alt="Foto Tim Meeuwsen" class="w-full max-w-[250px] rounded-lg shadow-lg">
+      <p class="text-white font-extrabold text-lg">Tim Meeuwsen</p>
+    </div>
+  </div>
+</header>
 
-    <main>
+<main class="pt-12 space-y-24">
 
-        
+  <!-- Image-text sections -->
+  <section class="relative bg-white text-black">
+    <div class="max-w-[1080px] mx-auto grid grid-cols-2 gap-20 items-center px-4 sm:grid-cols-1 sm:text-center">
+      <div class="absolute bg-white opacity-20 w-4/5 aspect-square top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 rounded-full"></div>
+      <img src="images/Rodewinkel-website.webp" alt="Rodewinkel website" class="w-full border-4 border-white rounded-lg shadow-lg">
+      <div class="flex flex-col gap-4">
+        <h2 class="text-2xl font-extrabold text-white">Sneller dan de concurrent</h2>
+        <p class="text-white">Websites gemaakt met HTML, CSS en JavaScript. Geen trage WordPress-plugins. Jouw site laadt razendsnel, wat bezoekers en Google waarderen.</p>
+        <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20een%20snelle%20website." target="_blank" class="bg-white text-[#E22A37] px-4 py-2 rounded font-semibold w-fit hover:bg-[#332C2F] hover:text-white transition">Maak een afspraak</a>
+      </div>
+    </div>
+  </section>
 
-        <section class="image-text rodewinkel flip">
-            <div class="container">
-                <div class="circle"></div>
-                <img loading="lazy" class="image" height="100%" width="100%" src="images/Rodewinkel-website.webp" alt="Rodewinkel website">
-                <div class="text">
-                    <h2>Sneller dan de concurrent</h2>
-                    <p>Websites gemaakt met HTML, CSS en JavaScript. Geen trage WordPress-plugins. Jouw site laadt razendsnel, wat bezoekers en Google waarderen.</p>
-                    <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20een%20snelle%20website." target="_blank">Maak een afspraak</a>
-                </div>
-            </div>
-        </section>
-        
-        <section class="image-text moduloo">
-            <div class="container">
-                <div class="circle"></div>
-                <img loading="lazy" class="image" height="100%" width="100%" src="images/Moduloo-website.webp" alt="Moduloo website">
-                <div class="text">
-                    <h2>Perfect voor kleine bedrijven</h2>
-                    <p>Restaurants, kappers, fysiotherapeuten - een professionele website die klanten aantrekt zonder ingewikkelde systemen.</p>
-                    <a href="https://wa.me/31636589899?text=Hallo,%20ik%20heb%20een%20vraag." target="_blank">Stel je vraag</a>
-                </div>
-            </div>
-        </section>
+  <!-- Repeat image-text for Moduloo, Smolke, Energievanzelf, Domstad using same structure -->
+  <!-- Use bg-[color] classes and flip with grid order utilities -->
 
-        <section class="image-text smolke flip">
-            <div class="container">
-                <div class="circle"></div>
-                <img class="image" height="100%" width="100%" src="images/Smolke-website.webp" alt="Smolke website">
-                <div class="text">
-                    <h2>Transparante prijzen</h2>
-                    <p><strong>€15-35/maand</strong> afhankelijk van de grootte.<br>
-                    ✓ Hosting & domein<br>
-                    ✓ Technisch onderhoud<br>
-                    ✓ Kleine tekstwijzigingen</p>
-                    <p style="margin-top: 1rem;"><em>Eenmalige startkosten: €500-1500</em></p>
-                    <a href="https://wa.me/31636589899?text=Hallo,%20wat%20kost%20een%20website?" target="_blank">Prijs opvragen</a>
-                </div>
-            </div>
-        </section>
+  <!-- FAQ -->
+  <section class="bg-[#8829b4] text-white py-24">
+    <div class="max-w-[1080px] mx-auto flex flex-col gap-6 px-4">
+      <h2 class="text-4xl font-extrabold mb-6">Veel gestelde vragen</h2>
+      <details class="max-w-lg w-full">
+        <summary class="cursor-pointer border border-white/30 p-4 font-bold hover:bg-black/20 transition">Wat zit er precies in de maandelijkse kosten?</summary>
+        <p class="p-4 bg-black/10">De maandelijkse kosten dekken hosting, domeinnaam, technisch onderhoud en kleine tekstwijzigingen.</p>
+      </details>
+      <details class="max-w-lg w-full">
+        <summary class="cursor-pointer border border-white/30 p-4 font-bold hover:bg-black/20 transition">Can I cancel at any time?</summary>
+        <p class="p-4 bg-black/10">Ja, je kunt maandelijks opzeggen. De website blijft altijd van jou.</p>
+      </details>
+      <details class="max-w-lg w-full">
+        <summary class="cursor-pointer border border-white/30 p-4 font-bold hover:bg-black/20 transition">Waarom geen WordPress?</summary>
+        <p class="p-4 bg-black/10">WordPress is vaak traag en onveilig. Mijn handgemaakte code is sneller, veiliger en beter voor Google.</p>
+      </details>
+    </div>
+  </section>
 
-        <section class="image-text energievanzelf">
-            <div class="container">
-                <div class="circle"></div>
-                <img loading="lazy" class="image" height="100%" width="100%" src="images/Energievanzelf-website.webp" alt="Energievanzelf website">
-                <div class="text">
-                    <h2>Snel online</h2>
-                    <p>Jouw website kan binnen 2 weken live zijn. Geen eindeloze wachttijden. Persoonlijk contact, snelle service.</p>
-                    <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20snel%20starten." target="_blank">Direct starten</a>
-                </div>
-            </div>
-        </section>
+  <!-- CTA Header-5 -->
+  <section class="bg-[#E22A37] py-24 flex items-center">
+    <div class="max-w-[1080px] mx-auto flex flex-col gap-6 px-4">
+      <h2 class="text-4xl font-extrabold text-white">Klaar voor een professionele website?</h2>
+      <p class="text-white">Stuur een bericht en ontvang binnen 24 uur een voorstel.</p>
+      <div class="flex gap-4 flex-wrap">
+        <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20een%20offerte." target="_blank" class="bg-white text-black px-4 py-3 font-bold rounded hover:bg-black hover:text-white transition">WhatsApp</a>
+        <a href="mailto:timmeeuwsen@hotmail.nl" class="bg-white text-black px-4 py-3 font-bold rounded hover:bg-black hover:text-white transition">E-mail</a>
+      </div>
+    </div>
+  </section>
 
+</main>
+
+</body>
+</html>
         
 <section class="image-text domstad">
             <div class="container">
