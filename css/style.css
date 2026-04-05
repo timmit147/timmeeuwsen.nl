@@ -1,3 +1,6 @@
+/* ===========================
+   BASE UTILITIES
+   =========================== */
 .fixed { position: fixed; }
 .absolute { position: absolute; }
 .relative { position: relative; }
@@ -46,6 +49,7 @@
 .mb-10 { margin-bottom: 10px; }
 .mb-15 { margin-bottom: 15px; }
 .mb-20 { margin-bottom: 20px; }
+.mb-30 { margin-bottom: 30px; }
 
 .p-15 { padding: 15px; }
 .pt-8 { padding-top: 8px; }
@@ -103,9 +107,9 @@
 .rounded-15 { border-radius: 15px; }
 .rounded-full { border-radius: 50%; }
 
-.border-1 { border-width: 1px; }
-.border-5 { border-width: 5px; }
-.border-b-1 { border-bottom-width: 1px; }
+.border-1 { border-width: 1px; border-style: solid; }
+.border-5 { border-width: 5px; border-style: solid; }
+.border-b-1 { border-bottom-width: 1px; border-bottom-style: solid; }
 
 .border-gray-300 { border-color: #d1d5db; }
 .border-white { border-color: #ffffff; }
@@ -160,124 +164,265 @@
 
 .grid-cols-1 { grid-template-columns: 1fr; }
 .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-.md-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-.md-grid-cols-4-3 { grid-template-columns: 4fr 3fr; }
-.md-grid-cols-3-4 { grid-template-columns: 3fr 4fr; }
 
 .marker-none::-webkit-details-marker { display: none; }
 
-@media (max-width: 800px) {
+/* ===========================
+   BUTTON — always left-aligned on mobile, natural width
+   =========================== */
+.btn-cta {
+  display: inline-block;
+  width: fit-content;
+  align-self: flex-start; /* left in flex-col context */
+}
+
+/* ===========================
+   HERO SECTION
+   Desktop: two columns side by side (text left, image right)
+   Mobile: text on top, image below
+   =========================== */
+header .max-w-1080 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-text {
+  order: 1;
+}
+
+.hero-image {
+  order: 2;
+}
+
+/* ===========================
+   CONTENT SECTIONS
+   Desktop: two columns, alternating image/text sides
+   Mobile: text on top, image below
+   =========================== */
+
+/* Default layout: text left (order 1), image right (order 2) */
+.section-grid {
+  display: grid;
+  grid-template-columns: 3fr 4fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Reversed: image left (order 1 visually), text right (order 2) */
+.section-grid-reverse {
+  grid-template-columns: 4fr 3fr;
+}
+
+.section-text {
+  order: 1;
+}
+
+.section-image {
+  order: 2;
+}
+
+.section-grid-reverse .section-text {
+  order: 2;
+}
+
+.section-grid-reverse .section-image {
+  order: 1;
+}
+
+/* ===========================
+   FAQ — clean accordion style
+   =========================== */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 680px;
+}
+
+.faq-item {
+  border: 1px solid rgba(255,255,255,0.3);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.faq-summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background-color 0.2s;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-summary::after {
+  content: '+';
+  font-size: 22px;
+  font-weight: 400;
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: transform 0.2s;
+}
+
+details[open] .faq-summary::after {
+  transform: rotate(45deg);
+}
+
+.faq-summary:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+details[open] .faq-summary {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.faq-answer {
+  margin: 0;
+  padding: 16px 20px;
+  background-color: rgba(0,0,0,0.15);
+  font-size: 15px;
+  line-height: 1.6;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+/* ===========================
+   CTA BUTTONS ROW
+   =========================== */
+.cta-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+/* ===========================
+   RESPONSIVE — MOBILE (≤ 700px)
+   =========================== */
+@media (max-width: 700px) {
+
+  /* NAV */
   .md-pl-20 { padding-left: 20px; }
   .md-pr-20 { padding-right: 20px; }
+
+  /* PADDING overrides */
   .md-pt-60 { padding-top: 60px; }
   .md-pb-60 { padding-bottom: 60px; }
   .md-pt-80 { padding-top: 80px; }
   .md-pb-80 { padding-bottom: 80px; }
-  .md-pt-100 { padding-top: 100px; }
-  .md-pb-100 { padding-bottom: 100px; }
-
-  .md-grid-cols-1 { grid-template-columns: 1fr; }
-  .md-grid-cols-2 { grid-template-columns: 1fr; }
-  .md-grid-cols-4-3 { grid-template-columns: 1fr; }
-  .md-grid-cols-3-4 { grid-template-columns: 1fr; }
-
-  .md-text-center { text-align: center; }
-  .md-align-center { align-items: center; }
-  .md-justify-center { justify-content: center; }
-
-  .md-order-1 { order: 1; }
-  .md-order-2 { order: 2; }
-
+  .md-min-h-auto { min-height: auto; }
   .md-max-w-full { max-width: 100%; }
 
-  .md-min-h-auto { min-height: auto; }
+  /* HERO: single column, text above image */
+  header .max-w-1080 {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .hero-text {
+    order: 1; /* text always first = top */
+  }
+
+  .hero-image {
+    order: 2; /* image always second = bottom */
+  }
+
+  /* CONTENT SECTIONS: single column, text above image */
+  .section-grid,
+  .section-grid-reverse {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  /* Force text on top, image below — for both normal and reversed grids */
+  .section-text,
+  .section-grid-reverse .section-text {
+    order: 1;
+  }
+
+  .section-image,
+  .section-grid-reverse .section-image {
+    order: 2;
+  }
+
+  /* Remove max-width constraints on paragraphs */
+  .max-w-400 {
+    max-width: 100%;
+  }
+
+  /* HERO heading size */
+  .min-h-100vh {
+    min-height: auto;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+
+  /* FAQ */
+  .faq-list {
+    max-width: 100%;
+  }
+
+  /* CTA buttons */
+  .cta-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  /* Text size scale-down */
+  .text-40 { font-size: 28px; }
+  .text-30 { font-size: 24px; }
 }
 
-
-/* Extra utilities voor exactere matching */
+/* ===========================
+   EXTRA UTILITIES
+   =========================== */
 .mx-auto { margin-left: auto; margin-right: auto; }
-
 .px-16 { padding-left: 16px; padding-right: 16px; }
 .px-20 { padding-left: 20px; padding-right: 20px; }
 .px-32 { padding-left: 32px; padding-right: 32px; }
-
 .py-16 { padding-top: 16px; padding-bottom: 16px; }
 .py-64 { padding-top: 64px; padding-bottom: 64px; }
-
 .pt-96 { padding-top: 96px; }
 .pb-40 { padding-bottom: 40px; }
 .pt-128 { padding-top: 128px; }
 .pb-64 { padding-bottom: 64px; }
-
 .mb-24 { margin-bottom: 24px; }
 .mb-32 { margin-bottom: 32px; }
 .mb-40 { margin-bottom: 40px; }
 .mb-48 { margin-bottom: 48px; }
-
 .gap-8 { gap: 8px; }
 .gap-12 { gap: 12px; }
 .gap-16 { gap: 16px; }
 .gap-24 { gap: 24px; }
 .gap-32 { gap: 32px; }
 .gap-48 { gap: 48px; }
-
 .items-start { align-items: flex-start; }
 .flex-row { flex-direction: row; }
 .flex-row-reverse { flex-direction: row-reverse; }
-
 .max-w-900 { max-width: 900px; }
 .max-w-640 { max-width: 640px; }
 .max-w-540 { max-width: 540px; }
 .max-w-520 { max-width: 520px; }
 .max-w-500 { max-width: 500px; }
-
 .text-16 { font-size: 16px; }
 .text-18 { font-size: 18px; }
 .text-19 { font-size: 19px; }
-
 .text-clamp-32-52 { font-size: clamp(32px, 5vw, 52px); }
 .text-clamp-26-36 { font-size: clamp(26px, 3.5vw, 36px); }
-
 .leading-115 { line-height: 1.15; }
 .leading-165 { line-height: 1.65; }
 .leading-17 { line-height: 1.7; }
-
 .rounded-4 { border-radius: 4px; }
-
 .border-gray-200 { border-color: #ddd; }
-.border-t-1 { border-top-width: 1px; }
-
+.border-t-1 { border-top-width: 1px; border-top-style: solid; }
 .bg-bg { background-color: #f9f9f9; }
 .text-mid { color: #666666; }
-
-@media (max-width: 768px) {
-  .sm-pl-20 { padding-left: 20px; }
-  .sm-pr-20 { padding-right: 20px; }
-
-  .sm-grid-cols-1 { grid-template-columns: 1fr; }
-
-  .sm-text-center { text-align: left; }
-  .sm-items-center { align-items: flex-start; }
-  .sm-justify-center { justify-content: flex-start; }
-
-  .sm-flex-col { flex-direction: column; }
-  .sm-flex-row-reverse { flex-direction: column-reverse; }
-
-  .sm-max-w-full { max-width: 100%; }
-}
-
-@media (max-width: 1024px) {
-  .md-pl-20 { padding-left: 20px; }
-  .md-pr-20 { padding-right: 20px; }
-
-  .md-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-
-  .md-text-center { text-align: center; }
-  .md-items-center { align-items: center; }
-  .md-justify-center { justify-content: center; }
-
-  .md-flex-col { flex-direction: column; }
-  .md-flex-row-reverse { flex-direction: row-reverse; }
-
-  .md-max-w-full { max-width: 100%; }
-}
