@@ -290,3 +290,55 @@
   /* Hero: collapse 2-col to 1-col */
   .md-grid-cols-1 { grid-template-columns: 1fr; }
 }
+
+/* =========================
+   GRID
+========================= */
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* =========================
+   SPACING
+========================= */
+
+.mt-auto {
+  margin-top: auto;
+}
+
+.pt-nav {
+  padding-top: 80px; /* match your navbar height */
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-12 {
+  gap: 12px;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+.text-16 {
+  font-size: 16px;
+}
+
+.text-18 {
+  font-size: 18px;
+}
+
+.leading-165 {
+  line-height: 1.65;
+}
+
+/* =========================
+   WIDTH
+========================= */
+
+.max-w-680 {
+  max-width: 680px;
+}
