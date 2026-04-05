@@ -21,6 +21,7 @@
 
 <body class="m-0 w-full overflow-x-hidden font-sans bg-white text-black">
 
+  <!-- NAV -->
   <nav class="fixed top-0 left-0 w-full bg-white z-999 border-b-1 border-gray-300">
     <div class="max-w-1080 ml-auto mr-auto pl-30 pr-30 pt-15 pb-15 flex justify-between items-center gap-20 flex-nowrap md-pl-20 md-pr-20">
       <a href="https://timmeeuwsen.nl/" class="font-900 text-20 text-black no-underline whitespace-nowrap">Tim Meeuwsen</a>
@@ -28,147 +29,161 @@
     </div>
   </nav>
 
-  <!-- HERO: text first (order-1), image second (order-2) — on mobile stacks text above image -->
-  <header class="relative overflow-hidden flex items-center min-h-100vh bg-blue-hero pt-100 pb-100">
+  <!-- HERO -->
+  <header class="relative overflow-hidden flex items-center min-h-100vh bg-blue-hero pt-nav pb-80">
     <div class="absolute top-50 right-0 h-80pct aspect-square rounded-full bg-white opacity-20 translate-center-right"></div>
 
-    <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 grid grid-cols-1 md-grid-cols-2 gap-40 items-center z-1 md-pl-20 md-pr-20 text-white">
-      <!-- Text block: order-1 everywhere = always on top on mobile -->
-      <div class="flex flex-col gap-20 hero-text">
+    <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 w-full grid grid-cols-2 gap-40 items-center z-1 md-pl-20 md-pr-20 md-grid-cols-1 md-gap-30 text-white">
+
+      <!-- Text: first in DOM = always on top on mobile -->
+      <div class="flex flex-col gap-20 items-start">
         <h1 class="text-clamp-25-40 font-900 leading-12 m-0">Professionele website voor je bedrijf vanaf €15/maand</h1>
-        <p class="max-w-400 mb-20 md-max-w-full">Hosting, domein, onderhoud én kleine aanpassingen - alles inbegrepen. Geen gedoe, geen WordPress.</p>
-        <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20meer%20weten%20over%20een%20website%20voor%20mijn%20bedrijf." target="_blank" rel="noopener noreferrer" class="btn-cta bg-dark text-white font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Vraag een offerte aan</a>
+        <p class="m-0">Hosting, domein, onderhoud én kleine aanpassingen - alles inbegrepen. Geen gedoe, geen WordPress.</p>
+        <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20meer%20weten%20over%20een%20website%20voor%20mijn%20bedrijf." target="_blank" rel="noopener noreferrer" class="bg-dark text-white font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Vraag een offerte aan</a>
       </div>
 
-      <!-- Image block: order-2 on desktop, but comes after text in DOM so stacks below on mobile -->
-      <div class="flex flex-col items-center gap-15 z-10 hero-image">
+      <!-- Image: second in DOM = always below text on mobile -->
+      <div class="flex flex-col items-center gap-15 z-10">
         <img src="images/tim-meeuwsen-profiel.webp" alt="Foto Tim Meeuwsen" width="100%" height="100%" class="block w-full max-w-450 rounded-15 shadow-50">
-        <p class="name text-20 font-900 m-0">Tim Meeuwsen</p>
+        <p class="text-20 font-900 m-0">Tim Meeuwsen</p>
       </div>
     </div>
   </header>
 
   <main>
 
-    <!-- Section: Sneller dan de concurrent (image right on desktop) -->
+    <!-- Sneller dan de concurrent: text left, image right -->
     <section class="relative overflow-hidden flex items-center pt-80 pb-80 bg-red-strong text-white md-pt-60 md-pb-60">
       <div class="absolute top-50 left-0 h-80pct aspect-square rounded-full bg-white opacity-20 translate-center-left"></div>
-
-      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 z-1 md-pl-20 md-pr-20 section-grid">
-        <div class="flex flex-col gap-20 section-text">
+      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 w-full grid grid-cols-3-4 gap-60 items-center z-1 md-pl-20 md-pr-20 md-grid-cols-1 md-gap-24">
+        <div class="flex flex-col gap-20 items-start order-1">
           <h2 class="text-30 font-900 m-0">Sneller dan de concurrent</h2>
-          <p class="mb-20">Websites gemaakt met HTML, CSS en JavaScript. Geen trage WordPress-plugins. Jouw site laadt razendsnel, wat bezoekers en Google waarderen.</p>
-          <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20een%20snelle%20website." target="_blank" rel="noopener noreferrer" class="btn-cta bg-white text-red-strong font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Maak een afspraak</a>
+          <p class="m-0">Websites gemaakt met HTML, CSS en JavaScript. Geen trage WordPress-plugins. Jouw site laadt razendsnel, wat bezoekers en Google waarderen.</p>
+          <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20een%20snelle%20website." target="_blank" rel="noopener noreferrer" class="bg-white text-red-strong font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Maak een afspraak</a>
         </div>
-        <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Rodewinkel website" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 section-image">
+        <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Rodewinkel website" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 order-2 md-order-2">
       </div>
     </section>
 
-    <!-- Section: Perfect voor kleine bedrijven (image left on desktop) -->
+    <!-- Perfect voor kleine bedrijven: image left, text right -->
     <section class="relative overflow-hidden flex items-center pt-80 pb-80 bg-light-blue text-dark md-pt-60 md-pb-60">
       <div class="absolute top-50 left-0 h-80pct aspect-square rounded-full bg-white opacity-20 translate-center-left"></div>
-
-      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 z-1 md-pl-20 md-pr-20 section-grid section-grid-reverse">
-        <img loading="lazy" src="images/Moduloo-website.webp" alt="Moduloo website" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 section-image">
-        <div class="flex flex-col gap-20 section-text">
+      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 w-full grid grid-cols-4-3 gap-60 items-center z-1 md-pl-20 md-pr-20 md-grid-cols-1 md-gap-24">
+        <!-- Text order-2 desktop, order-1 mobile (top) -->
+        <div class="flex flex-col gap-20 items-start order-2 md-order-1">
           <h2 class="text-30 font-900 m-0">Perfect voor kleine bedrijven</h2>
-          <p class="mb-20">Restaurants, kappers, fysiotherapeuten - een professionele website die klanten aantrekt zonder ingewikkelde systemen.</p>
-          <a href="https://wa.me/31636589899?text=Hallo,%20ik%20heb%20een%20vraag." target="_blank" rel="noopener noreferrer" class="btn-cta bg-dark text-white font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Stel je vraag</a>
+          <p class="m-0">Restaurants, kappers, fysiotherapeuten - een professionele website die klanten aantrekt zonder ingewikkelde systemen.</p>
+          <a href="https://wa.me/31636589899?text=Hallo,%20ik%20heb%20een%20vraag." target="_blank" rel="noopener noreferrer" class="bg-dark text-white font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Stel je vraag</a>
         </div>
+        <!-- Image order-1 desktop (left), order-2 mobile (below text) -->
+        <img loading="lazy" src="images/Moduloo-website.webp" alt="Moduloo website" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 order-1 md-order-2">
       </div>
     </section>
 
-    <!-- Section: Transparante prijzen (image right on desktop) -->
+    <!-- Transparante prijzen: text left, image right -->
     <section class="relative overflow-hidden flex items-center pt-80 pb-80 bg-orange-strong text-white md-pt-60 md-pb-60">
       <div class="absolute top-50 right-0 h-80pct aspect-square rounded-full bg-white opacity-20 translate-center-right"></div>
-
-      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 z-1 md-pl-20 md-pr-20 section-grid">
-        <div class="flex flex-col gap-20 section-text">
+      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 w-full grid grid-cols-3-4 gap-60 items-center z-1 md-pl-20 md-pr-20 md-grid-cols-1 md-gap-24">
+        <div class="flex flex-col gap-20 items-start order-1">
           <h2 class="text-30 font-900 m-0">Transparante prijzen</h2>
-          <p class="mb-20">
+          <p class="m-0">
             <strong>€15-35/maand</strong> afhankelijk van de grootte.<br>
             ✓ Hosting & domein<br>
             ✓ Technisch onderhoud<br>
             ✓ Kleine tekstwijzigingen
           </p>
-          <p class="mt-20 mb-20"><em>Eenmalige startkosten: €500-1500</em></p>
-          <a href="https://wa.me/31636589899?text=Hallo,%20wat%20kost%20een%20website?" target="_blank" rel="noopener noreferrer" class="btn-cta bg-dark text-white font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Prijs opvragen</a>
+          <p class="m-0"><em>Eenmalige startkosten: €500-1500</em></p>
+          <a href="https://wa.me/31636589899?text=Hallo,%20wat%20kost%20een%20website?" target="_blank" rel="noopener noreferrer" class="bg-dark text-white font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Prijs opvragen</a>
         </div>
-        <img loading="lazy" src="images/Smolke-website.webp" alt="Smolke website" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 section-image">
+        <img loading="lazy" src="images/Smolke-website.webp" alt="Smolke website" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 order-2 md-order-2">
       </div>
     </section>
 
-    <!-- Section: Snel online (image left on desktop) -->
+    <!-- Snel online: image left, text right -->
     <section class="relative overflow-hidden flex items-center pt-80 pb-80 bg-lime text-dark md-pt-60 md-pb-60">
       <div class="absolute top-50 left-0 h-80pct aspect-square rounded-full bg-white opacity-20 translate-center-left"></div>
-
-      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 z-1 md-pl-20 md-pr-20 section-grid section-grid-reverse">
-        <img loading="lazy" src="images/Energievanzelf-website.webp" alt="Energievanzelf website" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 section-image">
-        <div class="flex flex-col gap-20 section-text">
+      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 w-full grid grid-cols-4-3 gap-60 items-center z-1 md-pl-20 md-pr-20 md-grid-cols-1 md-gap-24">
+        <div class="flex flex-col gap-20 items-start order-2 md-order-1">
           <h2 class="text-30 font-900 m-0">Snel online</h2>
-          <p class="mb-20">Jouw website kan binnen 2 weken live zijn. Geen eindeloze wachttijden. Persoonlijk contact, snelle service.</p>
-          <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20snel%20starten." target="_blank" rel="noopener noreferrer" class="btn-cta bg-dark text-white font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Direct starten</a>
+          <p class="m-0">Jouw website kan binnen 2 weken live zijn. Geen eindeloze wachttijden. Persoonlijk contact, snelle service.</p>
+          <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20snel%20starten." target="_blank" rel="noopener noreferrer" class="bg-dark text-white font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Direct starten</a>
         </div>
+        <img loading="lazy" src="images/Energievanzelf-website.webp" alt="Energievanzelf website" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 order-1 md-order-2">
       </div>
     </section>
 
-    <!-- Section: De Domstad (image left on desktop) -->
+    <!-- De Domstad: image left, text right -->
     <section class="relative overflow-hidden flex items-center pt-80 pb-80 bg-dark-blue text-white md-pt-60 md-pb-60">
       <div class="absolute top-50 left-0 h-80pct aspect-square rounded-full bg-teal opacity-15 translate-center-left"></div>
-
-      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 z-1 md-pl-20 md-pr-20 section-grid section-grid-reverse">
-        <img loading="lazy" src="images/Demo.webp" alt="Bouwbedrijf De Domstad website demo" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 section-image">
-        <div class="flex flex-col gap-20 section-text">
+      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 w-full grid grid-cols-4-3 gap-60 items-center z-1 md-pl-20 md-pr-20 md-grid-cols-1 md-gap-24">
+        <div class="flex flex-col gap-20 items-start order-2 md-order-1">
           <h2 class="text-30 font-900 m-0">Nieuw project: De Domstad</h2>
-          <p class="mb-20">Een voorbeeld van een luxe, conversiegerichte website voor de bouwsector. Razendsnel en volledig geoptimaliseerd voor offerte-aanvragen.</p>
-          <a href="/demo/" target="_blank" rel="noopener noreferrer" class="btn-cta bg-teal text-dark-blue font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Bekijk de Demo</a>
+          <p class="m-0">Een voorbeeld van een luxe, conversiegerichte website voor de bouwsector. Razendsnel en volledig geoptimaliseerd voor offerte-aanvragen.</p>
+          <a href="/demo/" target="_blank" rel="noopener noreferrer" class="bg-teal text-dark-blue font-600 no-underline inline-block pt-12 pb-12 pl-24 pr-24 rounded-5 transition-5 hover-bg-black hover-text-white">Bekijk de Demo</a>
         </div>
+        <img loading="lazy" src="images/Demo.webp" alt="Bouwbedrijf De Domstad website demo" width="100%" height="100%" class="block w-full border-5 border-white rounded-5 shadow-30 order-1 md-order-2">
       </div>
     </section>
 
     <!-- FAQ -->
     <section class="bg-purple text-white pt-100 pb-100 md-pt-80 md-pb-80">
       <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 md-pl-20 md-pr-20">
-        <h2 class="text-40 font-900 mb-30 m-0">Veelgestelde vragen</h2>
+        <h2 class="text-40 font-900 m-0 mb-30">Veelgestelde vragen</h2>
+        <div class="flex flex-col gap-12 max-w-680">
 
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary class="faq-summary">Wat zit er in het maandbedrag?</summary>
-            <p class="faq-answer">Hosting, domeinnaam, technisch onderhoud en kleine aanpassingen zijn inbegrepen.</p>
+          <details class="border-1 border-white-30 rounded-6 overflow-hidden">
+            <summary class="flex justify-between items-center p-18 font-700 text-16 cursor-pointer no-marker lh-1 transition-3 hover-bg-white-10">
+              Wat zit er in het maandbedrag?
+              <span class="faq-plus text-22 ml-16 flex-shrink-0 font-400">+</span>
+            </summary>
+            <p class="m-0 pl-18 pr-18 pt-0 pb-18 text-15 lh-16 opacity-90">Hosting, domeinnaam, technisch onderhoud en kleine aanpassingen zijn inbegrepen.</p>
           </details>
 
-          <details class="faq-item">
-            <summary class="faq-summary">Hoe gaat het traject in zijn werk?</summary>
-            <p class="faq-answer">Je stuurt je wensen door, daarna maken we samen de inhoud en styling helder en overzichtelijk.</p>
+          <details class="border-1 border-white-30 rounded-6 overflow-hidden">
+            <summary class="flex justify-between items-center p-18 font-700 text-16 cursor-pointer no-marker lh-1 transition-3 hover-bg-white-10">
+              Hoe gaat het traject in zijn werk?
+              <span class="faq-plus text-22 ml-16 flex-shrink-0 font-400">+</span>
+            </summary>
+            <p class="m-0 pl-18 pr-18 pt-0 pb-18 text-15 lh-16 opacity-90">Je stuurt je wensen door, daarna maken we samen de inhoud en styling helder en overzichtelijk.</p>
           </details>
 
-          <details class="faq-item">
-            <summary class="faq-summary">Kan ik later iets laten aanpassen?</summary>
-            <p class="faq-answer">Ja, kleine tekst- of afbeeldingsaanpassingen kunnen later worden doorgevoerd.</p>
+          <details class="border-1 border-white-30 rounded-6 overflow-hidden">
+            <summary class="flex justify-between items-center p-18 font-700 text-16 cursor-pointer no-marker lh-1 transition-3 hover-bg-white-10">
+              Kan ik later iets laten aanpassen?
+              <span class="faq-plus text-22 ml-16 flex-shrink-0 font-400">+</span>
+            </summary>
+            <p class="m-0 pl-18 pr-18 pt-0 pb-18 text-15 lh-16 opacity-90">Ja, kleine tekst- of afbeeldingsaanpassingen kunnen later worden doorgevoerd.</p>
           </details>
 
-          <details class="faq-item">
-            <summary class="faq-summary">Moet ik zelf iets technisch regelen?</summary>
-            <p class="faq-answer">Nee, de technische kant wordt verzorgd. Jij hoeft alleen de inhoud en feedback aan te leveren.</p>
+          <details class="border-1 border-white-30 rounded-6 overflow-hidden">
+            <summary class="flex justify-between items-center p-18 font-700 text-16 cursor-pointer no-marker lh-1 transition-3 hover-bg-white-10">
+              Moet ik zelf iets technisch regelen?
+              <span class="faq-plus text-22 ml-16 flex-shrink-0 font-400">+</span>
+            </summary>
+            <p class="m-0 pl-18 pr-18 pt-0 pb-18 text-15 lh-16 opacity-90">Nee, de technische kant wordt verzorgd. Jij hoeft alleen de inhoud en feedback aan te leveren.</p>
           </details>
 
-          <details class="faq-item">
-            <summary class="faq-summary">Kan ik maandelijks opzeggen?</summary>
-            <p class="faq-answer">Ja, de samenwerking is per maand opzegbaar.</p>
+          <details class="border-1 border-white-30 rounded-6 overflow-hidden">
+            <summary class="flex justify-between items-center p-18 font-700 text-16 cursor-pointer no-marker lh-1 transition-3 hover-bg-white-10">
+              Kan ik maandelijks opzeggen?
+              <span class="faq-plus text-22 ml-16 flex-shrink-0 font-400">+</span>
+            </summary>
+            <p class="m-0 pl-18 pr-18 pt-0 pb-18 text-15 lh-16 opacity-90">Ja, de samenwerking is per maand opzegbaar.</p>
           </details>
+
         </div>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="bg-red-strong text-white flex items-center pt-100 pb-100 md-pt-80 md-pb-80">
-      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 md-pl-20 md-pr-20 w-full">
+    <section class="bg-red-strong text-white pt-100 pb-100 md-pt-80 md-pb-80">
+      <div class="max-w-1080 ml-auto mr-auto pl-40 pr-40 md-pl-20 md-pr-20">
         <div class="flex flex-col gap-20">
-          <h2 class="text-40 font-900 m-0">Klaar voor een professionele website?</h2>
+          <h2 class="text-40 font-900 m-0 md-text-28">Klaar voor een professionele website?</h2>
           <p class="m-0">Stuur een bericht en ontvang binnen 24 uur een voorstel.</p>
-          <div class="cta-buttons">
-            <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20een%20offerte." target="_blank" rel="noopener noreferrer" class="btn-cta bg-white text-black no-underline inline-block font-900 rounded-10 pt-12 pb-12 pl-20 pr-20 transition-5 hover-bg-black hover-text-white">WhatsApp</a>
-            <a href="/cdn-cgi/l/email-protection#5e2a3733333b3b2b292d3b301e36312a333f3732703032" class="btn-cta bg-white text-black no-underline inline-block font-900 rounded-10 pt-12 pb-12 pl-20 pr-20 transition-5 hover-bg-black hover-text-white">E-mail</a>
+          <div class="flex gap-16 flex-wrap">
+            <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20een%20offerte." target="_blank" rel="noopener noreferrer" class="bg-white text-black no-underline inline-block font-900 rounded-10 pt-12 pb-12 pl-20 pr-20 transition-5 hover-bg-black hover-text-white">WhatsApp</a>
+            <a href="/cdn-cgi/l/email-protection#5e2a3733333b3b2b292d3b301e36312a333f3732703032" class="bg-white text-black no-underline inline-block font-900 rounded-10 pt-12 pb-12 pl-20 pr-20 transition-5 hover-bg-black hover-text-white">E-mail</a>
           </div>
         </div>
       </div>
@@ -181,6 +196,15 @@
       <p class="m-0">© 2025 Tim Meeuwsen — Utrecht</p>
     </div>
   </footer>
+
+  <script>
+    document.querySelectorAll('details').forEach(function(d) {
+      d.addEventListener('toggle', function() {
+        var icon = d.querySelector('.faq-plus');
+        if (icon) icon.textContent = d.open ? '×' : '+';
+      });
+    });
+  </script>
 
 </body>
 </html>
