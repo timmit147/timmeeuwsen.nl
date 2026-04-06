@@ -10,246 +10,155 @@
 
   <style>
     * { box-sizing: border-box; font-family: sans-serif; margin: 0; padding: 0; }
-    body { background: #ffffff; color: #000000; overflow-x: hidden; }
+    body { background: #ffffff; color: #000000; overflow-x: hidden; line-height: 1.5; }
+    img { max-width: 100%; height: auto; display: block; border-radius: 5px; }
+    a { text-decoration: none; transition: 0.3s; }
+    .container { max-width: 1080px; margin: 0 auto; width: 100%; }
   </style>
 </head>
 <body>
 
-  <nav class="nav">
-    <div>
-      <a href="https://timmeeuwsen.nl/">Tim Meeuwsen</a>
-      <a href="menu">Menu</a>
+  <nav class="navbar">
+    <div class="container">
+      <a href="https://timmeeuwsen.nl/" class="logo">Tim Meeuwsen</a>
+      <a href="menu" class="btn-nav">Menu</a>
     </div>
   </nav>
   <style>
-    .nav { position: fixed; top: 0; left: 0; width: 100%; background: #ffffff; border-bottom: 1px solid #d1d5db; z-index: 999; padding: 15px 10%; }
-    .nav > div { display: flex; justify-content: space-between; align-items: center; max-width: 1080px; margin: 0 auto; gap: 20px; }
-    .nav > div > a:nth-child(1) { font-weight: 900; font-size: 20px; color: #000000; text-decoration: none; white-space: nowrap; }
-    .nav > div > a:nth-child(2) { background: #332C2F; color: #ffffff; padding: 8px 16px; border-radius: 5px; font-weight: 700; text-decoration: none; transition: 0.3s; }
-    .nav > div > a:nth-child(2):hover { opacity: 0.8; }
-    @media (max-width: 700px) {
-      .nav { padding: 15px 20px; }
-    }
+    .navbar { position: fixed; top: 0; width: 100%; background: #fff; border-bottom: 1px solid #d1d5db; z-index: 999; padding: 15px 20px; }
+    .navbar .container { display: flex; justify-content: space-between; align-items: center; }
+    .navbar .logo { font-weight: 900; font-size: 20px; color: #000; }
+    .navbar .btn-nav { background: #332C2F; color: #fff; padding: 8px 16px; border-radius: 5px; font-weight: 700; }
+    .navbar .btn-nav:hover { opacity: 0.8; }
   </style>
 
   <header class="hero">
-    <div>
+    <div class="hero-content">
       <h1>Maatwerk website laten maken voor jouw bedrijf</h1>
       <p>Geen technische kennis nodig – jij vertelt wat je wilt, ik maak het op maat.</p>
-      <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20meer%20weten%20over%20een%20website%20voor%20mijn%20bedrijf." target="_blank" rel="noopener noreferrer">Neem contact op</a>
+      <a href="https://wa.me/31636589899" target="_blank" rel="noopener">Neem contact op</a>
     </div>
-    <div>
-      <img src="images/tim-meeuwsen-profiel.webp" alt="Foto Tim Meeuwsen">
+    <div class="hero-image">
+      <img src="images/tim-meeuwsen-profiel.webp" alt="Foto van Tim Meeuwsen">
       <p>Tim Meeuwsen</p>
     </div>
   </header>
   <style>
-    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; min-height: 100vh; padding: 120px 10% 80px; background: #2a508b; color: #ffffff; max-width: 1080px; margin: 0 auto; }
-    .hero > div:nth-child(1) { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
-    .hero > div:nth-child(1) h1 { font-size: clamp(25px, 5vw, 40px); font-weight: 900; line-height: 1.2; }
-    .hero > div:nth-child(1) a { background: #332C2F; color: #ffffff; padding: 12px 24px; border-radius: 5px; font-weight: 600; text-decoration: none; transition: 0.3s; }
-    .hero > div:nth-child(1) a:hover { background: #000000; }
-    .hero > div:nth-child(2) { display: flex; flex-direction: column; align-items: center; gap: 15px; }
-    .hero > div:nth-child(2) img { box-shadow: 0 20px 50px rgba(0,0,0,0.3); border-radius: 15px; max-width: 100%; width: 100%; max-width: 450px; }
-    .hero > div:nth-child(2) p { font-size: 20px; font-weight: 900; }
-    @media (max-width: 700px) {
-      .hero { grid-template-columns: 1fr; padding: 100px 20px 60px; gap: 30px; }
-    }
+    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; min-height: 100vh; padding: 120px 10% 80px; background: #2a508b; color: #fff; max-width: 1080px; margin: 0 auto; }
+    .hero-content h1 { font-size: clamp(25px, 5vw, 40px); font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
+    .hero-content a { display: inline-block; background: #332C2F; color: #fff; padding: 12px 24px; border-radius: 5px; font-weight: 600; }
+    .hero-image { text-align: center; }
+    .hero-image img { box-shadow: 0 20px 50px rgba(0,0,0,0.3); border-radius: 15px; margin-bottom: 15px; }
+    .hero-image p { font-size: 20px; font-weight: 900; }
+    @media (max-width: 700px) { .hero { grid-template-columns: 1fr; padding: 100px 20px 60px; } }
   </style>
 
   <main>
-
-    <section class="section-red">
-      <div>
+    <section class="section-hassle">
+      <div class="text">
         <h2>Een website zonder gedoe</h2>
         <p>Geen trage plugins of technische problemen. Ik bouw een snelle, betrouwbare website die precies doet wat jij nodig hebt.</p>
-        <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20een%20snelle%20website." target="_blank" rel="noopener noreferrer">Maak een afspraak</a>
+        <a href="https://wa.me/31636589899" target="_blank" rel="noopener">Maak een afspraak</a>
       </div>
-      <div>
-        <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Rodewinkel website">
+      <div class="visual">
+        <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Voorbeeld Rodewinkel website">
       </div>
     </section>
     <style>
-      .section-red { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 10%; background: #E22A37; color: #ffffff; max-width: 1080px; margin: 0 auto; }
-      .section-red > div:nth-child(1) { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
-      .section-red > div:nth-child(1) h2 { font-size: 30px; font-weight: 900; }
-      .section-red > div:nth-child(1) a { background: #ffffff; color: #E22A37; padding: 12px 24px; border-radius: 5px; font-weight: 600; text-decoration: none; transition: 0.3s; }
-      .section-red > div:nth-child(1) a:hover { background: #000000; color: #ffffff; }
-      .section-red > div:nth-child(2) img { border: 5px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 100%; border-radius: 5px; }
-      @media (max-width: 700px) {
-        .section-red { grid-template-columns: 1fr; padding: 60px 20px; gap: 24px; }
-      }
+      .section-hassle { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 10%; background: #E22A37; color: #fff; max-width: 1080px; margin: 0 auto; }
+      .section-hassle .text h2 { font-size: 30px; font-weight: 900; margin-bottom: 20px; }
+      .section-hassle .text a { display: inline-block; background: #fff; color: #E22A37; padding: 12px 24px; border-radius: 5px; font-weight: 600; }
+      .section-hassle .visual img { border: 5px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+      @media (max-width: 700px) { .section-hassle { grid-template-columns: 1fr; padding: 60px 20px; } }
     </style>
 
-    <section class="section-lightblue">
-      <div>
+    <section class="section-business">
+      <div class="visual">
+        <img loading="lazy" src="images/Moduloo-website.webp" alt="Voorbeeld Moduloo website">
+      </div>
+      <div class="text">
         <h2>Perfect voor kleine bedrijven</h2>
         <p>Restaurants, kappers, fysiotherapeuten - een professionele website die klanten aantrekt zonder ingewikkelde systemen.</p>
-        <a href="https://wa.me/31636589899?text=Hallo,%20ik%20heb%20een%20vraag." target="_blank" rel="noopener noreferrer">Stel je vraag</a>
-      </div>
-      <div>
-        <img loading="lazy" src="images/Moduloo-website.webp" alt="Moduloo website">
+        <a href="https://wa.me/31636589899" target="_blank" rel="noopener">Stel je vraag</a>
       </div>
     </section>
     <style>
-      .section-lightblue { display: grid; grid-template-columns: 4fr 3fr; gap: 60px; align-items: center; padding: 80px 10%; background: #B6E6F4; color: #332C2F; max-width: 1080px; margin: 0 auto; }
-      .section-lightblue > div:nth-child(1) { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; order: 2; }
-      .section-lightblue > div:nth-child(1) h2 { font-size: 30px; font-weight: 900; }
-      .section-lightblue > div:nth-child(1) a { background: #332C2F; color: #ffffff; padding: 12px 24px; border-radius: 5px; font-weight: 600; text-decoration: none; transition: 0.3s; }
-      .section-lightblue > div:nth-child(1) a:hover { background: #000000; color: #ffffff; }
-      .section-lightblue > div:nth-child(2) { order: 1; }
-      .section-lightblue > div:nth-child(2) img { border: 5px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 100%; border-radius: 5px; }
-      @media (max-width: 700px) {
-        .section-lightblue { grid-template-columns: 1fr; padding: 60px 20px; gap: 24px; }
-        .section-lightblue > div:nth-child(1) { order: 1; }
-        .section-lightblue > div:nth-child(2) { order: 2; }
+      .section-business { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 10%; background: #B6E6F4; color: #332C2F; max-width: 1080px; margin: 0 auto; }
+      .section-business .text h2 { font-size: 30px; font-weight: 900; margin-bottom: 20px; }
+      .section-business .text a { display: inline-block; background: #332C2F; color: #fff; padding: 12px 24px; border-radius: 5px; font-weight: 600; }
+      .section-business .visual img { border: 5px solid #fff; }
+      @media (max-width: 700px) { 
+        .section-business { grid-template-columns: 1fr; padding: 60px 20px; }
+        .section-business .visual { order: 2; }
       }
     </style>
 
-    <section class="section-orange">
-      <div>
+    <section class="section-pricing">
+      <div class="text">
         <h2>Transparante prijzen</h2>
         <p><strong>€15-35/maand</strong> afhankelijk van de grootte.<br>✓ Hosting & domein<br>✓ Technisch onderhoud<br>✓ Kleine tekstwijzigingen</p>
         <p><em>Eenmalige startkosten: €500-1500</em></p>
-        <a href="https://wa.me/31636589899?text=Hallo,%20wat%20kost%20een%20website?" target="_blank" rel="noopener noreferrer">Prijs opvragen</a>
+        <a href="https://wa.me/31636589899" target="_blank" rel="noopener">Prijs opvragen</a>
       </div>
-      <div>
-        <img loading="lazy" src="images/Smolke-website.webp" alt="Smolke website">
-      </div>
-    </section>
-    <style>
-      .section-orange { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 10%; background: #EE7100; color: #ffffff; max-width: 1080px; margin: 0 auto; }
-      .section-orange > div:nth-child(1) { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
-      .section-orange > div:nth-child(1) h2 { font-size: 30px; font-weight: 900; }
-      .section-orange > div:nth-child(1) p { line-height: 1.6; }
-      .section-orange > div:nth-child(1) a { background: #332C2F; color: #ffffff; padding: 12px 24px; border-radius: 5px; font-weight: 600; text-decoration: none; transition: 0.3s; }
-      .section-orange > div:nth-child(1) a:hover { background: #000000; }
-      .section-orange > div:nth-child(2) img { border: 5px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 100%; border-radius: 5px; }
-      @media (max-width: 700px) {
-        .section-orange { grid-template-columns: 1fr; padding: 60px 20px; gap: 24px; }
-      }
-    </style>
-
-    <section class="section-lime">
-      <div>
-        <h2>Snel online</h2>
-        <p>Jouw website kan binnen 2 weken live zijn. Geen eindeloze wachttijden. Persoonlijk contact, snelle service.</p>
-        <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20snel%20starten." target="_blank" rel="noopener noreferrer">Direct starten</a>
-      </div>
-      <div>
-        <img loading="lazy" src="images/Energievanzelf-website.webp" alt="Energievanzelf website">
+      <div class="visual">
+        <img loading="lazy" src="images/Smolke-website.webp" alt="Voorbeeld Smolke website">
       </div>
     </section>
     <style>
-      .section-lime { display: grid; grid-template-columns: 4fr 3fr; gap: 60px; align-items: center; padding: 80px 10%; background: #C7D75B; color: #332C2F; max-width: 1080px; margin: 0 auto; }
-      .section-lime > div:nth-child(1) { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; order: 2; }
-      .section-lime > div:nth-child(1) h2 { font-size: 30px; font-weight: 900; }
-      .section-lime > div:nth-child(1) a { background: #332C2F; color: #ffffff; padding: 12px 24px; border-radius: 5px; font-weight: 600; text-decoration: none; transition: 0.3s; }
-      .section-lime > div:nth-child(1) a:hover { background: #000000; }
-      .section-lime > div:nth-child(2) { order: 1; }
-      .section-lime > div:nth-child(2) img { border: 5px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 100%; border-radius: 5px; }
-      @media (max-width: 700px) {
-        .section-lime { grid-template-columns: 1fr; padding: 60px 20px; gap: 24px; }
-        .section-lime > div:nth-child(1) { order: 1; }
-        .section-lime > div:nth-child(2) { order: 2; }
-      }
+      .section-pricing { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 10%; background: #EE7100; color: #fff; max-width: 1080px; margin: 0 auto; }
+      .section-pricing .text h2 { font-size: 30px; font-weight: 900; margin-bottom: 20px; }
+      .section-pricing .text a { display: inline-block; background: #332C2F; color: #fff; padding: 12px 24px; border-radius: 5px; font-weight: 600; }
+      @media (max-width: 700px) { .section-pricing { grid-template-columns: 1fr; padding: 60px 20px; } }
     </style>
 
-    <section class="section-darkblue">
-      <div>
-        <h2>Demo laten maken</h2>
-        <p>Wil je zien hoe jouw website eruit kan zien? Vraag een demo aan en bekijk of het voldoet aan jouw wensen.</p>
-        <a href="/demo/" target="_blank" rel="noopener noreferrer">Bekijk de Demo</a>
-      </div>
-      <div>
-        <img loading="lazy" src="images/Demo.webp" alt="Bouwbedrijf De Domstad website demo">
-      </div>
-    </section>
-    <style>
-      .section-darkblue { display: grid; grid-template-columns: 4fr 3fr; gap: 60px; align-items: center; padding: 80px 10%; background: #0f172a; color: #ffffff; max-width: 1080px; margin: 0 auto; }
-      .section-darkblue > div:nth-child(1) { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; order: 2; }
-      .section-darkblue > div:nth-child(1) h2 { font-size: 30px; font-weight: 900; }
-      .section-darkblue > div:nth-child(1) a { background: #00d1b2; color: #0f172a; padding: 12px 24px; border-radius: 5px; font-weight: 600; text-decoration: none; transition: 0.3s; }
-      .section-darkblue > div:nth-child(1) a:hover { background: #000000; color: #ffffff; }
-      .section-darkblue > div:nth-child(2) { order: 1; }
-      .section-darkblue > div:nth-child(2) img { border: 5px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); max-width: 100%; border-radius: 5px; }
-      @media (max-width: 700px) {
-        .section-darkblue { grid-template-columns: 1fr; padding: 60px 20px; gap: 24px; }
-        .section-darkblue > div:nth-child(1) { order: 1; }
-        .section-darkblue > div:nth-child(2) { order: 2; }
-      }
-    </style>
-
-    <section class="section-faq">
-      <div>
+    <section class="faq">
+      <div class="container-small">
         <h2>Veelgestelde vragen</h2>
-        <div>
+        <div class="faq-list">
           <details>
             <summary>Wat zit er in het maandbedrag? <span>+</span></summary>
             <p>Hosting, domeinnaam, technisch onderhoud en kleine aanpassingen zijn inbegrepen.</p>
           </details>
           <details>
             <summary>Hoe gaat het traject in zijn werk? <span>+</span></summary>
-            <p>Je stuurt je wensen door, daarna maken we samen de inhoud en styling helder en overzichtelijk.</p>
-          </details>
-          <details>
-            <summary>Kan ik later iets laten aanpassen? <span>+</span></summary>
-            <p>Ja, kleine tekst- of afbeeldingsaanpassingen kunnen later worden doorgevoerd.</p>
-          </details>
-          <details>
-            <summary>Moet ik zelf iets technisch regelen? <span>+</span></summary>
-            <p>Nee, de technische kant wordt verzorgd. Jij hoeft alleen de inhoud en feedback aan te leveren.</p>
+            <p>Je stuurt je wensen door, daarna maken we samen de inhoud en styling helder.</p>
           </details>
         </div>
       </div>
     </section>
     <style>
-      .section-faq { padding: 100px 10%; background: #8829b4; color: #ffffff; }
-      .section-faq > div:nth-child(1) { max-width: 680px; margin: 0 auto; }
-      .section-faq > div:nth-child(1) h2 { font-size: 40px; font-weight: 900; margin-bottom: 30px; }
-      .section-faq > div:nth-child(1) > div { display: flex; flex-direction: column; gap: 12px; }
-      .section-faq > div:nth-child(1) > div details { border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; overflow: hidden; }
-      .section-faq > div:nth-child(1) > div details summary { padding: 18px; font-weight: 700; font-size: 16px; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; transition: 0.3s; }
-      .section-faq > div:nth-child(1) > div details summary::-webkit-details-marker { display: none; }
-      .section-faq > div:nth-child(1) > div details summary:hover { background: rgba(255,255,255,0.1); }
-      .section-faq > div:nth-child(1) > div details summary span { font-size: 22px; font-weight: 400; margin-left: 16px; flex-shrink: 0; }
-      .section-faq > div:nth-child(1) > div details p { margin: 0; padding: 0 18px 18px; font-size: 15px; line-height: 1.6; opacity: 0.9; }
-      @media (max-width: 700px) {
-        .section-faq { padding: 80px 20px; }
-        .section-faq > div:nth-child(1) h2 { font-size: 28px; }
-      }
+      .faq { padding: 100px 20px; background: #8829b4; color: #fff; }
+      .container-small { max-width: 680px; margin: 0 auto; }
+      .faq h2 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; margin-bottom: 30px; }
+      .faq-list { display: flex; flex-direction: column; gap: 12px; }
+      .faq-list details { border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; }
+      .faq-list summary { padding: 18px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
+      .faq-list p { padding: 0 18px 18px; opacity: 0.9; font-size: 15px; }
     </style>
 
-    <section class="section-cta">
-      <div>
+    <section class="cta">
+      <div class="container">
         <h2>Klaar voor een professionele website?</h2>
         <p>Stuur een bericht en ontvang binnen 24 uur een voorstel.</p>
-        <div>
-          <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20graag%20een%20offerte." target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="/cdn-cgi/l/email-protection#5e2a3733333b3b2b292d3b301e36312a333f3732703032">E-mail</a>
+        <div class="cta-buttons">
+          <a href="https://wa.me/31636589899" class="btn-wa">WhatsApp</a>
+          <a href="mailto:info@example.com" class="btn-mail">E-mail</a>
         </div>
       </div>
     </section>
     <style>
-      .section-cta { padding: 100px 10%; background: #E22A37; color: #ffffff; }
-      .section-cta > div:nth-child(1) { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
-      .section-cta > div:nth-child(1) h2 { font-size: 40px; font-weight: 900; }
-      .section-cta > div:nth-child(1) p { font-size: 16px; }
-      .section-cta > div:nth-child(1) > div { display: flex; gap: 16px; flex-wrap: wrap; }
-      .section-cta > div:nth-child(1) > div a { background: #ffffff; color: #000000; text-decoration: none; font-weight: 900; border-radius: 10px; padding: 12px 20px; transition: 0.3s; }
-      .section-cta > div:nth-child(1) > div a:hover { background: #000000; color: #ffffff; }
-      @media (max-width: 700px) {
-        .section-cta { padding: 80px 20px; }
-        .section-cta > div:nth-child(1) h2 { font-size: 28px; }
-      }
+      .cta { padding: 100px 20px; background: #E22A37; color: #fff; text-align: center; }
+      .cta h2 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; margin-bottom: 20px; }
+      .cta-buttons { display: flex; gap: 16px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+      .cta-buttons a { background: #fff; color: #000; font-weight: 900; padding: 12px 24px; border-radius: 10px; }
+      .cta-buttons a:hover { background: #000; color: #fff; }
     </style>
-
   </main>
 
   <script>
-    document.querySelectorAll('details').forEach(function(d) {
-      d.addEventListener('toggle', function() {
-        var icon = d.querySelector('summary span');
+    document.querySelectorAll('details').forEach(d => {
+      d.addEventListener('toggle', () => {
+        const icon = d.querySelector('summary span');
         if (icon) icon.textContent = d.open ? '×' : '+';
       });
     });
@@ -257,4 +166,3 @@
 
 </body>
 </html>
-
