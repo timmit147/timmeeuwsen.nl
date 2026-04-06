@@ -8,16 +8,68 @@
   <link rel="canonical" href="https://timmeeuwsen.nl/menu.html" />
   <meta name="robots" content="index, follow" />
 
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body class="font-sans overflow-x-hidden w-full">
 
-<nav class="fixed top-0 left-0 w-full bg-white z-999 border-b-1 border-gray-300">
-    <div class="max-w-600 ml-auto mr-auto pl-24 pr-24 pt-15 pb-15 flex justify-between items-center gap-20 flex-nowrap">
-      <a href="https://timmeeuwsen.nl/" class="font-900 text-20 text-black no-underline whitespace-nowrap">Tim Meeuwsen</a>
-      <a href="javascript:history.back()" class="bg-dark text-white rounded-5 font-700 no-underline inline-block pt-8 pb-8 pl-16 pr-16 hover-opacity-80 transition-3">Terug</a>
-    </div>
+<!-- start of navigation -->
+<nav class="nav-block">
+  <div class="nav-container">
+    <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
+    <a href="/menu" class="nav-menu-text">menu</a>
+  </div>
 </nav>
+
+<style>
+  .nav-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    z-index: 1000;
+    padding: 10px 20px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: sans-serif;
+  }
+
+  .nav-logo {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+  }
+
+  .nav-menu-text {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 2px solid #000000;
+    line-height: 1;
+    display: inline-block;
+    text-transform: lowercase;
+    padding-bottom: 1px;
+    transition: 0.25s ease;
+  }
+
+  .nav-menu-text:hover {
+    color: #3b73ea;
+    border-bottom-color: #3b73ea;
+  }
+</style>
+<!-- end of navigation -->
 
 
   <main class="pt-100 pb-100 pl-24 pr-24">
