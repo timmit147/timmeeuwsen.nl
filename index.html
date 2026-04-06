@@ -1,33 +1,32 @@
-Helder, ik begrijp het. Je wilt de SEO-verbeteringen en de technische fixes (zoals de afmetingen van afbeeldingen en de meta-data lengte), maar je wilt dat ik zo dicht mogelijk bij je oorspronkelijke teksten blijf zonder alles te herschrijven.
-Ik heb de teksten alleen subtiel aangevuld waar het echt nodig was voor de SEO-score (om boven de 250 woorden te komen en de zinslengte iets te verhogen).
-Hier is de volledige HTML-code:
 <!DOCTYPE html>
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Website laten maken Utrecht | Maatwerk vanaf €15 p/m</title>
-
-  <meta name="description" content="Professionele website laten maken in Utrecht. Maatwerk design inclusief hosting en onderhoud vanaf €15 per maand. Geen technische kennis nodig. Start direct!">
-  
+  <meta name="description" content="Laat een professionele en snelle maatwerk website maken voor je bedrijf vanaf €15/maand. Geen technische kennis nodig. Persoonlijke service door Tim Meeuwsen in Utrecht.">
   <meta name="robots" content="index, follow">
   <meta name="author" content="Tim Meeuwsen">
   
-  <meta property="og:title" content="Website laten maken Utrecht | Tim Meeuwsen">
-  <meta property="og:description" content="Laat een snelle, professionele website bouwen voor jouw bedrijf zonder gedoe.">
+  <meta property="og:title" content="Professionele Website vanaf €15/maand | Tim Meeuwsen Utrecht">
+  <meta property="og:description" content="Geen technische kennis nodig. Laat een snelle, betrouwbare maatwerk website bouwen voor jouw bedrijf zonder gedoe.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.timmeeuwsen.nl">
   <meta property="og:image" content="https://www.timmeeuwsen.nl/images/tim-meeuwsen-profiel.webp">
+  <meta property="og:locale" content="nl_NL">
+
+  <title>Professionele Website vanaf €15/maand | Tim Meeuwsen Utrecht</title>
 
   <link rel="canonical" href="https://www.timmeeuwsen.nl">
-  
-  <style>
-    body { margin: 0; font-family: sans-serif; background-color: #f8fafc; color: #1e293b; }
-    img { max-width: 100%; height: auto; display: block; object-fit: cover; }
-    main { display: flex; flex-direction: column; align-items: center; width: 100%; }
-  </style>
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+  <link rel="manifest" href="/assets/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="theme-color" content="#000000">
 
+  <link rel="stylesheet" href="style.css">
+  
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,8 +40,8 @@ Hier is de volledige HTML-code:
       "addressLocality": "Utrecht",
       "addressCountry": "NL"
     },
-    "priceRange": "€15 - €35",
-    "description": "Professionele maatwerk websites laten maken voor bedrijven vanaf €15 per maand."
+    "priceRange": "€15 - €35 per maand",
+    "description": "Professionele maatwerk websites voor bedrijven vanaf €15/maand, inclusief hosting en onderhoud."
   }
   </script>
 </head>
@@ -50,8 +49,8 @@ Hier is de volledige HTML-code:
 
 <nav class="nav-block" aria-label="Hoofdnavigatie">
   <div class="nav-container">
-    <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
-    <a href="/menu" class="nav-menu-text">menu</a>
+    <a href="https://timmeeuwsen.nl/" class="nav-logo" title="Terug naar de homepage van Tim Meeuwsen">Tim Meeuwsen</a>
+    <a href="/menu" class="nav-menu-text" title="Open het menu">menu</a>
   </div>
 </nav>
 
@@ -66,27 +65,51 @@ Hier is de volledige HTML-code:
     border-bottom: 1px solid rgba(148, 163, 184, 0.25);
     z-index: 1000;
     padding: 10px 20px;
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
   }
+
   .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1080px;
     margin: 0 auto;
+    font-family: sans-serif;
   }
-  .nav-logo { font-weight: 700; font-size: 16px; color: #000; text-decoration: none; }
-  .nav-menu-text { font-weight: 700; font-size: 16px; color: #000; border-bottom: 2px solid #000; text-decoration: none; text-transform: lowercase; }
+
+  .nav-logo {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+  }
+
+  .nav-menu-text {
+    font-weight: 700;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 2px solid #000000;
+    line-height: 1;
+    display: inline-block;
+    text-transform: lowercase;
+    padding-bottom: 1px;
+    transition: 0.25s ease;
+    text-decoration: none;
+  }
 </style>
 <main>
 
 <header class="hero-block">
   <div class="hero-content">
     <h1 class="hero-title">Maatwerk website laten maken voor jouw bedrijf</h1>
-    <p class="hero-subtitle">Geen technische kennis nodig – jij vertelt simpelweg wat je wilt en ik maak de volledige website op maat voor jouw onderneming. Samen zorgen we voor een online visitekaartje dat perfect aansluit bij jouw doelen en klanten.</p>
-    <a href="https://wa.me/31636589899" class="hero-cta">Neem direct contact op</a>
+    <p class="hero-subtitle">Geen technische kennis nodig – jij vertelt wat je wilt, ik maak het op maat.</p>
+    <a href="https://wa.me/31636589899" class="hero-cta" target="_blank" rel="noopener noreferrer" title="Neem contact op via WhatsApp">Neem contact op</a>
   </div>
   <div class="hero-visual">
-    <img src="images/tim-meeuwsen-profiel.webp" alt="Tim Meeuwsen, professioneel webdesigner in Utrecht" class="hero-profile-img" width="380" height="380">
+    <img src="images/tim-meeuwsen-profiel.webp" alt="Tim Meeuwsen, professioneel webdesigner in Utrecht" class="hero-profile-img">
     <p class="hero-profile-name">Tim Meeuwsen</p>
   </div>
 </header>
@@ -97,221 +120,806 @@ Hier is de volledige HTML-code:
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
-    padding: 100px 20px 60px;
+    padding: 80px 20px;
     background: linear-gradient(135deg, #30599a 0%, #2a4e86 100%);
     color: #ffffff;
     max-width: 1080px;
-    margin-top: 30px;
+    width: min(1080px, 100%);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    font-family: sans-serif;
+    margin-top: 30px; /* Compenseer voor fixed header */
   }
-  .hero-title { font-size: clamp(28px, 5vw, 42px); font-weight: 900; line-height: 1.1; margin: 0; }
-  .hero-subtitle { font-size: 18px; color: rgba(255, 255, 255, 0.9); }
-  .hero-cta { background: #1f2430; color: #fff; padding: 12px 22px; border-radius: 10px; font-weight: 700; text-decoration: none; align-self: flex-start; }
-  .hero-profile-img { border-radius: 22px; border: 4px solid rgba(255,255,255,0.18); aspect-ratio: 1/1; }
-  .hero-profile-name { font-size: 18px; font-weight: 800; text-align: center; margin-top: 10px; }
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 900;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin: 0;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+    max-width: 36rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+  }
+
+  .hero-cta {
+    background: #1f2430;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    transition: 0.25s ease;
+    align-self: flex-start;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+    text-decoration: none;
+  }
+
+  .hero-cta:hover {
+    background: #000000;
+  }
+
+  .hero-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-profile-img {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 22px;
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+    border: 4px solid rgba(255,255,255,0.18);
+    display: block;
+  }
+
+  .hero-profile-name {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+  }
 
   @media (max-width: 700px) {
-    .hero-block { grid-template-columns: 1fr; padding-top: 80px; }
-    .hero-visual { order: -1; }
+    .hero-block {
+      grid-template-columns: 1fr;
+      padding: 88px 20px 56px;
+      gap: 28px;
+    }
+    
+    /* Afbeelding op mobiel bovenaan */
+    .hero-visual {
+      order: -1; 
+      align-items: flex-start;
+    }
+
+    .hero-content {
+      align-items: flex-start;
+    }
+
+    .hero-cta {
+      align-self: flex-start;
+    }
   }
 </style>
 <section class="hassle-free-block">
   <div class="hassle-text">
-    <h2 class="hassle-title">Een nieuwe website zonder gedoe</h2>
-    <p class="hassle-desc">Geen trage plugins, ingewikkelde instellingen of technische problemen meer. Ik bouw een snelle en betrouwbare website die precies doet wat jij nodig hebt om online succesvol te zijn. Dit bespaart jou tijd en frustratie, zodat jij je volledig kunt richten op je eigen onderneming in Utrecht.</p>
-    <a href="https://wa.me/31636589899" class="hassle-btn">Maak een afspraak</a>
+    <h2 class="hassle-title">Een website zonder gedoe</h2>
+    <p class="hassle-desc">Geen trage plugins of technische problemen. Ik bouw een snelle, betrouwbare website die precies doet wat jij nodig hebt.</p>
+    <a href="https://wa.me/31636589899" class="hassle-btn" target="_blank" rel="noopener noreferrer">Maak een afspraak</a>
   </div>
   <div class="hassle-image">
-    <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Voorbeeld van een maatwerk website voor Rodewinkel" class="project-img" width="600" height="400">
+    <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Voorbeeld van een snelle, maatwerk website ontwikkeld voor kledingwinkel Rodewinkel" class="project-img">
   </div>
 </section>
 
 <style>
   .hassle-free-block {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 3fr 4fr;
+    gap: 56px;
     align-items: center;
-    padding: 70px 20px;
+    padding: 72px 28px;
     background: linear-gradient(135deg, #de3a45 0%, #d62c38 100%);
-    color: #fff;
+    color: #ffffff;
     max-width: 1080px;
+    width: min(1080px, 100%);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    font-family: sans-serif;
   }
-  .hassle-title { font-size: 32px; font-weight: 900; margin: 0; }
-  .hassle-desc { font-size: 17px; line-height: 1.6; }
-  .hassle-btn { background: #fff; color: #d62c38; padding: 12px 22px; border-radius: 10px; font-weight: 700; text-decoration: none; align-self: flex-start; }
-  .project-img { border-radius: 18px; border: 4px solid #fff; aspect-ratio: 3/2; }
+
+  .hassle-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .hassle-title {
+    font-size: clamp(26px, 4vw, 32px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .hassle-desc {
+    color: rgba(255,255,255,0.92);
+    max-width: 34rem;
+    margin: 0;
+  }
+
+  .hassle-btn {
+    background: #ffffff;
+    color: #d62c38;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    align-self: flex-start;
+    transition: 0.25s ease;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
+  }
+
+  .hassle-btn:hover {
+    background: #0f172a;
+    color: #ffffff;
+  }
+
+  .hassle-image .project-img {
+    border: 4px solid rgba(255,255,255,0.9);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+  }
 
   @media (max-width: 700px) {
-    .hassle-free-block { grid-template-columns: 1fr; }
-    .hassle-image { order: -1; }
+    .hassle-free-block {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 56px 20px;
+      width: min(1080px, 100%);
+    }
+
+    /* Afbeelding op mobiel bovenaan */
+    .hassle-image {
+      order: -1;
+    }
+
+    .hassle-text {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .hassle-btn {
+      align-self: flex-start;
+    }
   }
 </style>
 <section class="pricing-block">
   <div class="pricing-text">
-    <h2 class="pricing-title">Transparante prijzen voor maatwerk</h2>
+    <h2 class="pricing-title">Transparante prijzen</h2>
     <div class="pricing-details">
-      <p><strong>€15-35 per maand</strong> afhankelijk van de grootte en wensen van je bedrijf.</p>
-      <ul class="pricing-features" style="list-style: none; padding: 0;">
-        <li>✓ Razendsnelle hosting & eigen domeinnaam</li>
-        <li>✓ Volledig technisch onderhoud en updates</li>
-        <li>✓ Kleine tekstwijzigingen altijd inbegrepen</li>
+      <p><strong>€15-35/maand</strong> afhankelijk van de grootte.</p>
+      <ul class="pricing-features">
+        <li>✓ Hosting & domein</li>
+        <li>✓ Technisch onderhoud</li>
+        <li>✓ Kleine tekstwijzigingen</li>
       </ul>
-      <p><em>Eenmalige startkosten voor het bouwen: €500 - €1500</em></p>
-      <p>Een professionele website laten maken was nog nooit zo overzichtelijk en betaalbaar voor het MKB.</p>
+      <p class="pricing-setup"><em>Eenmalige startkosten: €500-1500</em></p>
     </div>
-    <a href="https://wa.me/31636589899" class="pricing-btn">Prijs opvragen</a>
+    <a href="https://wa.me/31636589899" class="pricing-btn" target="_blank" rel="noopener noreferrer">Prijs opvragen</a>
   </div>
   <div class="pricing-image">
-    <img loading="lazy" src="images/Smolke-website.webp" alt="Betaalbaar webdesign project voor Smølke" class="project-img" width="600" height="400">
+    <img loading="lazy" src="images/Smolke-website.webp" alt="Betaalbare webdesign projecten: Responsive website ontworpen voor merk Smølke" class="project-img">
   </div>
 </section>
 
 <style>
   .pricing-block {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 3fr 4fr;
+    gap: 56px;
     align-items: center;
-    padding: 70px 20px;
+    padding: 72px 28px;
     background: linear-gradient(135deg, #ee7a14 0%, #dd6e08 100%);
-    color: #fff;
+    color: #ffffff;
     max-width: 1080px;
+    width: min(1080px, 100%);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    font-family: sans-serif;
   }
-  .pricing-title { font-size: 32px; font-weight: 900; margin: 0; }
-  .pricing-btn { background: #1f2430; color: #fff; padding: 12px 22px; border-radius: 10px; font-weight: 700; text-decoration: none; align-self: flex-start; }
+
+  .pricing-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .pricing-title {
+    font-size: clamp(26px, 4vw, 32px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .pricing-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: rgba(255,255,255,0.94);
+  }
+
+  .pricing-details p,
+  .pricing-details li {
+    margin: 0;
+  }
+
+  .pricing-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .pricing-setup {
+    color: rgba(255,255,255,0.88);
+  }
+
+  .pricing-btn {
+    background: #1f2430;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    align-self: flex-start;
+    transition: 0.25s ease;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
+  }
+
+  .pricing-btn:hover {
+    background: #000000;
+  }
+
+  .pricing-image .project-img {
+    border: 4px solid rgba(255,255,255,0.9);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+  }
 
   @media (max-width: 700px) {
-    .pricing-block { grid-template-columns: 1fr; }
-    .pricing-image { order: -1; }
+    .pricing-block {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 56px 20px;
+      width: min(1080px, 100%);
+    }
+
+    /* Afbeelding op mobiel bovenaan */
+    .pricing-image {
+      order: -1;
+    }
+
+    .pricing-text {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .pricing-btn {
+      align-self: flex-start;
+    }
   }
 </style>
 <section class="perfect-block">
   <div class="perfect-image">
-    <img loading="lazy" src="images/Moduloo-website.webp" alt="Website laten maken voor kleine bedrijven" class="project-img" width="600" height="400">
+    <img loading="lazy" src="images/Moduloo-website.webp" alt="Professionele bedrijfswebsite ontworpen voor het MKB en kleine ondernemers zoals Moduloo" class="project-img">
   </div>
   <div class="perfect-text">
     <h2 class="perfect-title">Perfect voor kleine bedrijven</h2>
-    <p class="perfect-desc">Restaurants, kappers, fysiotherapeuten en zzp'ers - ik maak een professionele website die echt klanten aantrekt zonder dat je zelf met ingewikkelde systemen aan de slag moet. Laat je online aanwezigheid over aan een expert in Utrecht.</p>
-    <a href="https://wa.me/31636589899" class="perfect-btn">Stel je vraag</a>
+    <p class="perfect-desc">Restaurants, kappers, fysiotherapeuten - een professionele website die klanten aantrekt zonder ingewikkelde systemen.</p>
+    <a href="https://wa.me/31636589899?text=Hallo,%20ik%20heb%20een%20vraag." class="perfect-btn" target="_blank" rel="noopener noreferrer">Stel je vraag</a>
   </div>
 </section>
 
 <style>
   .perfect-block {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 4fr 3fr;
+    gap: 56px;
     align-items: center;
-    padding: 70px 20px;
+    padding: 72px 28px;
     background: linear-gradient(135deg, #a8d9f1 0%, #94cbe8 100%);
     color: #0f172a;
     max-width: 1080px;
+    width: min(1080px, 100%);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    font-family: sans-serif;
   }
-  .perfect-title { font-size: 32px; font-weight: 900; margin: 0; }
-  .perfect-btn { background: #1f2430; color: #fff; padding: 12px 22px; border-radius: 10px; font-weight: 700; text-decoration: none; align-self: flex-start; }
+
+  .perfect-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .perfect-title {
+    font-size: clamp(26px, 4vw, 32px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .perfect-desc {
+    color: rgba(15,23,42,0.9);
+    max-width: 34rem;
+    margin: 0;
+  }
+
+  .perfect-btn {
+    background: #1f2430;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    align-self: flex-start;
+    transition: 0.25s ease;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
+  }
+
+  .perfect-btn:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  .perfect-image .project-img {
+    border: 4px solid rgba(255,255,255,0.9);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+  }
 
   @media (max-width: 700px) {
-    .perfect-block { grid-template-columns: 1fr; }
-    .perfect-image { order: -1; }
+    .perfect-block {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 56px 20px;
+      width: min(1080px, 100%);
+    }
+
+    /* Afbeelding op mobiel bovenaan (stond in de DOM al goed, maar zekerheidshalve toegevoegd) */
+    .perfect-image {
+      order: -1;
+    }
+
+    .perfect-text {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .perfect-btn {
+      align-self: flex-start;
+    }
   }
 </style>
 <section class="snel-online-block">
   <div class="snel-online-text">
-    <h2 class="snel-online-title">Snel online met je bedrijf</h2>
-    <p class="snel-online-desc">Jouw nieuwe website kan al binnen 2 weken live zijn. Ik werk niet met eindeloze wachttijden, maar bied persoonlijk contact en een snelle service. Zo kun je direct beginnen met het binnenhalen van nieuwe online aanvragen.</p>
-    <a href="https://wa.me/31636589899" class="snel-online-btn">Direct starten</a>
+    <h2 class="snel-online-title">Snel online</h2>
+    <p class="snel-online-desc">Jouw website kan binnen 2 weken live zijn. Geen eindeloze wachttijden. Persoonlijk contact, snelle service.</p>
+    <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20snel%20starten." target="_blank" rel="noopener noreferrer" class="snel-online-btn">Direct starten</a>
   </div>
   <div class="snel-online-image">
-    <img loading="lazy" src="images/Energievanzelf-website.webp" alt="Snel online met een nieuwe website" class="project-img" width="600" height="400">
+    <img loading="lazy" src="images/Energievanzelf-website.webp" alt="Snel opgeleverde, conversiegerichte website gemaakt voor Energievanzelf" class="project-img">
   </div>
 </section>
 
 <style>
   .snel-online-block {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 4fr 3fr;
+    gap: 56px;
     align-items: center;
-    padding: 70px 20px;
+    padding: 72px 28px;
     background: linear-gradient(135deg, #d4f06f 0%, #c7ea61 100%);
     color: #0f172a;
     max-width: 1080px;
+    width: min(1080px, 100%);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    font-family: sans-serif;
   }
-  .snel-online-title { font-size: 32px; font-weight: 900; margin: 0; }
-  .snel-online-btn { background: #1f2430; color: #fff; padding: 12px 22px; border-radius: 10px; font-weight: 700; text-decoration: none; align-self: flex-start; }
+
+  .snel-online-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .snel-online-title {
+    font-size: clamp(26px, 4vw, 32px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .snel-online-desc {
+    margin: 0;
+    color: rgba(15,23,42,0.9);
+    max-width: 34rem;
+  }
+
+  .snel-online-btn {
+    background: #1f2430;
+    color: #ffffff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 700;
+    align-self: flex-start;
+    transition: 0.25s ease;
+    display: inline-block;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
+  }
+
+  .snel-online-btn:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  .snel-online-image .project-img {
+    border: 4px solid rgba(255,255,255,0.9);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+  }
 
   @media (max-width: 700px) {
-    .snel-online-block { grid-template-columns: 1fr; }
-    .snel-online-image { order: -1; }
+    .snel-online-block {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 56px 20px;
+      width: min(1080px, 100%);
+    }
+
+    /* Afbeelding op mobiel bovenaan */
+    .snel-online-image {
+      order: -1;
+    }
+
+    .snel-online-text {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .snel-online-btn {
+      align-self: flex-start;
+    }
   }
 </style>
 <section class="demo-laten-maken-block">
   <div class="demo-laten-maken-text">
     <h2 class="demo-laten-maken-title">Demo laten maken</h2>
-    <p class="demo-laten-maken-desc">Benieuwd naar het resultaat? Wil je zien hoe jouw website eruit kan zien? Vraag een gratis demo aan en bekijk of mijn maatwerk aansluit bij de wensen van jouw onderneming.</p>
-    <a href="/demo/" class="demo-laten-maken-btn">Bekijk de Demo</a>
+    <p class="demo-laten-maken-desc">Wil je zien hoe jouw website eruit kan zien? Vraag een demo aan en bekijk of het voldoet aan jouw wensen.</p>
+    <a href="/demo/" class="demo-laten-maken-btn" title="Bekijk een demo van mijn webdesign">Bekijk de Demo</a>
   </div>
   <div class="demo-laten-maken-image">
-    <img loading="lazy" src="images/Demo.webp" alt="Website demo op maat" class="project-img" width="600" height="400">
+    <img loading="lazy" src="images/Demo.webp" alt="Visuele demo van een op maat gemaakte bedrijfswebsite voor Bouwbedrijf De Domstad" class="project-img">
   </div>
 </section>
 
 <style>
   .demo-laten-maken-block {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: 4fr 3fr;
+    gap: 56px;
     align-items: center;
-    padding: 70px 20px;
+    padding: 72px 28px;
     background: linear-gradient(135deg, #123b62 0%, #0f3152 100%);
-    color: #fff;
+    color: #ffffff;
     max-width: 1080px;
+    width: min(1080px, 100%);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    font-family: sans-serif;
   }
-  .demo-laten-maken-title { font-size: 32px; font-weight: 900; margin: 0; }
-  .demo-laten-maken-btn { background: #29c7b5; color: #0f3152; padding: 12px 22px; border-radius: 10px; font-weight: 800; text-decoration: none; align-self: flex-start; }
+
+  .demo-laten-maken-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .demo-laten-maken-title {
+    font-size: clamp(26px, 4vw, 32px);
+    font-weight: 900;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin: 0;
+  }
+
+  .demo-laten-maken-desc {
+    margin: 0;
+    color: rgba(255,255,255,0.9);
+    max-width: 34rem;
+  }
+
+  .demo-laten-maken-btn {
+    background: #29c7b5;
+    color: #0f3152;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 800;
+    align-self: flex-start;
+    transition: 0.25s ease;
+    display: inline-block;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
+  }
+
+  .demo-laten-maken-btn:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  .demo-laten-maken-image .project-img {
+    border: 4px solid rgba(255,255,255,0.9);
+    box-shadow: 0 18px 45px rgba(15, 23, 42, 0.14);
+    border-radius: 18px;
+    width: 100%;
+    display: block;
+  }
 
   @media (max-width: 700px) {
-    .demo-laten-maken-block { grid-template-columns: 1fr; }
-    .demo-laten-maken-image { order: -1; }
+    .demo-laten-maken-block {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 56px 20px;
+      width: min(1080px, 100%);
+    }
+
+    /* Afbeelding op mobiel bovenaan */
+    .demo-laten-maken-image {
+      order: -1;
+    }
+
+    .demo-laten-maken-text {
+      text-align: left;
+      align-items: flex-start;
+    }
+
+    .demo-laten-maken-btn {
+      align-self: flex-start;
+    }
   }
 </style>
 <section class="faq-block">
-  <div class="faq-container" style="max-width: 800px; margin: 0 auto;">
-    <h2 class="faq-title" style="text-align: center; font-size: 32px; font-weight: 900;">Veelgestelde vragen</h2>
-    <p style="text-align: center; margin-bottom: 20px;">Heb je nog vragen over het laten maken van een website? Hieronder staan de antwoorden op de meest gestelde vragen van mijn klanten.</p>
+  <div class="faq-container">
+    <h2 class="faq-title">Veelgestelde vragen</h2>
     <div class="faq-list">
-      <details class="faq-item" style="border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; margin-bottom: 10px; padding: 15px;">
-        <summary style="font-weight: 700; cursor: pointer;">Wat zit er in het maandbedrag?</summary>
-        <p style="margin-top: 10px; opacity: 0.9;">Hosting, domeinnaam, technisch onderhoud en kleine tekstanpassingen zijn volledig inbegrepen voor een vast bedrag.</p>
+      <details class="faq-item">
+        <summary class="faq-question">Wat zit er in het maandbedrag? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">Hosting, domeinnaam, technisch onderhoud en kleine aanpassingen zijn volledig inbegrepen.</p>
       </details>
-      <details class="faq-item" style="border: 1px solid rgba(255,255,255,0.2); border-radius: 10px; margin-bottom: 10px; padding: 15px;">
-        <summary style="font-weight: 700; cursor: pointer;">Hoe snel is mijn website live?</summary>
-        <p style="margin-top: 10px; opacity: 0.9;">In de meeste gevallen staat je nieuwe, professionele website binnen 2 weken online na het aanleveren van de benodigde informatie.</p>
+      <details class="faq-item">
+        <summary class="faq-question">Hoe snel is mijn website live? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">In de meeste gevallen staat je nieuwe professionele website binnen 2 weken online.</p>
       </details>
     </div>
   </div>
 </section>
 
 <style>
-  .faq-block { padding: 80px 20px; background: #7c299e; color: #fff; width: 100%; max-width: 1080px; }
+  .faq-block {
+    padding: 84px 24px;
+    background: linear-gradient(135deg, #8d31b6 0%, #7c299e 100%);
+    color: #ffffff;
+    max-width: 1080px;
+    width: min(1080px, 100%);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    font-family: sans-serif;
+  }
+
+  .faq-container {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  .faq-title {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 900;
+    margin-bottom: 28px;
+    text-align: center;
+    letter-spacing: -0.02em;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .faq-item {
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 14px;
+    overflow: hidden;
+    background: rgba(255,255,255,0.04);
+  }
+
+  .faq-question {
+    padding: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    transition: 0.25s ease;
+  }
+
+  .faq-question:hover {
+    background: rgba(255,255,255,0.06);
+  }
+
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-answer {
+    padding: 0 18px 18px;
+    opacity: 0.92;
+    font-size: 15px;
+    color: rgba(255,255,255,0.92);
+    margin: 0;
+  }
+
+  .faq-icon {
+    flex-shrink: 0;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1;
+  }
+
+  @media (max-width: 700px) {
+    .faq-block {
+      text-align: left;
+      padding: 64px 20px;
+      width: min(1080px, 100%);
+    }
+
+    .faq-container {
+      text-align: left;
+    }
+
+    .faq-title {
+      text-align: left;
+      margin-bottom: 20px;
+    }
+  }
 </style>
-<section class="cta-block">
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    item.addEventListener('toggle', function() {
+      var icon = item.querySelector('.faq-icon');
+      if (icon) icon.textContent = item.open ? '×' : '+';
+    });
+  });
+</script>
+<section class="cta-block" id="contact">
   <div class="cta-container">
     <h2 class="cta-title">Klaar voor een professionele website?</h2>
-    <p class="cta-desc">Stuur vandaag nog een bericht en ontvang binnen 24 uur een vrijblijvend voorstel voor jouw nieuwe website. Ik help je graag verder met een online oplossing die echt resultaat oplevert voor jouw bedrijf.</p>
-    <div class="cta-buttons" style="display: flex; gap: 15px; justify-content: center; margin-top: 25px;">
-      <a href="https://wa.me/31636589899" style="background: #fff; color: #000; padding: 12px 22px; border-radius: 10px; font-weight: 800; text-decoration: none;">WhatsApp</a>
-      <a href="mailto:info@timmeeuwsen.nl" style="background: #000; color: #fff; padding: 12px 22px; border-radius: 10px; font-weight: 800; text-decoration: none;">E-mail</a>
+    <p class="cta-desc">Stuur een bericht en ontvang binnen 24 uur een voorstel.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/31636589899" class="cta-wa" target="_blank" rel="noopener noreferrer" aria-label="Stuur een WhatsApp bericht">WhatsApp</a>
+      <a href="mailto:info@timmeeuwsen.nl" class="cta-mail" aria-label="Stuur een e-mail naar Tim Meeuwsen">E-mail</a>
     </div>
   </div>
 </section>
 
 <style>
-  .cta-block { padding: 80px 20px; background: #de3a45; color: #fff; text-align: center; width: 100%; max-width: 1080px; }
-  .cta-title { font-size: 36px; font-weight: 900; }
-  .cta-desc { font-size: 18px; max-width: 700px; margin: 0 auto; }
+  .cta-block {
+    padding: 84px 24px;
+    background: linear-gradient(135deg, #de3a45 0%, #c92f3b 100%);
+    color: #ffffff;
+    text-align: center;
+    max-width: 1080px;
+    width: min(1080px, 100%);
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    font-family: sans-serif;
+  }
+
+  .cta-container {
+    max-width: 1080px;
+    margin: 0 auto;
+  }
+
+  .cta-title {
+    font-size: clamp(28px, 5vw, 40px);
+    font-weight: 900;
+    margin-bottom: 16px;
+    letter-spacing: -0.03em;
+  }
+
+  .cta-desc {
+    color: rgba(255,255,255,0.92);
+    margin: 0;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .cta-buttons a {
+    background: #ffffff;
+    color: #000000;
+    font-weight: 800;
+    border-radius: 12px;
+    padding: 12px 22px;
+    transition: 0.25s ease;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
+  }
+
+  .cta-buttons a:hover {
+    background: #000000;
+    color: #ffffff;
+  }
+
+  @media (max-width: 700px) {
+    .cta-block {
+      text-align: left;
+      padding: 64px 20px;
+      width: min(1080px, 100%);
+    }
+
+    .cta-container {
+      text-align: left;
+    }
+
+    .cta-buttons {
+      justify-content: flex-start;
+    }
+  }
 </style>
 </main>
+
 </body>
 </html>
-
