@@ -3,166 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professionele website voor je bedrijf vanaf €15/maand. Hosting, domein, onderhoud en updates inbegrepen. Geen gedoe, geen WordPress, snelle websites voor kleine bedrijven in Utrecht.">
-  <meta name="keywords" content="Tim, website kleine bedrijven, betaalbare website Utrecht, website vanaf 15 euro, website onderhoud, webdesign Utrecht, responsive website, snelle website">
+  <meta name="description" content="Professionele website voor je bedrijf vanaf €15/maand. Hosting, domein en onderhoud inbegrepen. Utrecht.">
   <meta name="robots" content="index, follow">
   <title>Professionele Website vanaf €15/maand | Tim Meeuwsen Utrecht</title>
 
   <style>
+    /* GLOBAL SETTINGS - Basics for the whole page */
     * { box-sizing: border-box; font-family: sans-serif; margin: 0; padding: 0; }
     body { background: #ffffff; color: #000000; overflow-x: hidden; line-height: 1.5; }
-    img { max-width: 100%; height: auto; display: block; border-radius: 5px; }
-    a { text-decoration: none; transition: 0.3s; }
-    .container { max-width: 1080px; margin: 0 auto; width: 100%; }
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; }
   </style>
 </head>
 <body>
 
-  <nav class="navbar">
-    <div class="container">
-      <a href="https://timmeeuwsen.nl/" class="logo">Tim Meeuwsen</a>
-      <a href="menu" class="btn-nav">Menu</a>
+// start of navigation
+<nav class="nav-block">
+  <div class="nav-container">
+    <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
+    <a href="#contact" class="nav-menu-btn">Menu</a>
+  </div>
+</nav>
+<style>
+  .nav-block { position: fixed; top: 0; left: 0; width: 100%; background: #ffffff; border-bottom: 1px solid #d1d5db; z-index: 999; padding: 15px 20px; }
+  .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1080px; margin: 0 auto; }
+  .nav-logo { font-weight: 900; font-size: 20px; color: #000000; }
+  .nav-menu-btn { background: #332C2F; color: #ffffff; padding: 8px 16px; border-radius: 5px; font-weight: 700; transition: 0.3s; }
+  .nav-menu-btn:hover { opacity: 0.8; }
+</style>
+// end of navigation
+
+
+// start of hero
+<header class="hero-block">
+  <div class="hero-content">
+    <h1 class="hero-title">Maatwerk website laten maken voor jouw bedrijf</h1>
+    <p class="hero-subtitle">Geen technische kennis nodig – jij vertelt wat je wilt, ik maak het op maat.</p>
+    <a href="https://wa.me/31636589899" class="hero-cta" target="_blank">Neem contact op</a>
+  </div>
+  <div class="hero-visual">
+    <img src="images/tim-meeuwsen-profiel.webp" alt="Tim Meeuwsen Profielfoto" class="hero-profile-img">
+    <p class="hero-profile-name">Tim Meeuwsen</p>
+  </div>
+</header>
+<style>
+  .hero-block { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; min-height: 100vh; padding: 120px 20px 80px; background: #2a508b; color: #ffffff; max-width: 1080px; margin: 0 auto; }
+  .hero-content { display: flex; flex-direction: column; gap: 20px; align-items: flex-start; }
+  .hero-title { font-size: clamp(25px, 5vw, 40px); font-weight: 900; line-height: 1.2; }
+  .hero-cta { background: #332C2F; color: #ffffff; padding: 12px 24px; border-radius: 5px; font-weight: 600; transition: 0.3s; }
+  .hero-cta:hover { background: #000000; }
+  .hero-visual { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+  .hero-profile-img { box-shadow: 0 20px 50px rgba(0,0,0,0.3); border-radius: 15px; max-width: 450px; width: 100%; }
+  .hero-profile-name { font-size: 20px; font-weight: 900; }
+  @media (max-width: 700px) { .hero-block { grid-template-columns: 1fr; text-align: center; } .hero-content { align-items: center; } }
+</style>
+// end of hero
+
+
+<main>
+
+// start of section-hassle-free
+<section class="hassle-free-block">
+  <div class="hassle-text">
+    <h2 class="hassle-title">Een website zonder gedoe</h2>
+    <p class="hassle-desc">Geen trage plugins of technische problemen. Ik bouw een snelle, betrouwbare website die precies doet wat jij nodig hebt.</p>
+    <a href="https://wa.me/31636589899" class="hassle-btn">Maak een afspraak</a>
+  </div>
+  <div class="hassle-image">
+    <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Project Rodewinkel" class="project-img">
+  </div>
+</section>
+<style>
+  .hassle-free-block { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 20px; background: #E22A37; color: #ffffff; max-width: 1080px; margin: 0 auto; }
+  .hassle-text { display: flex; flex-direction: column; gap: 20px; }
+  .hassle-title { font-size: 30px; font-weight: 900; }
+  .hassle-btn { background: #ffffff; color: #E22A37; padding: 12px 24px; border-radius: 5px; font-weight: 600; align-self: flex-start; transition: 0.3s; }
+  .hassle-btn:hover { background: #000000; color: #ffffff; }
+  .project-img { border: 5px solid #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); border-radius: 5px; }
+  @media (max-width: 700px) { .hassle-free-block { grid-template-columns: 1fr; } .hassle-btn { align-self: center; } }
+</style>
+// end of section-hassle-free
+
+
+// start of section-pricing
+<section class="pricing-block">
+  <div class="pricing-text">
+    <h2 class="pricing-title">Transparante prijzen</h2>
+    <div class="pricing-details">
+      <p><strong>€15-35/maand</strong> afhankelijk van de grootte.</p>
+      <ul class="pricing-features">
+        <li>✓ Hosting & domein</li>
+        <li>✓ Technisch onderhoud</li>
+        <li>✓ Kleine tekstwijzigingen</li>
+      </ul>
+      <p class="pricing-setup"><em>Eenmalige startkosten: €500-1500</em></p>
     </div>
-  </nav>
-  <style>
-    .navbar { position: fixed; top: 0; width: 100%; background: #fff; border-bottom: 1px solid #d1d5db; z-index: 999; padding: 15px 20px; }
-    .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-    .navbar .logo { font-weight: 900; font-size: 20px; color: #000; }
-    .navbar .btn-nav { background: #332C2F; color: #fff; padding: 8px 16px; border-radius: 5px; font-weight: 700; }
-    .navbar .btn-nav:hover { opacity: 0.8; }
-  </style>
+    <a href="https://wa.me/31636589899" class="pricing-btn">Prijs opvragen</a>
+  </div>
+  <div class="pricing-image">
+    <img loading="lazy" src="images/Smolke-website.webp" alt="Project Smolke" class="project-img">
+  </div>
+</section>
+<style>
+  .pricing-block { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 20px; background: #EE7100; color: #ffffff; max-width: 1080px; margin: 0 auto; }
+  .pricing-text { display: flex; flex-direction: column; gap: 20px; }
+  .pricing-title { font-size: 30px; font-weight: 900; }
+  .pricing-features { list-style: none; padding: 10px 0; }
+  .pricing-btn { background: #332C2F; color: #ffffff; padding: 12px 24px; border-radius: 5px; font-weight: 600; align-self: flex-start; transition: 0.3s; }
+  .pricing-btn:hover { background: #000000; }
+  @media (max-width: 700px) { .pricing-block { grid-template-columns: 1fr; } .pricing-btn { align-self: center; } }
+</style>
+// end of section-pricing
 
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Maatwerk website laten maken voor jouw bedrijf</h1>
-      <p>Geen technische kennis nodig – jij vertelt wat je wilt, ik maak het op maat.</p>
-      <a href="https://wa.me/31636589899" target="_blank" rel="noopener">Neem contact op</a>
+
+// start of faq
+<section class="faq-block">
+  <div class="faq-container">
+    <h2 class="faq-title">Veelgestelde vragen</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary class="faq-question">Wat zit er in het maandbedrag? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">Hosting, domeinnaam, technisch onderhoud en kleine aanpassingen zijn volledig inbegrepen.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-question">Hoe snel is mijn website live? <span class="faq-icon">+</span></summary>
+        <p class="faq-answer">In de meeste gevallen staat je nieuwe professionele website binnen 2 weken online.</p>
+      </details>
     </div>
-    <div class="hero-image">
-      <img src="images/tim-meeuwsen-profiel.webp" alt="Foto van Tim Meeuwsen">
-      <p>Tim Meeuwsen</p>
-    </div>
-  </header>
-  <style>
-    .hero { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; min-height: 100vh; padding: 120px 10% 80px; background: #2a508b; color: #fff; max-width: 1080px; margin: 0 auto; }
-    .hero-content h1 { font-size: clamp(25px, 5vw, 40px); font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
-    .hero-content a { display: inline-block; background: #332C2F; color: #fff; padding: 12px 24px; border-radius: 5px; font-weight: 600; }
-    .hero-image { text-align: center; }
-    .hero-image img { box-shadow: 0 20px 50px rgba(0,0,0,0.3); border-radius: 15px; margin-bottom: 15px; }
-    .hero-image p { font-size: 20px; font-weight: 900; }
-    @media (max-width: 700px) { .hero { grid-template-columns: 1fr; padding: 100px 20px 60px; } }
-  </style>
-
-  <main>
-    <section class="section-hassle">
-      <div class="text">
-        <h2>Een website zonder gedoe</h2>
-        <p>Geen trage plugins of technische problemen. Ik bouw een snelle, betrouwbare website die precies doet wat jij nodig hebt.</p>
-        <a href="https://wa.me/31636589899" target="_blank" rel="noopener">Maak een afspraak</a>
-      </div>
-      <div class="visual">
-        <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Voorbeeld Rodewinkel website">
-      </div>
-    </section>
-    <style>
-      .section-hassle { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 10%; background: #E22A37; color: #fff; max-width: 1080px; margin: 0 auto; }
-      .section-hassle .text h2 { font-size: 30px; font-weight: 900; margin-bottom: 20px; }
-      .section-hassle .text a { display: inline-block; background: #fff; color: #E22A37; padding: 12px 24px; border-radius: 5px; font-weight: 600; }
-      .section-hassle .visual img { border: 5px solid #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
-      @media (max-width: 700px) { .section-hassle { grid-template-columns: 1fr; padding: 60px 20px; } }
-    </style>
-
-    <section class="section-business">
-      <div class="visual">
-        <img loading="lazy" src="images/Moduloo-website.webp" alt="Voorbeeld Moduloo website">
-      </div>
-      <div class="text">
-        <h2>Perfect voor kleine bedrijven</h2>
-        <p>Restaurants, kappers, fysiotherapeuten - een professionele website die klanten aantrekt zonder ingewikkelde systemen.</p>
-        <a href="https://wa.me/31636589899" target="_blank" rel="noopener">Stel je vraag</a>
-      </div>
-    </section>
-    <style>
-      .section-business { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 10%; background: #B6E6F4; color: #332C2F; max-width: 1080px; margin: 0 auto; }
-      .section-business .text h2 { font-size: 30px; font-weight: 900; margin-bottom: 20px; }
-      .section-business .text a { display: inline-block; background: #332C2F; color: #fff; padding: 12px 24px; border-radius: 5px; font-weight: 600; }
-      .section-business .visual img { border: 5px solid #fff; }
-      @media (max-width: 700px) { 
-        .section-business { grid-template-columns: 1fr; padding: 60px 20px; }
-        .section-business .visual { order: 2; }
-      }
-    </style>
-
-    <section class="section-pricing">
-      <div class="text">
-        <h2>Transparante prijzen</h2>
-        <p><strong>€15-35/maand</strong> afhankelijk van de grootte.<br>✓ Hosting & domein<br>✓ Technisch onderhoud<br>✓ Kleine tekstwijzigingen</p>
-        <p><em>Eenmalige startkosten: €500-1500</em></p>
-        <a href="https://wa.me/31636589899" target="_blank" rel="noopener">Prijs opvragen</a>
-      </div>
-      <div class="visual">
-        <img loading="lazy" src="images/Smolke-website.webp" alt="Voorbeeld Smolke website">
-      </div>
-    </section>
-    <style>
-      .section-pricing { display: grid; grid-template-columns: 3fr 4fr; gap: 60px; align-items: center; padding: 80px 10%; background: #EE7100; color: #fff; max-width: 1080px; margin: 0 auto; }
-      .section-pricing .text h2 { font-size: 30px; font-weight: 900; margin-bottom: 20px; }
-      .section-pricing .text a { display: inline-block; background: #332C2F; color: #fff; padding: 12px 24px; border-radius: 5px; font-weight: 600; }
-      @media (max-width: 700px) { .section-pricing { grid-template-columns: 1fr; padding: 60px 20px; } }
-    </style>
-
-    <section class="faq">
-      <div class="container-small">
-        <h2>Veelgestelde vragen</h2>
-        <div class="faq-list">
-          <details>
-            <summary>Wat zit er in het maandbedrag? <span>+</span></summary>
-            <p>Hosting, domeinnaam, technisch onderhoud en kleine aanpassingen zijn inbegrepen.</p>
-          </details>
-          <details>
-            <summary>Hoe gaat het traject in zijn werk? <span>+</span></summary>
-            <p>Je stuurt je wensen door, daarna maken we samen de inhoud en styling helder.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-    <style>
-      .faq { padding: 100px 20px; background: #8829b4; color: #fff; }
-      .container-small { max-width: 680px; margin: 0 auto; }
-      .faq h2 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; margin-bottom: 30px; }
-      .faq-list { display: flex; flex-direction: column; gap: 12px; }
-      .faq-list details { border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; }
-      .faq-list summary { padding: 18px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; }
-      .faq-list p { padding: 0 18px 18px; opacity: 0.9; font-size: 15px; }
-    </style>
-
-    <section class="cta">
-      <div class="container">
-        <h2>Klaar voor een professionele website?</h2>
-        <p>Stuur een bericht en ontvang binnen 24 uur een voorstel.</p>
-        <div class="cta-buttons">
-          <a href="https://wa.me/31636589899" class="btn-wa">WhatsApp</a>
-          <a href="mailto:info@example.com" class="btn-mail">E-mail</a>
-        </div>
-      </div>
-    </section>
-    <style>
-      .cta { padding: 100px 20px; background: #E22A37; color: #fff; text-align: center; }
-      .cta h2 { font-size: clamp(28px, 5vw, 40px); font-weight: 900; margin-bottom: 20px; }
-      .cta-buttons { display: flex; gap: 16px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
-      .cta-buttons a { background: #fff; color: #000; font-weight: 900; padding: 12px 24px; border-radius: 10px; }
-      .cta-buttons a:hover { background: #000; color: #fff; }
-    </style>
-  </main>
-
-  <script>
-    document.querySelectorAll('details').forEach(d => {
-      d.addEventListener('toggle', () => {
-        const icon = d.querySelector('summary span');
-        if (icon) icon.textContent = d.open ? '×' : '+';
-      });
+  </div>
+</section>
+<style>
+  .faq-block { padding: 100px 20px; background: #8829b4; color: #ffffff; }
+  .faq-container { max-width: 680px; margin: 0 auto; }
+  .faq-title { font-size: 35px; font-weight: 900; margin-bottom: 30px; text-align: center; }
+  .faq-item { border: 1px solid rgba(255,255,255,0.3); border-radius: 6px; margin-bottom: 12px; }
+  .faq-question { padding: 18px; font-weight: 700; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  .faq-question::-webkit-details-marker { display: none; }
+  .faq-answer { padding: 0 18px 18px; opacity: 0.9; font-size: 15px; }
+</style>
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('toggle', () => {
+      const icon = item.querySelector('.faq-icon');
+      if (icon) icon.textContent = item.open ? '×' : '+';
     });
-  </script>
+  });
+</script>
+// end of faq
+
+
+// start of cta
+<section class="cta-block" id="contact">
+  <div class="cta-container">
+    <h2 class="cta-title">Klaar voor een professionele website?</h2>
+    <p class="cta-desc">Stuur een bericht en ontvang binnen 24 uur een voorstel.</p>
+    <div class="cta-buttons">
+      <a href="https://wa.me/31636589899" class="cta-wa">WhatsApp</a>
+      <a href="mailto:info@timmeeuwsen.nl" class="cta-mail">E-mail</a>
+    </div>
+  </div>
+</section>
+<style>
+  .cta-block { padding: 100px 20px; background: #E22A37; color: #ffffff; text-align: center; }
+  .cta-container { max-width: 1080px; margin: 0 auto; }
+  .cta-title { font-size: clamp(28px, 5vw, 40px); font-weight: 900; margin-bottom: 20px; }
+  .cta-buttons { display: flex; gap: 16px; justify-content: center; margin-top: 30px; flex-wrap: wrap; }
+  .cta-buttons a { background: #ffffff; color: #000000; font-weight: 900; border-radius: 10px; padding: 12px 24px; transition: 0.3s; }
+  .cta-buttons a:hover { background: #000000; color: #ffffff; }
+</style>
+// end of cta
+
+</main>
 
 </body>
 </html>
