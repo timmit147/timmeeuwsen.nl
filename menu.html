@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu Overzicht – Tim Meeuwsen | Webdesign Utrecht</title>
-  <meta name="description" content="Overzicht van alle belangrijke pagina's van Tim Meeuwsen – Webdesign Utrecht. Snelle toegang tot Home, Website laten maken Utrecht, Demo en Contact." />
+  <meta name="description" content="Overzicht van alle belangrijke pagina's van Tim Meeuwsen – Webdesign Utrecht. Snelle toegang tot Homepagina en Demo." />
   <link rel="canonical" href="https://timmeeuwsen.nl/menu.html" />
   <meta name="robots" content="index, follow" />
 
@@ -16,11 +16,12 @@
 <nav class="nav-block">
   <div class="nav-container">
     <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
-    <a href="/menu" class="nav-menu-text">menu</a>
+    <a href="javascript:history.back()" class="nav-menu-text">terug</a>
   </div>
 </nav>
 
 <style>
+  /* start of navigation CSS */
   .nav-block {
     position: fixed;
     top: 0;
@@ -68,27 +69,26 @@
     color: #3b73ea;
     border-bottom-color: #3b73ea;
   }
+  /* end of navigation CSS */
 </style>
 <!-- end of navigation -->
 
+<!-- start of main content -->
+<main style="margin-top:80px; padding: 0 20px;">
+  <div style="max-width:600px; margin:0 auto;">
+    <h1 style="margin:0 0 20px; font-size:40px; font-weight:900; line-height:1.2; text-align:left;">Menu Overzicht</h1>
 
-  <main class="pt-100 pb-100 pl-24 pr-24">
-    <div class="max-w-600 mx-auto">
-      <h1 class="m-0 mb-20 text-40 font-900 leading-12 text-left">Menu Overzicht</h1>
+    <ul style="list-style:none; margin:0; padding:0; text-align:left;">
+      <li style="margin-bottom:15px;">
+        <a href="https://timmeeuwsen.nl/" style="text-decoration:none; color:#000; font-size:20px; transition:0.3s;">Homepagina</a>
+      </li>
+      <li style="margin-bottom:15px;">
+        <a href="https://timmeeuwsen.nl/demo" style="text-decoration:none; color:#000; font-size:20px; transition:0.3s;">Demo website</a>
+      </li>
+    </ul>
+  </div>
+</main>
+<!-- end of main content -->
 
-      <ul class="list-none m-0 p-0 pl-0 text-left">
-        <li class="mb-15 m-0 p-0 pl-0 ">
-          <a href="https://timmeeuwsen.nl/" class="no-underline text-dark text-20 hover-opacity-80 transition-3">Home</a>
-        </li>
-        
-        <li class="mb-15 m-0 p-0 pl-0">
-          <a href="https://timmeeuwsen.nl/demo" class="no-underline text-dark text-20 hover-opacity-80 transition-3">Demo website</a>
-        </li>
-        <li class="mb-15 m-0 p-0 pl-0">
-          <a href="https://timmeeuwsen.nl/#contact" class="no-underline text-dark text-20 hover-opacity-80 transition-3">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </main>
 </body>
 </html>
