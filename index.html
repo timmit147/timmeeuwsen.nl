@@ -22,7 +22,7 @@
   <nav class="nav-block">
     <div class="nav-container">
       <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
-      <a href="/menu" class="nav-menu-btn">Menu</a>
+      <a href="#contact" class="nav-menu-btn">Menu</a>
     </div>
   </nav>
 
@@ -107,6 +107,7 @@
         border-radius: 5px;
         font-weight: 600;
         transition: 0.3s;
+        align-self: flex-start;
       }
       .hero-cta:hover { background: #000000; }
       .hero-visual {
@@ -128,10 +129,18 @@
       @media (max-width: 700px) {
         .hero-block {
           grid-template-columns: 1fr;
-          text-align: center;
+          text-align: left;
+          justify-items: start;
         }
         .hero-content {
-          align-items: center;
+          align-items: flex-start;
+          text-align: left;
+        }
+        .hero-visual {
+          align-items: flex-start;
+        }
+        .hero-cta {
+          align-self: flex-start;
         }
       }
     </style>
@@ -191,9 +200,15 @@
       @media (max-width: 700px) {
         .hassle-free-block {
           grid-template-columns: 1fr;
+          text-align: left;
+          justify-items: start;
+        }
+        .hassle-text {
+          text-align: left;
+          align-items: flex-start;
         }
         .hassle-btn {
-          align-self: center;
+          align-self: flex-start;
         }
       }
     </style>
@@ -253,9 +268,15 @@
       @media (max-width: 700px) {
         .pricing-block {
           grid-template-columns: 1fr;
+          text-align: left;
+          justify-items: start;
+        }
+        .pricing-text {
+          text-align: left;
+          align-items: flex-start;
         }
         .pricing-btn {
-          align-self: center;
+          align-self: flex-start;
         }
       }
     </style>
@@ -313,6 +334,17 @@
         padding: 0 18px 18px;
         opacity: 0.9;
         font-size: 15px;
+      }
+      @media (max-width: 700px) {
+        .faq-block {
+          text-align: left;
+        }
+        .faq-container {
+          text-align: left;
+        }
+        .faq-title {
+          text-align: left;
+        }
       }
     </style>
 
@@ -372,6 +404,17 @@
       .cta-buttons a:hover {
         background: #000000;
         color: #ffffff;
+      }
+      @media (max-width: 700px) {
+        .cta-block {
+          text-align: left;
+        }
+        .cta-container {
+          text-align: left;
+        }
+        .cta-buttons {
+          justify-content: flex-start;
+        }
       }
     </style>
     <!-- end of cta -->
