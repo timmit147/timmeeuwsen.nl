@@ -22,7 +22,7 @@
 <nav class="nav-block">
   <div class="nav-container">
     <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
-    <a href="/menu" class="nav-menu-text">Menu</a>
+    <a href="/menu" class="nav-menu-text">menu</a>
   </div>
 </nav>
 
@@ -35,7 +35,7 @@
     background: #ffffff;
     border-bottom: 1px solid #d1d5db;
     z-index: 1000;
-    padding: 15px 20px;
+    padding: 10px 20px; /* iets minder hoog */
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
   }
 
@@ -49,25 +49,24 @@
 
   .nav-logo {
     font-weight: 700;
-    font-size: 16px; /* zelfde grootte als menu */
+    font-size: 16px; /* gelijk aan menu */
     color: #000000; /* zwart */
+    line-height: 1.5; /* zorgt dat tekst niet springt */
   }
 
   .nav-menu-text {
     font-weight: 700;
-    font-size: 16px;
-    color: #1e3a8a; /* mooie blauwe kleur */
+    font-size: 16px; /* gelijk aan logo */
+    color: #3b82f6; /* lichtere blauwe kleur */
     cursor: pointer;
-    border-bottom: 2px solid transparent; /* standaard geen underline */
-    transition: 0.3s;
-    padding-bottom: 2px;
-  }
-
-  .nav-menu-text:hover {
-    border-bottom: 2px solid #1e3a8a; /* blauwe underline bij hover */
+    border-bottom: 2px solid #3b82f6; /* altijd zichtbaar, 2px */
+    padding-bottom: 2px; /* ruimte tussen tekst en border */
+    line-height: 1.5; /* zorgt dat menu tekst niet springt */
+    text-transform: lowercase; /* geen hoofdletter */
   }
 </style>
 <!-- end of navigation -->
+  
   <main>
 
     <!-- start of hero -->
