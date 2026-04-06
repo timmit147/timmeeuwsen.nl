@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Professionele website voor je bedrijf vanaf €15/maand. Utrecht.">
+  
+  <meta name="description" content="Laat een professionele en snelle maatwerk website maken voor je bedrijf vanaf €15/maand. Geen technische kennis nodig. Persoonlijke service door Tim Meeuwsen in Utrecht.">
   <meta name="robots" content="index, follow">
+  <meta name="author" content="Tim Meeuwsen">
+  
+  <meta property="og:title" content="Professionele Website vanaf €15/maand | Tim Meeuwsen Utrecht">
+  <meta property="og:description" content="Geen technische kennis nodig. Laat een snelle, betrouwbare maatwerk website bouwen voor jouw bedrijf zonder gedoe.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.timmeeuwsen.nl">
+  <meta property="og:image" content="https://www.timmeeuwsen.nl/images/tim-meeuwsen-profiel.webp">
+  <meta property="og:locale" content="nl_NL">
+
   <title>Professionele Website vanaf €15/maand | Tim Meeuwsen Utrecht</title>
 
   <link rel="canonical" href="https://www.timmeeuwsen.nl">
@@ -17,14 +27,30 @@
 
   <link rel="stylesheet" href="style.css">
   
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Tim Meeuwsen Webdesign",
+    "image": "https://www.timmeeuwsen.nl/images/tim-meeuwsen-profiel.webp",
+    "url": "https://www.timmeeuwsen.nl",
+    "telephone": "+31636589899",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Utrecht",
+      "addressCountry": "NL"
+    },
+    "priceRange": "€15 - €35 per maand",
+    "description": "Professionele maatwerk websites voor bedrijven vanaf €15/maand, inclusief hosting en onderhoud."
+  }
+  </script>
 </head>
 <body>
 
-<!-- start of navigation -->
-<nav class="nav-block">
+<nav class="nav-block" aria-label="Hoofdnavigatie">
   <div class="nav-container">
-    <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
-    <a href="/menu" class="nav-menu-text">menu</a>
+    <a href="https://timmeeuwsen.nl/" class="nav-logo" title="Terug naar de homepage van Tim Meeuwsen">Tim Meeuwsen</a>
+    <a href="/menu" class="nav-menu-text" title="Open het menu">menu</a>
   </div>
 </nav>
 
@@ -57,6 +83,7 @@
     color: #000000;
     line-height: 1.2;
     letter-spacing: 0.01em;
+    text-decoration: none;
   }
 
   .nav-menu-text {
@@ -70,22 +97,19 @@
     text-transform: lowercase;
     padding-bottom: 1px;
     transition: 0.25s ease;
+    text-decoration: none;
   }
-
 </style>
-<!-- end of navigation -->
-
 <main>
 
-<!-- start of hero -->
 <header class="hero-block">
   <div class="hero-content">
     <h1 class="hero-title">Maatwerk website laten maken voor jouw bedrijf</h1>
     <p class="hero-subtitle">Geen technische kennis nodig – jij vertelt wat je wilt, ik maak het op maat.</p>
-    <a href="https://wa.me/31636589899" class="hero-cta" target="_blank" rel="noopener">Neem contact op</a>
+    <a href="https://wa.me/31636589899" class="hero-cta" target="_blank" rel="noopener noreferrer" title="Neem contact op via WhatsApp">Neem contact op</a>
   </div>
   <div class="hero-visual">
-    <img src="images/tim-meeuwsen-profiel.webp" alt="Tim Meeuwsen Profielfoto" class="hero-profile-img">
+    <img src="images/tim-meeuwsen-profiel.webp" alt="Tim Meeuwsen, professioneel webdesigner in Utrecht" class="hero-profile-img">
     <p class="hero-profile-name">Tim Meeuwsen</p>
   </div>
 </header>
@@ -104,9 +128,9 @@
     overflow: hidden;
     box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
     font-family: sans-serif;
+    margin-top: 50px; /* Compenseer voor fixed header */
   }
 
-  
   .hero-content {
     display: flex;
     flex-direction: column;
@@ -140,6 +164,7 @@
     transition: 0.25s ease;
     align-self: flex-start;
     box-shadow: 0 8px 20px rgba(0,0,0,0.16);
+    text-decoration: none;
   }
 
   .hero-cta:hover {
@@ -179,12 +204,14 @@
       padding: 88px 20px 56px;
       gap: 28px;
     }
-
-    .hero-content {
+    
+    /* Afbeelding op mobiel bovenaan */
+    .hero-visual {
+      order: -1; 
       align-items: flex-start;
     }
 
-    .hero-visual {
+    .hero-content {
       align-items: flex-start;
     }
 
@@ -193,17 +220,14 @@
     }
   }
 </style>
-<!-- end of hero -->
-
-<!-- start of section-hassle-free -->
 <section class="hassle-free-block">
   <div class="hassle-text">
     <h2 class="hassle-title">Een website zonder gedoe</h2>
     <p class="hassle-desc">Geen trage plugins of technische problemen. Ik bouw een snelle, betrouwbare website die precies doet wat jij nodig hebt.</p>
-    <a href="https://wa.me/31636589899" class="hassle-btn">Maak een afspraak</a>
+    <a href="https://wa.me/31636589899" class="hassle-btn" target="_blank" rel="noopener noreferrer">Maak een afspraak</a>
   </div>
   <div class="hassle-image">
-    <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Project Rodewinkel" class="project-img">
+    <img loading="lazy" src="images/Rodewinkel-website.webp" alt="Voorbeeld van een snelle, maatwerk website ontwikkeld voor kledingwinkel Rodewinkel" class="project-img">
   </div>
 </section>
 
@@ -252,6 +276,7 @@
     align-self: flex-start;
     transition: 0.25s ease;
     box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
   }
 
   .hassle-btn:hover {
@@ -275,6 +300,11 @@
       width: min(1080px, 100%);
     }
 
+    /* Afbeelding op mobiel bovenaan */
+    .hassle-image {
+      order: -1;
+    }
+
     .hassle-text {
       text-align: left;
       align-items: flex-start;
@@ -285,9 +315,6 @@
     }
   }
 </style>
-<!-- end of section-hassle-free -->
-
-<!-- start of section-pricing -->
 <section class="pricing-block">
   <div class="pricing-text">
     <h2 class="pricing-title">Transparante prijzen</h2>
@@ -300,10 +327,10 @@
       </ul>
       <p class="pricing-setup"><em>Eenmalige startkosten: €500-1500</em></p>
     </div>
-    <a href="https://wa.me/31636589899" class="pricing-btn">Prijs opvragen</a>
+    <a href="https://wa.me/31636589899" class="pricing-btn" target="_blank" rel="noopener noreferrer">Prijs opvragen</a>
   </div>
   <div class="pricing-image">
-    <img loading="lazy" src="images/Smolke-website.webp" alt="Project Smolke" class="project-img">
+    <img loading="lazy" src="images/Smolke-website.webp" alt="Betaalbare webdesign projecten: Responsive website ontworpen voor merk Smølke" class="project-img">
   </div>
 </section>
 
@@ -371,6 +398,7 @@
     align-self: flex-start;
     transition: 0.25s ease;
     box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
   }
 
   .pricing-btn:hover {
@@ -393,6 +421,11 @@
       width: min(1080px, 100%);
     }
 
+    /* Afbeelding op mobiel bovenaan */
+    .pricing-image {
+      order: -1;
+    }
+
     .pricing-text {
       text-align: left;
       align-items: flex-start;
@@ -403,17 +436,14 @@
     }
   }
 </style>
-<!-- end of section-pricing -->
-
-<!-- start of section-perfect-for-kleine-bedrijven -->
 <section class="perfect-block">
   <div class="perfect-image">
-    <img loading="lazy" src="images/Moduloo-website.webp" alt="Project Moduloo" class="project-img">
+    <img loading="lazy" src="images/Moduloo-website.webp" alt="Professionele bedrijfswebsite ontworpen voor het MKB en kleine ondernemers zoals Moduloo" class="project-img">
   </div>
   <div class="perfect-text">
     <h2 class="perfect-title">Perfect voor kleine bedrijven</h2>
     <p class="perfect-desc">Restaurants, kappers, fysiotherapeuten - een professionele website die klanten aantrekt zonder ingewikkelde systemen.</p>
-    <a href="https://wa.me/31636589899?text=Hallo,%20ik%20heb%20een%20vraag." class="perfect-btn">Stel je vraag</a>
+    <a href="https://wa.me/31636589899?text=Hallo,%20ik%20heb%20een%20vraag." class="perfect-btn" target="_blank" rel="noopener noreferrer">Stel je vraag</a>
   </div>
 </section>
 
@@ -462,6 +492,7 @@
     align-self: flex-start;
     transition: 0.25s ease;
     box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
   }
 
   .perfect-btn:hover {
@@ -485,6 +516,11 @@
       width: min(1080px, 100%);
     }
 
+    /* Afbeelding op mobiel bovenaan (stond in de DOM al goed, maar zekerheidshalve toegevoegd) */
+    .perfect-image {
+      order: -1;
+    }
+
     .perfect-text {
       text-align: left;
       align-items: flex-start;
@@ -495,9 +531,6 @@
     }
   }
 </style>
-<!-- end of section-perfect-for-kleine-bedrijven -->
-
-<!-- start of section-snel-online -->
 <section class="snel-online-block">
   <div class="snel-online-text">
     <h2 class="snel-online-title">Snel online</h2>
@@ -505,7 +538,7 @@
     <a href="https://wa.me/31636589899?text=Hallo,%20ik%20wil%20snel%20starten." target="_blank" rel="noopener noreferrer" class="snel-online-btn">Direct starten</a>
   </div>
   <div class="snel-online-image">
-    <img loading="lazy" src="images/Energievanzelf-website.webp" alt="Energievanzelf website" class="project-img">
+    <img loading="lazy" src="images/Energievanzelf-website.webp" alt="Snel opgeleverde, conversiegerichte website gemaakt voor Energievanzelf" class="project-img">
   </div>
 </section>
 
@@ -555,6 +588,7 @@
     transition: 0.25s ease;
     display: inline-block;
     box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
   }
 
   .snel-online-btn:hover {
@@ -578,6 +612,11 @@
       width: min(1080px, 100%);
     }
 
+    /* Afbeelding op mobiel bovenaan */
+    .snel-online-image {
+      order: -1;
+    }
+
     .snel-online-text {
       text-align: left;
       align-items: flex-start;
@@ -588,17 +627,14 @@
     }
   }
 </style>
-<!-- end of section-snel-online -->
-
-<!-- start of section-demo-laten-maken -->
 <section class="demo-laten-maken-block">
   <div class="demo-laten-maken-text">
     <h2 class="demo-laten-maken-title">Demo laten maken</h2>
     <p class="demo-laten-maken-desc">Wil je zien hoe jouw website eruit kan zien? Vraag een demo aan en bekijk of het voldoet aan jouw wensen.</p>
-    <a href="/demo/" target="_blank" rel="noopener noreferrer" class="demo-laten-maken-btn">Bekijk de Demo</a>
+    <a href="/demo/" class="demo-laten-maken-btn" title="Bekijk een demo van mijn webdesign">Bekijk de Demo</a>
   </div>
   <div class="demo-laten-maken-image">
-    <img loading="lazy" src="images/Demo.webp" alt="Bouwbedrijf De Domstad website demo" class="project-img">
+    <img loading="lazy" src="images/Demo.webp" alt="Visuele demo van een op maat gemaakte bedrijfswebsite voor Bouwbedrijf De Domstad" class="project-img">
   </div>
 </section>
 
@@ -648,6 +684,7 @@
     transition: 0.25s ease;
     display: inline-block;
     box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
   }
 
   .demo-laten-maken-btn:hover {
@@ -671,6 +708,11 @@
       width: min(1080px, 100%);
     }
 
+    /* Afbeelding op mobiel bovenaan */
+    .demo-laten-maken-image {
+      order: -1;
+    }
+
     .demo-laten-maken-text {
       text-align: left;
       align-items: flex-start;
@@ -681,9 +723,6 @@
     }
   }
 </style>
-<!-- end of section-demo-laten-maken -->
-
-<!-- start of faq -->
 <section class="faq-block">
   <div class="faq-container">
     <h2 class="faq-title">Veelgestelde vragen</h2>
@@ -799,16 +838,13 @@
     });
   });
 </script>
-<!-- end of faq -->
-
-<!-- start of cta -->
 <section class="cta-block" id="contact">
   <div class="cta-container">
     <h2 class="cta-title">Klaar voor een professionele website?</h2>
     <p class="cta-desc">Stuur een bericht en ontvang binnen 24 uur een voorstel.</p>
     <div class="cta-buttons">
-      <a href="https://wa.me/31636589899" class="cta-wa">WhatsApp</a>
-      <a href="mailto:info@timmeeuwsen.nl" class="cta-mail">E-mail</a>
+      <a href="https://wa.me/31636589899" class="cta-wa" target="_blank" rel="noopener noreferrer" aria-label="Stuur een WhatsApp bericht">WhatsApp</a>
+      <a href="mailto:info@timmeeuwsen.nl" class="cta-mail" aria-label="Stuur een e-mail naar Tim Meeuwsen">E-mail</a>
     </div>
   </div>
 </section>
@@ -859,6 +895,7 @@
     padding: 12px 22px;
     transition: 0.25s ease;
     box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+    text-decoration: none;
   }
 
   .cta-buttons a:hover {
@@ -882,8 +919,6 @@
     }
   }
 </style>
-<!-- end of cta -->
-
 </main>
 
 </body>
