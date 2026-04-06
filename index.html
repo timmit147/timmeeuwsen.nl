@@ -1,4 +1,3 @@
-Here is the refactored code. It converts your utility-class-heavy HTML back to the clean, modular layout pattern you requested, strictly using one class per section, keeping CSS localized below each element, keeping images responsive, and styling internal elements exclusively via nth-child and tag selectors.
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -246,14 +245,6 @@ Here is the refactored code. It converts your utility-class-heavy HTML back to t
     </style>
 
   </main>
-
-  <footer class="footer">
-    <p>&copy; 2026 Tim Meeuwsen. Alle rechten voorbehouden.</p>
-  </footer>
-  <style>
-    .footer { padding: 40px; text-align: center; background: #2a508b; color: white; }
-    .footer p { margin: 0; }
-  </style>
 
   <script>
     document.querySelectorAll('details').forEach(function(d) {
