@@ -77,8 +77,8 @@ body {
 
 .hero-container {
   display: flex;
-  flex-direction: column; /* default: mobile stacked */
-  align-items: center;
+  flex-direction: column; /* mobile stacked */
+  align-items: flex-start; /* text left-aligned on mobile */
   max-width: 1080px;
   margin: 0 auto;
   gap: 40px; /* space between image and text */
@@ -87,22 +87,23 @@ body {
 .hero-image {
   max-width: 100%;
   height: auto;
+  border-radius: 15px; /* added border radius */
 }
 
 .hero-content h1 {
-  font-size: 42px;
+  font-size: 36px; /* slightly smaller on mobile */
   font-weight: 900;
   line-height: 1.1;
   margin: 0;
   max-width: 12ch;
-  text-align: center;
+  text-align: left; /* left-aligned on mobile */
 }
 
 .hero-content p {
   font-size: 18px;
   margin-top: 16px;
   max-width: 55ch;
-  text-align: center;
+  text-align: left; /* left-aligned on mobile */
 }
 
 .hero-cta {
@@ -126,14 +127,19 @@ body {
 
   .hero-content {
     text-align: left;
+    max-width: 50%;
   }
 
   .hero-image {
-    max-width: 45%; /* adjust as needed */
+    max-width: 45%;
   }
 
-  .hero-content {
-    max-width: 50%;
+  .hero-content h1 {
+    font-size: 42px; /* bigger on desktop */
+  }
+
+  .hero-content p {
+    text-align: left;
   }
 }
 </style>
