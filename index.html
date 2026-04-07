@@ -52,64 +52,86 @@
 <!-- START NAV BLOCK -->
 <nav class="nav-block" aria-label="Hoofdnavigatie">
   <div class="nav-container">
-    <a href="https://timmeeuwsen.nl/" class="nav-logo" title="Terug naar de homepage van Tim Meeuwsen">Tim Meeuwsen</a>
+    <a href="https://timmeeuwsen.nl/" class="nav-logo" title="Terug naar de homepage van Tim Meeuwsen">
+      Tim Meeuwsen
+    </a>
     <a href="/menu" class="nav-menu-text" title="Open het menu">menu</a>
   </div>
 </nav>
 
-    <style>
-    .nav-block {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(10px);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
-      z-index: 1000;
-      padding: 10px 20px;
-      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
-    }
+<style>
+  .nav-block {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    z-index: 1000;
+    padding: 14px 20px;
+  }
 
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      max-width: 1080px;
-      margin: 0 auto;
-      font-family: sans-serif;
-    }
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1080px;
+    margin: 0 auto;
+    font-family: inherit;
+  }
 
-    .nav-logo {
-      font-weight: 700;
-      font-size: 16px;
-      color: #000000;
-      line-height: 1.2;
-      letter-spacing: 0.01em;
-      text-decoration: none;
-    }
+  .nav-logo {
+    font-weight: 500;
+    font-size: 16px;
+    color: #0f172a;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
 
-    .nav-menu-text {
-      font-weight: 700;
-      font-size: 16px;
-      color: #000000;
-      cursor: pointer;
-      border-bottom: 2px solid #000000;
-      line-height: 1;
-      display: inline-block;
-      text-transform: lowercase;
-      padding-bottom: 1px;
-      transition: 0.25s ease;
-      text-decoration: none;
-    }
+  .nav-logo:hover {
+    opacity: 0.75;
+    transform: translateY(-1px);
+  }
 
-    .nav-menu-text:hover {
-      opacity: 0.75;
-    }
-  </style>
+  .nav-menu-text {
+    font-weight: 500;
+    font-size: 16px;
+    color: #0f172a;
+    text-decoration: none;
+    text-transform: lowercase;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    position: relative;
+    padding-bottom: 4px;
+    transition: opacity 0.25s ease;
+  }
 
-  
-  <!-- END NAV BLOCK -->
+  .nav-menu-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-menu-text:hover {
+    opacity: 0.7;
+  }
+
+  .nav-menu-text:hover::after {
+    transform: scaleX(0.85);
+  }
+</style>
+<!-- END NAV BLOCK -->
 
 <main>
 
