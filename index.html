@@ -68,7 +68,20 @@
       height: auto;
       display: block;
     }
+</style>
 
+</head>
+<body>
+  
+<!-- START NAV BLOCK -->
+<nav class="nav-block" aria-label="Hoofdnavigatie">
+  <div class="nav-container">
+    <a href="https://timmeeuwsen.nl/" class="nav-logo" title="Terug naar de homepage van Tim Meeuwsen">Tim Meeuwsen</a>
+    <a href="/menu" class="nav-menu-text" title="Open het menu">menu</a>
+  </div>
+</nav>
+
+    <style>
     .nav-block {
       position: fixed;
       top: 0;
@@ -118,15 +131,9 @@
       opacity: 0.75;
     }
   </style>
-</head>
-<body>
 
-<nav class="nav-block" aria-label="Hoofdnavigatie">
-  <div class="nav-container">
-    <a href="https://timmeeuwsen.nl/" class="nav-logo" title="Terug naar de homepage van Tim Meeuwsen">Tim Meeuwsen</a>
-    <a href="/menu" class="nav-menu-text" title="Open het menu">menu</a>
-  </div>
-</nav>
+  
+  <!-- END NAV BLOCK -->
 
 <main>
 
@@ -1062,7 +1069,7 @@
       align-items: center;
       gap: 16px;
       transition: 0.25s ease;
-      color: #4c1d95;
+      color: #fffffc;
     }
 
     .faq-question:hover {
@@ -1105,6 +1112,15 @@
       }
     }
   </style>
+
+  <script>
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    item.addEventListener('toggle', function() {
+      var icon = item.querySelector('.faq-icon');
+      if (icon) icon.textContent = item.open ? '×' : '+';
+    });
+  });
+  </script>
 
   <!-- END FAQ BLOCK -->
 
@@ -1199,6 +1215,10 @@
       border: 1px solid rgba(0,0,0,0.08);
     }
 
+    .cta-wa {
+    background: #25D366;
+    }
+
     .cta-buttons a:hover {
       background: #000000;
       color: #ffffff;
@@ -1223,14 +1243,7 @@
 
 </main>
 
-<script>
-  document.querySelectorAll('.faq-item').forEach(function(item) {
-    item.addEventListener('toggle', function() {
-      var icon = item.querySelector('.faq-icon');
-      if (icon) icon.textContent = item.open ? '×' : '+';
-    });
-  });
-</script>
+
 
 </body>
 </html>
