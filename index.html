@@ -70,16 +70,17 @@
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     z-index: 1000;
-    padding: 14px 20px;
   }
 
   .nav-container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 14px 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1080px;
-    margin: 0 auto;
-    font-family: inherit;
+    box-sizing: border-box;
+    width: 100%;
   }
 
   .nav-logo {
@@ -118,6 +119,10 @@
     transition: transform 0.25s ease;
   }
 
+  .nav-logo:hover,
+  .nav-menu-text:hover {
+    opacity: 0.75;
+  }
 </style>
 <!-- END NAV BLOCK -->
 
