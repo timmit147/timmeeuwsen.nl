@@ -685,6 +685,154 @@
     }
   </style>
   <!-- END PERFECT BLOCK -->
+ <!-- START FAQ BLOCK -->
+  <section class="faq-block">
+    <div class="faq-container">
+      <h2 class="faq-title">Veelgestelde vragen</h2>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary class="faq-question">Wat zit er in het maandbedrag? <span class="faq-icon">+</span></summary>
+          <p class="faq-answer">Hosting, domeinnaam, technisch onderhoud en kleine aanpassingen zijn volledig inbegrepen.</p>
+        </details>
+        <details class="faq-item">
+          <summary class="faq-question">Hoe snel is mijn website live? <span class="faq-icon">+</span></summary>
+          <p class="faq-answer">In de meeste gevallen staat je nieuwe professionele website binnen 2 weken online.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .faq-block {
+      position: relative;
+      padding: 84px 24px;
+      max-width: 1080px;
+      width: min(1080px, 100%);
+      margin: 0 auto;
+      overflow: hidden;
+      background: linear-gradient(180deg, #ffffff 0%, #fbf5ff 100%);
+      color: #000000;
+      border: 1px solid rgba(124, 58, 237, 0.08);
+      border-radius: 0;
+      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+      font-family: sans-serif;
+    }
+
+    .faq-block::before {
+      content: "";
+      position: absolute;
+      top: -90px;
+      right: -90px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(168, 85, 247, 0) 70%);
+      pointer-events: none;
+    }
+
+    .faq-block::after {
+      content: "";
+      position: absolute;
+      bottom: -110px;
+      left: -110px;
+      width: 280px;
+      height: 280px;
+      background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, rgba(124, 58, 237, 0) 72%);
+      pointer-events: none;
+    }
+
+    .faq-container {
+      max-width: 680px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .faq-title {
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 900;
+      margin-bottom: 28px;
+      text-align: center;
+      letter-spacing: -0.02em;
+      color: #000000;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      border: 1px solid rgba(124, 58, 237, 0.12);
+      border-radius: 14px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.85);
+    }
+
+    .faq-question {
+      padding: 18px;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      transition: 0.25s ease;
+      color: #000000;
+    }
+
+    .faq-question:hover {
+      background: rgba(124, 58, 237, 0.04);
+    }
+
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-answer {
+      padding: 0 18px 18px;
+      opacity: 0.92;
+      font-size: 15px;
+      color: #000000;
+      margin: 0;
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      font-weight: 400;
+      font-size: 22px;
+      line-height: 1;
+      color: #7c3aed;
+    }
+
+    @media (max-width: 700px) {
+      .faq-block {
+        text-align: left;
+        padding: 64px 20px;
+      }
+
+      .faq-container {
+        text-align: left;
+      }
+
+      .faq-title {
+        text-align: left;
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+
+  <script>
+  document.querySelectorAll('.faq-item').forEach(function(item) {
+    item.addEventListener('toggle', function() {
+      var icon = item.querySelector('.faq-icon');
+      if (icon) icon.textContent = item.open ? '×' : '+';
+    });
+  });
+  </script>
+
+  <!-- END FAQ BLOCK -->
 
   <!-- START SNEL ONLINE BLOCK -->
   <section class="snel-online-block">
@@ -950,154 +1098,6 @@
   </style>
   <!-- END DEMO LATEN MAKEN BLOCK -->
 
-  <!-- START FAQ BLOCK -->
-  <section class="faq-block">
-    <div class="faq-container">
-      <h2 class="faq-title">Veelgestelde vragen</h2>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary class="faq-question">Wat zit er in het maandbedrag? <span class="faq-icon">+</span></summary>
-          <p class="faq-answer">Hosting, domeinnaam, technisch onderhoud en kleine aanpassingen zijn volledig inbegrepen.</p>
-        </details>
-        <details class="faq-item">
-          <summary class="faq-question">Hoe snel is mijn website live? <span class="faq-icon">+</span></summary>
-          <p class="faq-answer">In de meeste gevallen staat je nieuwe professionele website binnen 2 weken online.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    .faq-block {
-      position: relative;
-      padding: 84px 24px;
-      max-width: 1080px;
-      width: min(1080px, 100%);
-      margin: 0 auto;
-      overflow: hidden;
-      background: linear-gradient(180deg, #ffffff 0%, #fbf5ff 100%);
-      color: #000000;
-      border: 1px solid rgba(124, 58, 237, 0.08);
-      border-radius: 0;
-      box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-      font-family: sans-serif;
-    }
-
-    .faq-block::before {
-      content: "";
-      position: absolute;
-      top: -90px;
-      right: -90px;
-      width: 240px;
-      height: 240px;
-      background: radial-gradient(circle, rgba(168, 85, 247, 0.12) 0%, rgba(168, 85, 247, 0) 70%);
-      pointer-events: none;
-    }
-
-    .faq-block::after {
-      content: "";
-      position: absolute;
-      bottom: -110px;
-      left: -110px;
-      width: 280px;
-      height: 280px;
-      background: radial-gradient(circle, rgba(124, 58, 237, 0.08) 0%, rgba(124, 58, 237, 0) 72%);
-      pointer-events: none;
-    }
-
-    .faq-container {
-      max-width: 680px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
-
-    .faq-title {
-      font-size: clamp(28px, 4vw, 36px);
-      font-weight: 900;
-      margin-bottom: 28px;
-      text-align: center;
-      letter-spacing: -0.02em;
-      color: #000000;
-    }
-
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .faq-item {
-      border: 1px solid rgba(124, 58, 237, 0.12);
-      border-radius: 14px;
-      overflow: hidden;
-      background: rgba(255,255,255,0.85);
-    }
-
-    .faq-question {
-      padding: 18px;
-      font-weight: 700;
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
-      transition: 0.25s ease;
-      color: #000000;
-    }
-
-    .faq-question:hover {
-      background: rgba(124, 58, 237, 0.04);
-    }
-
-    .faq-question::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-answer {
-      padding: 0 18px 18px;
-      opacity: 0.92;
-      font-size: 15px;
-      color: #000000;
-      margin: 0;
-    }
-
-    .faq-icon {
-      flex-shrink: 0;
-      font-weight: 400;
-      font-size: 22px;
-      line-height: 1;
-      color: #7c3aed;
-    }
-
-    @media (max-width: 700px) {
-      .faq-block {
-        text-align: left;
-        padding: 64px 20px;
-      }
-
-      .faq-container {
-        text-align: left;
-      }
-
-      .faq-title {
-        text-align: left;
-        margin-bottom: 20px;
-      }
-    }
-  </style>
-
-  <script>
-  document.querySelectorAll('.faq-item').forEach(function(item) {
-    item.addEventListener('toggle', function() {
-      var icon = item.querySelector('.faq-icon');
-      if (icon) icon.textContent = item.open ? '×' : '+';
-    });
-  });
-  </script>
-
-  <!-- END FAQ BLOCK -->
 
   <!-- START CTA BLOCK -->
   <section class="cta-block" id="contact">
@@ -1179,7 +1179,8 @@
     }
 
     .cta-buttons a {
-      color: #000000;
+      background: #2563eb;
+      color: #ffffff;
       font-weight: 800;
       border-radius: 12px;
       padding: 12px 22px;
@@ -1189,13 +1190,6 @@
       border: 1px solid rgba(0,0,0,0.08);
     }
 
-    .cta-wa {
-    background: #25D366;
-    }
-
-      .cta-mail{
-        background: #2563eb;
-      }
 
     .cta-buttons a:hover {
       background: #000000;
