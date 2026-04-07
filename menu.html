@@ -12,14 +12,11 @@
 </head>
 <body class="font-sans overflow-x-hidden w-full">
 
-
 <!-- START NAV BLOCK -->
 <nav class="nav-block" aria-label="Hoofdnavigatie">
   <div class="nav-container">
-    <a href="https://timmeeuwsen.nl/" class="nav-logo" title="Terug naar de homepage van Tim Meeuwsen">
-      Tim Meeuwsen
-    </a>
-    <a href="javascript:history.back()" class="nav-menu-text" title="Open het menu">menu</a>
+    <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
+    <a href="javascript:history.back()" class="nav-menu-text">menu</a>
   </div>
 </nav>
 
@@ -31,32 +28,25 @@
     width: 100%;
     background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     z-index: 1000;
-    padding: 14px 20px;
   }
 
   .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1080px;
+    max-width: 600px; /* zelfde als main */
     margin: 0 auto;
-    font-family: inherit;
+    padding: 14px 20px; /* zelfde padding als main */
   }
 
   .nav-logo {
     font-weight: 500;
     font-size: 16px;
     color: #0f172a;
-    line-height: 1.2;
-    letter-spacing: 0.01em;
     text-decoration: none;
-    transition: opacity 0.25s ease, transform 0.25s ease;
   }
-
-
 
   .nav-menu-text {
     font-weight: 500;
@@ -64,11 +54,9 @@
     color: #0f172a;
     text-decoration: none;
     text-transform: lowercase;
-    line-height: 1;
     letter-spacing: 0.04em;
     position: relative;
     padding-bottom: 4px;
-    transition: opacity 0.25s ease;
   }
 
   .nav-menu-text::after {
@@ -79,31 +67,67 @@
     width: 100%;
     height: 1px;
     background: currentColor;
-    transform: scaleX(1);
-    transform-origin: left;
-    transition: transform 0.25s ease;
   }
-
-
 </style>
 <!-- END NAV BLOCK -->
-  
-<!-- start of main content -->
-<main style="margin-top:80px; padding: 0 20px;">
-  <div style="max-width:600px; margin:0 auto;">
-    <h1 style="margin:0 0 20px; font-size:40px; font-weight:900; line-height:1.2; text-align:left;">Menu Overzicht</h1>
 
-    <ul style="list-style:none; margin:0; padding:0; text-align:left;">
-      <li style="margin-bottom:15px;">
-        <a href="https://timmeeuwsen.nl/" style="text-decoration:none; color:#000; font-size:20px; transition:0.3s;">Homepagina</a>
+
+<!-- START MAIN -->
+<main class="main">
+  <div class="main-container">
+    <h1 class="main-title">Menu Overzicht</h1>
+
+    <ul class="menu-list">
+      <li>
+        <a href="https://timmeeuwsen.nl/">Homepagina</a>
       </li>
-      <li style="margin-bottom:15px;">
-        <a href="https://timmeeuwsen.nl/demo" style="text-decoration:none; color:#000; font-size:20px; transition:0.3s;">Demo website</a>
+      <li>
+        <a href="https://timmeeuwsen.nl/demo">Demo website</a>
       </li>
     </ul>
   </div>
 </main>
-<!-- end of main content -->
+
+<style>
+  .main {
+    margin-top: 80px;
+    padding: 0 20px;
+  }
+
+  .main-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .main-title {
+    margin-bottom: 20px;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1.2;
+  }
+
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-list li {
+    margin-bottom: 15px;
+  }
+
+  .menu-list a {
+    text-decoration: none;
+    color: #0f172a;
+    font-size: 20px;
+    transition: opacity 0.25s ease;
+  }
+
+  .menu-list a:hover {
+    opacity: 0.7;
+  }
+</style>
+<!-- END MAIN -->
 
 </body>
 </html>
