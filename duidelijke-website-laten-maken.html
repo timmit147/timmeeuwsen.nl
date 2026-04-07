@@ -72,7 +72,7 @@ body {
 <style>
 .hero-block {
   background: #ffffff;
-  padding: 60px 24px;
+  padding: 60px 24px; /* top/bottom 60px, left/right 24px */
 }
 
 .hero-container {
@@ -81,29 +81,31 @@ body {
   align-items: flex-start; /* text left-aligned on mobile */
   max-width: 1080px;
   margin: 0 auto;
-  gap: 40px; /* space between image and text */
+  gap: 20px; /* reduced gap so image touches top padding */
 }
 
 .hero-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 15px; /* added border radius */
+  border-radius: 15px; /* rounded corners */
+  display: block;
+  margin: 0; /* remove default margins */
 }
 
 .hero-content h1 {
-  font-size: 36px; /* slightly smaller on mobile */
+  font-size: 32px; /* 10px smaller on mobile */
   font-weight: 900;
   line-height: 1.1;
   margin: 0;
-  max-width: 12ch;
-  text-align: left; /* left-aligned on mobile */
+  width: 100%; /* full width on mobile */
+  text-align: left;
 }
 
 .hero-content p {
   font-size: 18px;
   margin-top: 16px;
-  max-width: 55ch;
-  text-align: left; /* left-aligned on mobile */
+  max-width: 100%; /* full width on mobile */
+  text-align: left;
 }
 
 .hero-cta {
@@ -140,10 +142,11 @@ body {
 
   .hero-content p {
     text-align: left;
+    max-width: 55ch;
   }
 }
 </style>
-
+  
 <!-- PROBLEEM -->
 <section class="block block-gray">
   <div class="block-inner">
