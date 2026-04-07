@@ -36,6 +36,22 @@
   padding: 14px 24px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  text-decoration: none;
+  color: #111;
+  font-weight: 700;
+}
+.nav-menu-text {
+  text-decoration: none;
+  color: #111;
+}
+body {
+  margin: 0;
+  padding-top: 60px;
+  font-family: Arial, sans-serif;
+  color: #111;
 }
 </style>
 
@@ -46,23 +62,30 @@
   <div class="hero-content">
     <h1>Website laten maken die jouw aanbod duidelijk uitlegt</h1>
     <p>Binnen 5 seconden snappen bezoekers wat jij doet en nemen ze contact op.</p>
-    <a href="https://wa.me/31636589899" class="hero-cta">Start via WhatsApp</a>
+    <a href="https://wa.me/31636589899" class="hero-cta" target="_blank" rel="noopener noreferrer">Start via WhatsApp</a>
   </div>
 </header>
 
 <style>
 .hero-block {
+  background: #ffffff;
   padding: 120px 24px 60px;
+}
+.hero-content {
   max-width: 1080px;
   margin: 0 auto;
 }
 .hero-content h1 {
   font-size: 42px;
   font-weight: 900;
+  line-height: 1.1;
+  margin: 0;
+  max-width: 12ch;
 }
 .hero-content p {
   font-size: 18px;
   margin-top: 16px;
+  max-width: 55ch;
 }
 .hero-cta {
   display: inline-block;
@@ -77,126 +100,44 @@
 
 <!-- PROBLEEM -->
 <section class="block block-gray">
-  <h2>Waarom veel websites geen klanten opleveren</h2>
-  <p>Veel websites zijn onduidelijk. Bezoekers begrijpen niet direct wat je doet en haken af.</p>
+  <div class="block-inner">
+    <h2>Waarom veel websites geen klanten opleveren</h2>
+    <p>Veel websites zijn onduidelijk. Bezoekers begrijpen niet direct wat je doet en haken af.</p>
 
-  <ul>
-    <li>Te veel tekst</li>
-    <li>Onduidelijk aanbod</li>
-    <li>Geen duidelijke structuur</li>
-  </ul>
+    <ul>
+      <li>Te veel tekst</li>
+      <li>Onduidelijk aanbod</li>
+      <li>Geen duidelijke structuur</li>
+    </ul>
 
-  <p><strong>Resultaat: je mist klanten.</strong></p>
+    <p><strong>Resultaat: je mist klanten.</strong></p>
 
-  <a href="https://wa.me/31636589899" class="block-btn">Fix mijn website</a>
-</section>
-
-<!-- OPLOSSING -->
-<section class="block block-white">
-  <h2>Een website die jouw aanbod simpel uitlegt</h2>
-  <p>Ik maak een duidelijke website waarin jouw dienst of product direct begrepen wordt.</p>
-
-  <ul>
-    <li>Duidelijke opbouw</li>
-    <li>Simpel uitgelegd aanbod</li>
-    <li>Focus op actie (contact)</li>
-  </ul>
-
-  <a href="https://wa.me/31636589899" class="block-btn">Ik wil dit ook</a>
-</section>
-
-<!-- RESULTAAT -->
-<section class="block block-gray">
-  <h2>Wat het je oplevert</h2>
-
-  <ul>
-    <li>Bezoekers snappen direct wat je doet</li>
-    <li>Meer vertrouwen</li>
-    <li>Meer aanvragen</li>
-  </ul>
-
-  <a href="https://wa.me/31636589899" class="block-btn">Meer aanvragen krijgen</a>
-</section>
-
-<!-- HOE HET WERKT -->
-<section class="block block-white">
-  <h2>Zo werkt het</h2>
-
-  <ol>
-    <li>Jij legt kort uit wat je doet</li>
-    <li>Ik maak het simpel en duidelijk</li>
-    <li>Je website gaat snel live</li>
-  </ol>
-
-  <a href="https://wa.me/31636589899" class="block-btn">Start proces</a>
-</section>
-
-<!-- AANBOD -->
-<section class="block block-gray">
-  <h2>Wat je krijgt</h2>
-
-  <ul>
-    <li>1 pagina website</li>
-    <li>Duidelijke uitleg van je aanbod</li>
-    <li>Mobiel vriendelijk</li>
-    <li>Snelle laadtijd</li>
-    <li>Contact via WhatsApp</li>
-  </ul>
-
-  <a href="https://wa.me/31636589899" class="block-btn">Bekijk aanbod</a>
-</section>
-
-<!-- DOELGROEP -->
-<section class="block block-white">
-  <h2>Voor wie is dit perfect?</h2>
-
-  <ul>
-    <li>ZZP’ers</li>
-    <li>Coaches</li>
-    <li>Kleine bedrijven</li>
-    <li>Startups</li>
-  </ul>
-
-  <a href="https://wa.me/31636589899" class="block-btn">Check of dit past</a>
-</section>
-
-<!-- CTA -->
-<section class="cta block-gray">
-  <h2>Klaar voor een duidelijke website?</h2>
-  <p>Ontvang binnen 24 uur een voorstel.</p>
-
-  <a href="https://wa.me/31636589899">Start nu</a>
+    <a href="https://wa.me/31636589899" class="block-btn" target="_blank" rel="noopener noreferrer">Fix mijn website</a>
+  </div>
 </section>
 
 <style>
-.block {
+.block-gray {
+  background: #f5f5f5;
+}
+.block-inner {
   max-width: 800px;
   margin: 0 auto;
   padding: 60px 24px;
 }
-
-.block-gray {
-  background: #f5f5f5;
-}
-
-.block-white {
-  background: #ffffff;
-}
-
-.block h2 {
+.block-gray h2 {
   font-size: 28px;
-  margin-bottom: 12px;
+  margin: 0 0 12px;
 }
-
-.block p {
-  margin-bottom: 10px;
+.block-gray p {
+  margin: 0 0 10px;
+  line-height: 1.6;
 }
-
-.block ul, .block ol {
+.block-gray ul {
   padding-left: 20px;
-  margin-bottom: 20px;
+  margin: 18px 0 20px;
+  line-height: 1.8;
 }
-
 .block-btn {
   display: inline-block;
   margin-top: 10px;
@@ -206,13 +147,169 @@
   border-radius: 8px;
   text-decoration: none;
 }
+</style>
 
+<!-- OPLOSSING -->
+<section class="block block-white">
+  <div class="block-inner">
+    <h2>Een website die jouw aanbod simpel uitlegt</h2>
+    <p>Ik maak een duidelijke website waarin jouw dienst of product direct begrepen wordt.</p>
+
+    <ul>
+      <li>Duidelijke opbouw</li>
+      <li>Simpel uitgelegd aanbod</li>
+      <li>Focus op actie (contact)</li>
+    </ul>
+
+    <a href="https://wa.me/31636589899" class="block-btn" target="_blank" rel="noopener noreferrer">Ik wil dit ook</a>
+  </div>
+</section>
+
+<style>
+.block-white {
+  background: #ffffff;
+}
+.block-white h2 {
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+.block-white p {
+  margin: 0 0 10px;
+  line-height: 1.6;
+}
+.block-white ul {
+  padding-left: 20px;
+  margin: 18px 0 20px;
+  line-height: 1.8;
+}
+</style>
+
+<!-- RESULTAAT -->
+<section class="block block-gray">
+  <div class="block-inner">
+    <h2>Wat het je oplevert</h2>
+
+    <ul>
+      <li>Bezoekers snappen direct wat je doet</li>
+      <li>Meer vertrouwen</li>
+      <li>Meer aanvragen</li>
+    </ul>
+
+    <a href="https://wa.me/31636589899" class="block-btn" target="_blank" rel="noopener noreferrer">Meer aanvragen krijgen</a>
+  </div>
+</section>
+
+<style>
+.block-gray h2 {
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+.block-gray ul {
+  padding-left: 20px;
+  margin: 18px 0 20px;
+  line-height: 1.8;
+}
+</style>
+
+<!-- HOE HET WERKT -->
+<section class="block block-white">
+  <div class="block-inner">
+    <h2>Zo werkt het</h2>
+
+    <ol>
+      <li>Jij legt kort uit wat je doet</li>
+      <li>Ik maak het simpel en duidelijk</li>
+      <li>Je website gaat snel live</li>
+    </ol>
+
+    <a href="https://wa.me/31636589899" class="block-btn" target="_blank" rel="noopener noreferrer">Start proces</a>
+  </div>
+</section>
+
+<style>
+.block-white ol {
+  padding-left: 20px;
+  margin: 18px 0 20px;
+  line-height: 1.8;
+}
+</style>
+
+<!-- AANBOD -->
+<section class="block block-gray">
+  <div class="block-inner">
+    <h2>Wat je krijgt</h2>
+
+    <ul>
+      <li>1 pagina website</li>
+      <li>Duidelijke uitleg van je aanbod</li>
+      <li>Mobiel vriendelijk</li>
+      <li>Snelle laadtijd</li>
+      <li>Contact via WhatsApp</li>
+    </ul>
+
+    <a href="https://wa.me/31636589899" class="block-btn" target="_blank" rel="noopener noreferrer">Bekijk aanbod</a>
+  </div>
+</section>
+
+<style>
+.block-gray ul {
+  padding-left: 20px;
+  margin: 18px 0 20px;
+  line-height: 1.8;
+}
+</style>
+
+<!-- DOELGROEP -->
+<section class="block block-white">
+  <div class="block-inner">
+    <h2>Voor wie is dit perfect?</h2>
+
+    <ul>
+      <li>ZZP’ers</li>
+      <li>Coaches</li>
+      <li>Kleine bedrijven</li>
+      <li>Startups</li>
+    </ul>
+
+    <a href="https://wa.me/31636589899" class="block-btn" target="_blank" rel="noopener noreferrer">Check of dit past</a>
+  </div>
+</section>
+
+<style>
+.block-white ul {
+  padding-left: 20px;
+  margin: 18px 0 20px;
+  line-height: 1.8;
+}
+</style>
+
+<!-- CTA -->
+<section class="cta block-gray">
+  <div class="block-inner cta-inner">
+    <h2>Klaar voor een duidelijke website?</h2>
+    <p>Ontvang binnen 24 uur een voorstel.</p>
+
+    <a href="https://wa.me/31636589899" class="cta-btn" target="_blank" rel="noopener noreferrer">Start nu</a>
+  </div>
+</section>
+
+<style>
 .cta {
+  background: #f5f5f5;
+}
+.cta-inner {
   text-align: center;
   padding: 80px 24px;
 }
-
-.cta a {
+.cta h2 {
+  font-size: 28px;
+  margin: 0 0 12px;
+}
+.cta p {
+  margin: 0;
+  line-height: 1.6;
+}
+.cta-btn {
   display: inline-block;
   margin-top: 16px;
   background: #000;
