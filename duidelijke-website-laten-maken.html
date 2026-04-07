@@ -59,34 +59,52 @@ body {
 
 <!-- HERO -->
 <header class="hero-block">
-  <div class="hero-content">
-    <h1>Website laten maken die jouw aanbod duidelijk uitlegt</h1>
-    <p>Binnen 5 seconden snappen bezoekers wat jij doet en nemen ze contact op.</p>
-    <a href="https://wa.me/31636589899" class="hero-cta" target="_blank" rel="noopener noreferrer">Start via WhatsApp</a>
+  <div class="hero-container">
+    <img src="images/compass.webp" alt="Compass" class="hero-image">
+    <div class="hero-content">
+      <h1>Website laten maken die jouw aanbod duidelijk uitlegt</h1>
+      <p>Binnen 5 seconden snappen bezoekers wat jij doet en nemen ze contact op.</p>
+      <a href="https://wa.me/31636589899" class="hero-cta" target="_blank" rel="noopener noreferrer">Start via WhatsApp</a>
+    </div>
   </div>
 </header>
 
 <style>
 .hero-block {
   background: #ffffff;
-  padding: 120px 24px 60px;
+  padding: 60px 24px;
 }
-.hero-content {
+
+.hero-container {
+  display: flex;
+  flex-direction: column; /* default: mobile stacked */
+  align-items: center;
   max-width: 1080px;
   margin: 0 auto;
+  gap: 40px; /* space between image and text */
 }
+
+.hero-image {
+  max-width: 100%;
+  height: auto;
+}
+
 .hero-content h1 {
   font-size: 42px;
   font-weight: 900;
   line-height: 1.1;
   margin: 0;
   max-width: 12ch;
+  text-align: center;
 }
+
 .hero-content p {
   font-size: 18px;
   margin-top: 16px;
   max-width: 55ch;
+  text-align: center;
 }
+
 .hero-cta {
   display: inline-block;
   margin-top: 20px;
@@ -95,6 +113,28 @@ body {
   padding: 12px 20px;
   border-radius: 10px;
   text-decoration: none;
+}
+
+/* Desktop: image next to text */
+@media screen and (min-width: 768px) {
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-image {
+    max-width: 45%; /* adjust as needed */
+  }
+
+  .hero-content {
+    max-width: 50%;
+  }
 }
 </style>
 
