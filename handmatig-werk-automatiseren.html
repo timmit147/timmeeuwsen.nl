@@ -129,7 +129,6 @@
 </style>
 <!-- END NAV BLOCK -->
 
-
 <main>
 
 <!-- START HERO BLOCK -->
@@ -144,9 +143,11 @@
       </p>
 
       <div class="hero-actions">
-        <a href="#tool" class="hero-cta">Bekijk mogelijkheden</a>
+        <a href="https://wa.me/31636589899" class="hero-cta" target="_blank" rel="noopener noreferrer">
+          Bespreek jouw mogelijkheden
+        </a>
         <a href="https://wa.me/31636589899" class="hero-link" target="_blank" rel="noopener noreferrer">
-          Bespreek jouw situatie
+          WhatsApp
         </a>
       </div>
     </div>
@@ -207,6 +208,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
+    width: auto;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 700;
@@ -244,12 +246,12 @@
 
     .hero-actions {
       flex-direction: column;
-      align-items: stretch;
+      align-items: flex-start;
     }
 
     .hero-cta,
     .hero-link {
-      width: 100%;
+      width: auto;
     }
   }
 </style>
@@ -275,7 +277,9 @@
 
     <p><strong>Resultaat: meer stress, meer fouten en minder tijd voor belangrijk werk.</strong></p>
 
-    <a href="#tool" class="problem-btn">Laat zien wat mogelijk is</a>
+    <a href="https://wa.me/31636589899" class="problem-btn" target="_blank" rel="noopener noreferrer">
+      Bespreek jouw situatie
+    </a>
   </div>
 </section>
 
@@ -370,7 +374,9 @@
       <li>Sneller werken</li>
     </ul>
 
-    <a href="#tool" class="solution-btn">Bekijk een voorbeeld</a>
+    <a href="https://wa.me/31636589899" class="solution-btn" target="_blank" rel="noopener noreferrer">
+      Bespreek de mogelijkheden
+    </a>
   </div>
 </section>
 
@@ -451,10 +457,10 @@
 <!-- START TOOL BLOCK -->
 <section class="tool-block" id="tool">
   <div class="tool-inner">
-    <div class="tool-kicker">Tool voorbeeld</div>
+    <div class="tool-kicker">Tool</div>
     <h2>Maak een eenvoudig voorbeeld</h2>
     <p>
-      Vul de gegevens in en bekijk direct een nette voorvertoning.
+      Vul de gegevens in en maak een nette PDF.
     </p>
 
     <div class="tool-wrap">
@@ -472,33 +478,40 @@
         <input id="price" type="number" min="0" step="1" placeholder="Prijs" />
 
         <div class="tool-actions">
-          <button class="tool-btn" type="button" id="updateBtn">Bijwerken</button>
-          <button class="tool-btn tool-btn-secondary" type="button" id="printBtn">Print / opslaan</button>
+          <button class="tool-btn" type="button" id="downloadBtn">PDF downloaden</button>
         </div>
       </div>
+    </div>
+  </div>
 
-      <div class="tool-preview-card" id="quotePreview">
-        <div class="tool-preview-top">
-          <span class="tool-preview-badge">Voorvertoning</span>
-          <strong id="previewPrice">€0,00</strong>
+  <div class="print-only">
+    <div class="print-sheet" id="printSheet">
+      <div class="print-head">
+        <div>
+          <div class="print-kicker">Voorbeeld</div>
+          <h3>Offerte</h3>
         </div>
-
-        <h3 id="previewProject">Titel</h3>
-        <p id="previewText">
-          Een compacte oplossing die helpt om handmatig werk te verminderen en processen overzichtelijker te maken.
-        </p>
-
-        <div class="tool-preview-meta">
-          <div>
-            <span>Bedrijfsnaam</span>
-            <strong id="previewCompany">Bedrijfsnaam</strong>
-          </div>
-          <div>
-            <span>Klantnaam</span>
-            <strong id="previewClient">Klantnaam</strong>
-          </div>
-        </div>
+        <div class="print-price" id="printPrice">€0,00</div>
       </div>
+
+      <div class="print-row">
+        <span>Bedrijfsnaam</span>
+        <strong id="printCompany">Bedrijfsnaam</strong>
+      </div>
+
+      <div class="print-row">
+        <span>Klantnaam</span>
+        <strong id="printClient">Klantnaam</strong>
+      </div>
+
+      <div class="print-row">
+        <span>Titel</span>
+        <strong id="printProject">Titel</strong>
+      </div>
+
+      <p class="print-text">
+        Een compacte oplossing die helpt om handmatig werk te verminderen en processen overzichtelijker te maken.
+      </p>
     </div>
   </div>
 </section>
@@ -545,19 +558,17 @@
   }
 
   .tool-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    display: block;
     margin-top: 24px;
   }
 
-  .tool-form-card,
-  .tool-preview-card {
+  .tool-form-card {
     background: #fff;
     border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 24px;
     box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
     padding: 22px;
+    max-width: 520px;
   }
 
   .tool-block label {
@@ -586,19 +597,20 @@
   }
 
   .tool-actions {
-    display: grid;
-    gap: 12px;
+    display: flex;
+    justify-content: flex-start;
     margin-top: 18px;
   }
 
   .tool-btn {
     border: 0;
     cursor: pointer;
-    padding: 13px 18px;
+    padding: 12px 18px;
     font-size: 15px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: auto;
     border-radius: 12px;
     font-weight: 700;
     transition: transform 0.15s ease, background 0.15s ease;
@@ -612,26 +624,36 @@
     background: #1d4ed8;
   }
 
-  .tool-btn-secondary {
+  .print-only {
+    position: absolute;
+    left: -99999px;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .print-sheet {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
     background: #fff;
     color: #0f172a;
-    border: 1px solid rgba(15, 23, 42, 0.12);
-    box-shadow: none;
+    font-family: Arial, sans-serif;
   }
 
-  .tool-btn-secondary:hover {
-    background: #f8fafc;
-  }
-
-  .tool-preview-top {
+  .print-head {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 16px;
+    align-items: flex-start;
+    gap: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 18px;
   }
 
-  .tool-preview-badge {
+  .print-kicker {
     display: inline-flex;
     padding: 7px 10px;
     border-radius: 999px;
@@ -641,109 +663,67 @@
     font-weight: 800;
     letter-spacing: 0.06em;
     text-transform: uppercase;
+    margin-bottom: 10px;
   }
 
-  .tool-preview-top strong {
-    font-size: 18px;
-    color: #0f172a;
-  }
-
-  .tool-preview-card h3 {
-    margin: 0 0 10px;
-    font-size: 28px;
-    line-height: 1.1;
-    color: #0f172a;
-  }
-
-  .tool-preview-card p {
+  .print-head h3 {
     margin: 0;
+    font-size: 34px;
+    line-height: 1.1;
+  }
+
+  .print-price {
+    font-size: 26px;
+    font-weight: 800;
+  }
+
+  .print-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 14px 0;
+    border-bottom: 1px dashed #e2e8f0;
+  }
+
+  .print-row span {
+    color: #64748b;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+  }
+
+  .print-row strong {
+    font-size: 16px;
+  }
+
+  .print-text {
+    margin: 18px 0 0;
     line-height: 1.7;
     color: #475569;
   }
 
-  .tool-preview-meta {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 18px;
-  }
-
-  .tool-preview-meta div {
-    background: #f8fafc;
-    border-radius: 18px;
-    padding: 14px;
-  }
-
-  .tool-preview-meta span {
-    display: block;
-    font-size: 12px;
-    color: #64748b;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 800;
-    margin-bottom: 4px;
-  }
-
-  .tool-preview-meta strong {
-    font-size: 16px;
-    color: #0f172a;
-  }
-
-  @media (max-width: 900px) {
-    .tool-wrap {
-      grid-template-columns: 1fr;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .tool-preview-meta {
-      grid-template-columns: 1fr;
-    }
-  }
-
   @media print {
-    .nav-block,
-    .hero-block,
-    .problem-block,
-    .solution-block,
-    .tool-form-card,
-    .tool-block p,
-    .result-block,
-    .process-block,
-    .audience-block,
-    .cta-block {
-      display: none !important;
+    body * {
+      visibility: hidden !important;
     }
 
-    .tool-block {
-      background: #fff !important;
-      padding: 0 !important;
-    }
-
-    .tool-inner {
-      padding: 0 !important;
-      max-width: 100% !important;
-    }
-
-    .tool-wrap {
-      grid-template-columns: 1fr !important;
-      margin-top: 0 !important;
-    }
-
-    .tool-preview-card,
-    #quotePreview,
-    #quotePreview * {
+    .print-only,
+    .print-only * {
       visibility: visible !important;
     }
 
-    #quotePreview {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      margin: 0;
-      box-shadow: none !important;
-      border: 1px solid #cbd5e1 !important;
+    .print-only {
+      position: static !important;
+      left: 0 !important;
+      width: auto !important;
+      height: auto !important;
+      overflow: visible !important;
+    }
+
+    .print-sheet {
+      padding: 0 !important;
+      max-width: 100% !important;
     }
   }
 </style>
@@ -1078,6 +1058,7 @@
     margin-top: 18px;
     align-items: center;
     justify-content: center;
+    width: auto;
     padding: 12px 18px;
     background: #2563eb;
     color: #fff;
@@ -1108,4 +1089,41 @@
   const companyName = document.getElementById("companyName");
   const clientName = document.getElementById("clientName");
   const projectName = document.getElementById("projectName");
-  const
+  const price = document.getElementById("price");
+
+  const printCompany = document.getElementById("printCompany");
+  const printClient = document.getElementById("printClient");
+  const printProject = document.getElementById("printProject");
+  const printPrice = document.getElementById("printPrice");
+
+  function money(value) {
+    return new Intl.NumberFormat("nl-NL", {
+      style: "currency",
+      currency: "EUR"
+    }).format(value || 0);
+  }
+
+  function updatePrintSheet() {
+    const priceValue = Number(price.value || 0);
+
+    printCompany.textContent = companyName.value || "Bedrijfsnaam";
+    printClient.textContent = clientName.value || "Klantnaam";
+    printProject.textContent = projectName.value || "Titel";
+    printPrice.textContent = money(priceValue);
+  }
+
+  [companyName, clientName, projectName, price].forEach((field) => {
+    field.addEventListener("input", updatePrintSheet);
+    field.addEventListener("change", updatePrintSheet);
+  });
+
+  document.getElementById("downloadBtn").addEventListener("click", () => {
+    updatePrintSheet();
+    window.print();
+  });
+
+  updatePrintSheet();
+</script>
+
+</body>
+</html>
