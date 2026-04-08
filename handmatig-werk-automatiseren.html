@@ -129,20 +129,18 @@
 </style>
 <!-- END NAV BLOCK -->
 
-
 <main>
 
 <!-- START HERO BLOCK -->
 <header class="hero-block">
   <div class="hero-container">
     <div>
-      <div class="hero-badge">Client-side web app demo</div>
+      <div class="hero-badge">Slimmere weboplossingen</div>
 
       <div class="hero-content">
         <h1>Te veel tijd kwijt aan handmatig werk?</h1>
         <p>
-          Ik maak een simpele web app die processen overzichtelijker maakt, zodat je minder handmatig hoeft te doen
-          en sneller werkt.
+          Ik bedenk en bouw oplossingen die terugkerend werk verminderen, processen simpeler maken en tijd besparen.
         </p>
 
         <div class="hero-actions">
@@ -157,21 +155,21 @@
     <div class="hero-card" aria-label="Samenvatting van de oplossing">
       <div class="hero-card-top">
         <span class="hero-card-pill">Oplossing</span>
-        <strong>1 web app</strong>
+        <strong>Web app op maat</strong>
       </div>
       <div class="hero-card-grid">
         <div>
           <span class="hero-mini-label">Focus</span>
-          <strong>Meer overzicht</strong>
+          <strong>Minder handwerk</strong>
         </div>
         <div>
           <span class="hero-mini-label">Resultaat</span>
-          <strong>Minder fouten</strong>
+          <strong>Meer tijd en overzicht</strong>
         </div>
       </div>
       <div class="hero-card-foot">
-        <span>Snelle demo</span>
-        <span>Persoonlijk op maat</span>
+        <span>Kort en duidelijk</span>
+        <span>Persoonlijk aanpasbaar</span>
       </div>
     </div>
   </div>
@@ -366,11 +364,10 @@
 </style>
 <!-- END HERO BLOCK -->
 
-
 <!-- START PROBLEEM BLOCK -->
 <section class="problem-block">
   <div class="problem-inner">
-    <div class="section-kicker">Probleem</div>
+    <div class="problem-kicker">Probleem</div>
     <h2>Waarom handmatig werk zoveel tijd kost</h2>
     <p>
       Veel bedrijven verliezen onnodig tijd aan terugkerende taken. Je doet steeds dezelfde dingen opnieuw, controleert
@@ -386,7 +383,7 @@
 
     <p><strong>Resultaat: meer stress, meer fouten en minder tijd voor belangrijk werk.</strong></p>
 
-    <a href="#tool" class="block-btn">Laat de oplossing zien</a>
+    <a href="#tool" class="problem-btn">Laat de oplossing zien</a>
   </div>
 </section>
 
@@ -403,7 +400,7 @@
     padding: 60px 0;
   }
 
-  .section-kicker {
+  .problem-kicker {
     display: inline-flex;
     margin-bottom: 14px;
     padding: 7px 10px;
@@ -442,7 +439,7 @@
     margin-bottom: 6px;
   }
 
-  .block-btn {
+  .problem-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -456,37 +453,31 @@
     box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
   }
 
-  .block-btn:hover {
+  .problem-btn:hover {
     transform: translateY(-1px);
     background: #1d4ed8;
   }
 </style>
 <!-- END PROBLEEM BLOCK -->
 
-
 <!-- START OPLOSSING BLOCK -->
 <section class="solution-block">
   <div class="solution-inner">
-    <div class="section-kicker">Oplossing</div>
-    <h2>Een simpele web app die jouw proces overzichtelijker maakt</h2>
+    <div class="solution-kicker">Oplossing</div>
+    <h2>Slimme oplossingen die tijd en handwerk verminderen</h2>
     <p>
-      Ik bouw een duidelijke web app die handmatig werk vervangt of slimmer maakt. Denk aan een tool die informatie
-      verzamelt, een overzicht toont of een proces sneller laat lopen.
+      Ik bedenk en bouw oplossingen die passen bij jouw situatie. Denk aan een eenvoudige web app, een handige tool
+      of een klein systeem dat een deel van het werk overneemt.
     </p>
 
     <ul>
-      <li>Alles op één plek</li>
-      <li>Minder fouten door handwerk</li>
-      <li>Sneller werken met simpele stappen</li>
-      <li>Volledig aan te passen aan jouw bedrijf</li>
+      <li>Minder handmatig werk</li>
+      <li>Meer overzicht</li>
+      <li>Minder fouten</li>
+      <li>Sneller werken</li>
     </ul>
 
-    <p>
-      Hieronder staat een voorbeeld van zo'n oplossing: een offerte-tool waarmee je snel een nette offerte of PDF-voorbeeld
-      maakt. Dezelfde stijl kan ik aanpassen voor jouw proces of klantworkflow.
-    </p>
-
-    <a href="#tool" class="block-btn">Bekijk het voorbeeld</a>
+    <a href="#tool" class="solution-btn">Ik wil dit ook</a>
   </div>
 </section>
 
@@ -501,6 +492,19 @@
     max-width: 920px;
     margin: 0 auto;
     padding: 60px 0;
+  }
+
+  .solution-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
   .solution-block h2 {
@@ -528,121 +532,80 @@
   .solution-block li {
     margin-bottom: 6px;
   }
+
+  .solution-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.15s ease, background 0.15s ease;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+  }
+
+  .solution-btn:hover {
+    transform: translateY(-1px);
+    background: #1d4ed8;
+  }
 </style>
 <!-- END OPLOSSING BLOCK -->
-
 
 <!-- START TOOL BLOCK -->
 <section class="tool-block" id="tool">
   <div class="tool-inner">
-    <div class="section-kicker">Tool voorbeeld</div>
-    <h2>Voorbeeld van een client-side offerte generator</h2>
+    <div class="tool-kicker">Tool voorbeeld</div>
+    <h2>Maak een eenvoudig PDF-voorbeeld</h2>
     <p>
-      Dit is een simpele HTML, CSS en JavaScript tool. Je vult gegevens in en krijgt direct een nette offerte-voorvertoning
-      die je kunt printen of opslaan als PDF.
+      Vul de gegevens in en genereer direct een nette PDF-voorvertoning.
     </p>
 
     <div class="tool-wrap">
       <div class="tool-form-card">
-        <h3>Offerte gegevens</h3>
-
-        <label for="companyName">Jouw bedrijfsnaam</label>
+        <label for="companyName">Bedrijfsnaam</label>
         <input id="companyName" type="text" value="Tim Meeuwsen" />
 
         <label for="clientName">Klantnaam</label>
         <input id="clientName" type="text" value="Voorbeeld Bedrijf" />
 
-        <label for="projectName">Project / dienst</label>
-        <input id="projectName" type="text" value="Web app voor handmatig werk verminderen" />
+        <label for="projectName">Titel</label>
+        <input id="projectName" type="text" value="Duidelijke oplossing op maat" />
 
-        <label for="description">Korte omschrijving</label>
-        <textarea id="description" rows="4">Een simpele web app die terugkerende taken overzichtelijk maakt en processen sneller laat lopen.</textarea>
-
-        <div class="tool-grid">
-          <div>
-            <label for="price">Prijs excl. btw (€)</label>
-            <input id="price" type="number" min="0" step="1" value="850" />
-          </div>
-          <div>
-            <label for="vat">Btw (%)</label>
-            <input id="vat" type="number" min="0" step="1" value="21" />
-          </div>
-        </div>
-
-        <div class="tool-grid">
-          <div>
-            <label for="daysValid">Geldig tot (dagen)</label>
-            <input id="daysValid" type="number" min="1" step="1" value="14" />
-          </div>
-          <div>
-            <label for="quoteNumber">Offertenummer</label>
-            <input id="quoteNumber" type="text" value="OFF-2026-001" />
-          </div>
-        </div>
+        <label for="price">Prijs excl. btw (€)</label>
+        <input id="price" type="number" min="0" step="1" value="850" />
 
         <div class="tool-actions">
-          <button class="tool-btn" type="button" id="updateBtn">Genereer offerte</button>
+          <button class="tool-btn" type="button" id="updateBtn">Genereer PDF</button>
           <button class="tool-btn tool-btn-secondary" type="button" id="printBtn">Print / opslaan als PDF</button>
         </div>
       </div>
 
       <div class="tool-preview-card" id="quotePreview">
-        <div class="quote-header">
+        <div class="tool-preview-top">
+          <span class="tool-preview-badge">PDF voorbeeld</span>
+          <strong id="previewPrice">€850,00</strong>
+        </div>
+
+        <h3 id="previewProject">Duidelijke oplossing op maat</h3>
+        <p id="previewText">
+          Een compacte oplossing die helpt om handmatig werk te verminderen en processen overzichtelijker te maken.
+        </p>
+
+        <div class="tool-preview-meta">
           <div>
-            <div class="quote-kicker">Offerte</div>
-            <h3 id="previewCompany">Tim Meeuwsen</h3>
-          </div>
-          <div class="quote-meta">
-            <div><span>Offertenummer</span><strong id="previewNumber">OFF-2026-001</strong></div>
-            <div><span>Geldig tot</span><strong id="previewDate">14 dagen</strong></div>
-          </div>
-        </div>
-
-        <div class="quote-block">
-          <span>Voor</span>
-          <strong id="previewClient">Voorbeeld Bedrijf</strong>
-        </div>
-
-        <div class="quote-block">
-          <span>Project</span>
-          <strong id="previewProject">Web app voor handmatig werk verminderen</strong>
-        </div>
-
-        <div class="quote-text" id="previewDescription">
-          Een simpele web app die terugkerende taken overzichtelijk maakt en processen sneller laat lopen.
-        </div>
-
-        <div class="quote-pricing">
-          <div>
-            <span>Prijs excl. btw</span>
-            <strong id="previewPrice">€850,00</strong>
+            <span>Bedrijf</span>
+            <strong id="previewCompany">Tim Meeuwsen</strong>
           </div>
           <div>
-            <span>Btw</span>
-            <strong id="previewVat">€178,50</strong>
+            <span>Klant</span>
+            <strong id="previewClient">Voorbeeld Bedrijf</strong>
           </div>
-          <div class="quote-total">
-            <span>Totaal incl. btw</span>
-            <strong id="previewTotal">€1.028,50</strong>
-          </div>
-        </div>
-
-        <div class="quote-footer">
-          <strong>Wat je krijgt:</strong>
-          <ul>
-            <li>Een duidelijke oplossing</li>
-            <li>Een simpele interface</li>
-            <li>Volledig passend bij jouw workflow</li>
-            <li>Client-side demo zonder backend</li>
-          </ul>
         </div>
       </div>
     </div>
-
-    <p class="tool-note">
-      Dit voorbeeld laat zien wat ik voor klanten kan maken: een simpele tool die direct iets oplost en op maat gemaakt kan worden
-      voor een specifiek proces.
-    </p>
   </div>
 </section>
 
@@ -659,16 +622,29 @@
     padding: 60px 0;
   }
 
+  .tool-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #fff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
   .tool-block h2 {
     font-size: clamp(28px, 4vw, 42px);
     line-height: 1.08;
-    margin: 0 0 14px;
+    margin: 0 0 12px;
     letter-spacing: -0.03em;
     color: #0f172a;
   }
 
   .tool-block p {
-    margin: 0 0 14px;
+    margin: 0;
     line-height: 1.7;
     color: #475569;
     font-size: 17px;
@@ -678,7 +654,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-top: 28px;
+    margin-top: 24px;
   }
 
   .tool-form-card,
@@ -690,12 +666,6 @@
     padding: 22px;
   }
 
-  .tool-form-card h3 {
-    margin: 0 0 16px;
-    font-size: 22px;
-    color: #0f172a;
-  }
-
   .tool-block label {
     display: block;
     margin: 14px 0 8px;
@@ -704,8 +674,7 @@
     color: #334155;
   }
 
-  .tool-block input,
-  .tool-block textarea {
+  .tool-block input {
     width: 100%;
     border: 1px solid rgba(15, 23, 42, 0.12);
     border-radius: 14px;
@@ -717,21 +686,9 @@
     box-sizing: border-box;
   }
 
-  .tool-block input:focus,
-  .tool-block textarea:focus {
+  .tool-block input:focus {
     border-color: rgba(37, 99, 235, 0.5);
     box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
-  }
-
-  .tool-block textarea {
-    resize: vertical;
-    min-height: 110px;
-  }
-
-  .tool-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
   }
 
   .tool-actions {
@@ -751,9 +708,6 @@
     border-radius: 12px;
     font-weight: 700;
     transition: transform 0.15s ease, background 0.15s ease;
-  }
-
-  .tool-btn {
     background: #2563eb;
     color: #fff;
     box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
@@ -775,20 +729,17 @@
     background: #f8fafc;
   }
 
-  .quote-header {
+  .tool-preview-top {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
-    align-items: flex-start;
-    padding-bottom: 18px;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    margin-bottom: 18px;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
   }
 
-  .quote-kicker {
+  .tool-preview-badge {
     display: inline-flex;
-    margin-bottom: 8px;
-    padding: 6px 10px;
+    padding: 7px 10px;
     border-radius: 999px;
     background: #dbeafe;
     color: #1d4ed8;
@@ -798,22 +749,38 @@
     text-transform: uppercase;
   }
 
-  .quote-header h3 {
-    margin: 0;
+  .tool-preview-top strong {
+    font-size: 18px;
+    color: #0f172a;
+  }
+
+  .tool-preview-card h3 {
+    margin: 0 0 10px;
     font-size: 28px;
     line-height: 1.1;
     color: #0f172a;
   }
 
-  .quote-meta {
-    text-align: right;
-    display: grid;
-    gap: 12px;
+  .tool-preview-card p {
+    margin: 0;
+    line-height: 1.7;
+    color: #475569;
   }
 
-  .quote-meta span,
-  .quote-block span,
-  .quote-pricing span {
+  .tool-preview-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 18px;
+  }
+
+  .tool-preview-meta div {
+    background: #f8fafc;
+    border-radius: 18px;
+    padding: 14px;
+  }
+
+  .tool-preview-meta span {
     display: block;
     font-size: 12px;
     color: #64748b;
@@ -823,62 +790,9 @@
     margin-bottom: 4px;
   }
 
-  .quote-meta strong,
-  .quote-block strong,
-  .quote-pricing strong {
+  .tool-preview-meta strong {
     font-size: 16px;
     color: #0f172a;
-  }
-
-  .quote-block {
-    padding: 14px 0;
-    border-bottom: 1px dashed rgba(15, 23, 42, 0.12);
-  }
-
-  .quote-text {
-    padding: 18px 0;
-    line-height: 1.7;
-    color: #475569;
-  }
-
-  .quote-pricing {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 8px;
-  }
-
-  .quote-pricing > div {
-    background: #f8fafc;
-    border-radius: 18px;
-    padding: 14px;
-  }
-
-  .quote-total {
-    background: #eff6ff !important;
-  }
-
-  .quote-footer {
-    margin-top: 18px;
-    padding-top: 18px;
-    border-top: 1px solid rgba(15, 23, 42, 0.08);
-  }
-
-  .quote-footer strong {
-    display: block;
-    margin-bottom: 10px;
-    color: #0f172a;
-  }
-
-  .quote-footer ul {
-    margin: 0;
-    padding-left: 18px;
-    line-height: 1.9;
-    color: #0f172a;
-  }
-
-  .tool-note {
-    margin-top: 18px;
   }
 
   @media (max-width: 900px) {
@@ -888,31 +802,21 @@
   }
 
   @media (max-width: 700px) {
-    .tool-grid,
-    .quote-pricing {
+    .tool-preview-meta {
       grid-template-columns: 1fr;
-    }
-
-    .quote-header {
-      flex-direction: column;
-    }
-
-    .quote-meta {
-      text-align: left;
     }
   }
 
   @media print {
     .nav-block,
-    .hero-actions,
+    .hero-block,
     .problem-block,
     .solution-block,
     .tool-form-card,
-    .tool-note,
+    .tool-block p,
     .result-block,
     .process-block,
     .audience-block,
-    .faq-block,
     .cta-block {
       display: none !important;
     }
@@ -932,12 +836,6 @@
       margin-top: 0 !important;
     }
 
-    .tool-preview-card {
-      box-shadow: none !important;
-      border: 1px solid #cbd5e1 !important;
-      page-break-inside: avoid;
-    }
-
     .tool-preview-card,
     #quotePreview,
     #quotePreview * {
@@ -951,25 +849,16 @@
       width: 100%;
       margin: 0;
       box-shadow: none !important;
-    }
-
-    .quote-pricing > div {
-      background: #fff !important;
-      border: 1px solid #e2e8f0;
-    }
-
-    .quote-total {
-      background: #fff !important;
+      border: 1px solid #cbd5e1 !important;
     }
   }
 </style>
 <!-- END TOOL BLOCK -->
 
-
 <!-- START RESULTAAT BLOCK -->
 <section class="result-block">
   <div class="result-inner">
-    <div class="section-kicker">Resultaat</div>
+    <div class="result-kicker">Resultaat</div>
     <h2>Wat een goede oplossing oplevert</h2>
     <p>
       Een slimme web app hoeft niet ingewikkeld te zijn. Als de juiste stappen duidelijk zijn, kun je al snel veel tijd
@@ -984,7 +873,7 @@
       <li>Meer tijd voor belangrijk werk</li>
     </ul>
 
-    <a href="https://wa.me/31636589899" class="block-btn" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/31636589899" class="result-btn" target="_blank" rel="noopener noreferrer">
       Ik wil dit voor mijn bedrijf
     </a>
   </div>
@@ -1001,6 +890,19 @@
     max-width: 920px;
     margin: 0 auto;
     padding: 60px 0;
+  }
+
+  .result-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
   .result-block h2 {
@@ -1028,24 +930,42 @@
   .result-block li {
     margin-bottom: 6px;
   }
+
+  .result-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.15s ease, background 0.15s ease;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+  }
+
+  .result-btn:hover {
+    transform: translateY(-1px);
+    background: #1d4ed8;
+  }
 </style>
 <!-- END RESULTAAT BLOCK -->
-
 
 <!-- START HOE HET WERKT BLOCK -->
 <section class="process-block">
   <div class="process-inner">
-    <div class="section-kicker">Werkwijze</div>
+    <div class="process-kicker">Werkwijze</div>
     <h2>Zo maak ik dit persoonlijk voor jouw bedrijf</h2>
 
     <ol>
       <li>Je legt uit waar jij nu tijd verliest.</li>
-      <li>Ik maak daar een simpele oplossing voor.</li>
-      <li>Ik pas de tool aan op jouw workflow en doelen.</li>
-      <li>Je krijgt een duidelijke demo of werkende web app.</li>
+      <li>Ik bedenk een passende oplossing.</li>
+      <li>Ik maak het simpel en duidelijk.</li>
+      <li>Je krijgt iets dat past bij jouw werk.</li>
     </ol>
 
-    <a href="https://wa.me/31636589899" class="block-btn" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/31636589899" class="process-btn" target="_blank" rel="noopener noreferrer">
       Start met jouw oplossing
     </a>
   </div>
@@ -1062,6 +982,19 @@
     max-width: 920px;
     margin: 0 auto;
     padding: 60px 0;
+  }
+
+  .process-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #fff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
   .process-block h2 {
@@ -1082,14 +1015,32 @@
   .process-block li {
     margin-bottom: 6px;
   }
+
+  .process-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.15s ease, background 0.15s ease;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+  }
+
+  .process-btn:hover {
+    transform: translateY(-1px);
+    background: #1d4ed8;
+  }
 </style>
 <!-- END HOE HET WERKT BLOCK -->
-
 
 <!-- START DOELGROEP BLOCK -->
 <section class="audience-block">
   <div class="audience-inner">
-    <div class="section-kicker">Voor wie</div>
+    <div class="audience-kicker">Voor wie</div>
     <h2>Voor bedrijven die slimmer willen werken</h2>
 
     <ul>
@@ -1099,7 +1050,7 @@
       <li>Iedereen die eerst een simpele demo wil zien</li>
     </ul>
 
-    <a href="https://wa.me/31636589899" class="block-btn" target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.me/31636589899" class="audience-btn" target="_blank" rel="noopener noreferrer">
       Check of dit past
     </a>
   </div>
@@ -1116,6 +1067,19 @@
     max-width: 920px;
     margin: 0 auto;
     padding: 60px 0;
+  }
+
+  .audience-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
   .audience-block h2 {
@@ -1136,84 +1100,35 @@
   .audience-block li {
     margin-bottom: 6px;
   }
+
+  .audience-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 18px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.15s ease, background 0.15s ease;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+  }
+
+  .audience-btn:hover {
+    transform: translateY(-1px);
+    background: #1d4ed8;
+  }
 </style>
 <!-- END DOELGROEP BLOCK -->
-
-
-<!-- START FAQ BLOCK -->
-<section class="faq-block">
-  <div class="faq-inner">
-    <div class="section-kicker">FAQ</div>
-    <h2>Veelgestelde vragen</h2>
-
-    <div class="faq-item">
-      <h3>Werkt deze tool zonder backend?</h3>
-      <p>Ja. Dit voorbeeld is volledig client-side en werkt met alleen HTML, CSS en JavaScript.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Kan ik deze tool laten aanpassen aan mijn eigen dienst?</h3>
-      <p>Ja. Dezelfde opzet kan ik ombouwen naar jouw proces, aanbod of klantworkflow.</p>
-    </div>
-
-    <div class="faq-item">
-      <h3>Kan dit echt als PDF worden opgeslagen?</h3>
-      <p>Ja. Met de printknop kun je de offerte opslaan als PDF.</p>
-    </div>
-  </div>
-</section>
-
-<style>
-  .faq-block {
-    padding: 8px 24px;
-    background: #f5f7fb;
-    font-family: Arial, sans-serif;
-  }
-
-  .faq-inner {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 60px 0;
-  }
-
-  .faq-block h2 {
-    font-size: clamp(28px, 4vw, 42px);
-    line-height: 1.08;
-    margin: 0 0 14px;
-    letter-spacing: -0.03em;
-    color: #0f172a;
-  }
-
-  .faq-item {
-    background: #fff;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 18px;
-    padding: 18px;
-    margin-top: 14px;
-  }
-
-  .faq-item h3 {
-    margin: 0 0 8px;
-    font-size: 18px;
-    color: #0f172a;
-  }
-
-  .faq-item p {
-    margin: 0;
-    line-height: 1.7;
-    color: #475569;
-  }
-</style>
-<!-- END FAQ BLOCK -->
-
 
 <!-- START CTA BLOCK -->
 <section class="cta-block">
   <div class="cta-inner">
-    <div class="section-kicker">Contact</div>
-    <h2>Klaar om handmatig werk slimmer te maken?</h2>
-    <p>Ik bouw een simpele oplossing die past bij jouw bedrijf en direct duidelijk laat zien wat mogelijk is.</p>
-    <a href="https://wa.me/31636589899" class="cta-btn" target="_blank" rel="noopener noreferrer">Start nu</a>
+    <div class="cta-kicker">Contact</div>
+    <h2>Klaar om handmatig werk te verminderen?</h2>
+    <p>Ik help je met een oplossing die past bij jouw werk en tijd bespaart.</p>
+    <a href="https://wa.me/31636589899" class="cta-btn" target="_blank" rel="noopener noreferrer">Neem contact op</a>
   </div>
 </section>
 
@@ -1231,6 +1146,19 @@
     text-align: center;
     background: linear-gradient(180deg, #fff, #f8fbff);
     border-radius: 24px;
+  }
+
+  .cta-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
   }
 
   .cta-block h2 {
@@ -1284,21 +1212,13 @@
   const companyName = document.getElementById("companyName");
   const clientName = document.getElementById("clientName");
   const projectName = document.getElementById("projectName");
-  const description = document.getElementById("description");
   const price = document.getElementById("price");
-  const vat = document.getElementById("vat");
-  const daysValid = document.getElementById("daysValid");
-  const quoteNumber = document.getElementById("quoteNumber");
 
   const previewCompany = document.getElementById("previewCompany");
   const previewClient = document.getElementById("previewClient");
   const previewProject = document.getElementById("previewProject");
-  const previewDescription = document.getElementById("previewDescription");
   const previewPrice = document.getElementById("previewPrice");
-  const previewVat = document.getElementById("previewVat");
-  const previewTotal = document.getElementById("previewTotal");
-  const previewDate = document.getElementById("previewDate");
-  const previewNumber = document.getElementById("previewNumber");
+  const quotePreview = document.getElementById("quotePreview");
 
   function money(value) {
     return new Intl.NumberFormat("nl-NL", {
@@ -1309,30 +1229,18 @@
 
   function updatePreview() {
     const priceValue = Number(price.value || 0);
-    const vatValue = Number(vat.value || 0);
-    const vatAmount = priceValue * (vatValue / 100);
-    const total = priceValue + vatAmount;
 
     previewCompany.textContent = companyName.value || "Bedrijfsnaam";
     previewClient.textContent = clientName.value || "Klantnaam";
-    previewProject.textContent = projectName.value || "Project";
-    previewDescription.textContent = description.value || "Korte omschrijving van de oplossing.";
+    previewProject.textContent = projectName.value || "Titel";
     previewPrice.textContent = money(priceValue);
-    previewVat.textContent = money(vatAmount);
-    previewTotal.textContent = money(total);
-    previewDate.textContent = `${daysValid.value || 14} dagen`;
-    previewNumber.textContent = quoteNumber.value || "OFF-2026-001";
   }
 
   [
     companyName,
     clientName,
     projectName,
-    description,
-    price,
-    vat,
-    daysValid,
-    quoteNumber
+    price
   ].forEach((field) => {
     field.addEventListener("input", updatePreview);
     field.addEventListener("change", updatePreview);
