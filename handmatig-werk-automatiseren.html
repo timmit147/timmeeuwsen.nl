@@ -739,6 +739,17 @@
   const pdfPrijs = document.getElementById("pdfPrijs");
   const pdfPrijs2 = document.getElementById("pdfPrijs2");
 
+  const toolCard = document.querySelector("#offer-tool .tool-card");
+  const pdfPage = document.getElementById("pdfPage");
+
+  let originalToolDisplay = "";
+  let originalPdfPosition = "";
+  let originalPdfLeft = "";
+  let originalPdfTop = "";
+  let originalPdfWidth = "";
+  let originalPdfMinHeight = "";
+  let originalPdfPadding = "";
+
   function updatePreview() {
     const bedrijf = bedrijfInput.value || "";
     const klant = klantInput.value || "";
@@ -758,11 +769,49 @@
     pdfPrijs2.textContent = prijs;
   }
 
+  function preparePrint() {
+    originalToolDisplay = toolCard.style.display;
+    originalPdfPosition = pdfPage.style.position;
+    originalPdfLeft = pdfPage.style.left;
+    originalPdfTop = pdfPage.style.top;
+    originalPdfWidth = pdfPage.style.width;
+    originalPdfMinHeight = pdfPage.style.minHeight;
+    originalPdfPadding = pdfPage.style.padding;
+
+    toolCard.style.display = "none";
+
+    pdfPage.style.position = "static";
+    pdfPage.style.left = "0";
+    pdfPage.style.top = "0";
+    pdfPage.style.width = "210mm";
+    pdfPage.style.minHeight = "297mm";
+    pdfPage.style.padding = "18mm";
+  }
+
+  function restoreAfterPrint() {
+    toolCard.style.display = originalToolDisplay;
+    pdfPage.style.position = originalPdfPosition;
+    pdfPage.style.left = originalPdfLeft;
+    pdfPage.style.top = originalPdfTop;
+    pdfPage.style.width = originalPdfWidth;
+    pdfPage.style.minHeight = originalPdfMinHeight;
+    pdfPage.style.padding = originalPdfPadding;
+  }
+
   function downloadPdf() {
     updatePreview();
+    preparePrint();
+
+    window.onafterprint = function () {
+      restoreAfterPrint();
+    };
 
     setTimeout(() => {
       window.print();
+
+      setTimeout(() => {
+        restoreAfterPrint();
+      }, 1000);
     }, 50);
   }
 
