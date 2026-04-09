@@ -465,13 +465,13 @@
 <!-- END OPLOSSING BLOCK -->
 
 
-<!-- START TOOL BLOCK -->
+ <!-- START TOOL BLOCK -->
 <section class="tool-block" id="tool">
   <div class="tool-inner">
     <div class="tool-kicker">Tool</div>
-    <h2>Maak een eenvoudig voorbeeld</h2>
+    <h2>Automatisch je offerte genereren</h2>
     <p>
-      Vul de gegevens in en maak een nette PDF.
+      Vul de gegevens in en maak direct een nette offerte als 1 PDF op 1 pagina.
     </p>
 
     <div class="tool-wrap">
@@ -499,29 +499,71 @@
     <div class="print-sheet" id="printSheet">
       <div class="print-head">
         <div>
-          <div class="print-kicker">Voorbeeld</div>
-          <h3>Offerte</h3>
+          <div class="print-kicker">Offerte</div>
+          <h3>Automatisch genereren</h3>
         </div>
         <div class="print-price" id="printPrice">€0,00</div>
       </div>
 
-      <div class="print-row">
-        <span>Bedrijfsnaam</span>
-        <strong id="printCompany">Bedrijfsnaam</strong>
+      <div class="print-grid">
+        <div class="print-card">
+          <span>Bedrijfsnaam</span>
+          <strong id="printCompany">Bedrijfsnaam</strong>
+        </div>
+
+        <div class="print-card">
+          <span>Klantnaam</span>
+          <strong id="printClient">Klantnaam</strong>
+        </div>
+
+        <div class="print-card">
+          <span>Titel</span>
+          <strong id="printProject">Titel</strong>
+        </div>
+
+        <div class="print-card">
+          <span>Datum</span>
+          <strong id="printDate">01-01-2026</strong>
+        </div>
       </div>
 
-      <div class="print-row">
-        <span>Klantnaam</span>
-        <strong id="printClient">Klantnaam</strong>
-      </div>
-
-      <div class="print-row">
-        <span>Titel</span>
-        <strong id="printProject">Titel</strong>
-      </div>
-
+      <div class="print-section-title">Omschrijving</div>
       <p class="print-text">
-        Een compacte oplossing die helpt om handmatig werk te verminderen en processen overzichtelijker te maken.
+        Een compacte oplossing die helpt om handmatig werk te verminderen, processen simpeler te maken en terugkerend werk automatisch te laten verlopen.
+      </p>
+
+      <div class="print-section-title">Samenvatting</div>
+      <div class="print-table">
+        <div class="print-table-head">
+          <span>Omschrijving</span>
+          <span>Aantal</span>
+          <span>Bedrag</span>
+        </div>
+
+        <div class="print-table-row">
+          <span>Automatisering oplossing</span>
+          <span>1</span>
+          <span id="printLinePrice">€0,00</span>
+        </div>
+      </div>
+
+      <div class="print-total-box">
+        <div>
+          <span>Subtotaal</span>
+          <strong id="printSubtotal">€0,00</strong>
+        </div>
+        <div>
+          <span>BTW (21%)</span>
+          <strong id="printVat">€0,00</strong>
+        </div>
+        <div class="print-final">
+          <span>Totaal</span>
+          <strong id="printTotal">€0,00</strong>
+        </div>
+      </div>
+
+      <p class="print-footer">
+        Deze offerte is automatisch gegenereerd.
       </p>
     </div>
   </div>
@@ -561,7 +603,7 @@
     color: #0f172a;
   }
 
-  .tool-block p {
+  .tool-block > div > p {
     margin: 0;
     line-height: 1.7;
     color: #475569;
@@ -648,10 +690,11 @@
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 32px;
     background: #fff;
     color: #0f172a;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
   }
 
   .print-head {
@@ -659,7 +702,7 @@
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
-    padding-bottom: 18px;
+    padding-bottom: 14px;
     border-bottom: 1px solid #e2e8f0;
     margin-bottom: 18px;
   }
@@ -679,42 +722,137 @@
 
   .print-head h3 {
     margin: 0;
-    font-size: 34px;
+    font-size: 30px;
     line-height: 1.1;
+    letter-spacing: -0.03em;
   }
 
   .print-price {
     font-size: 26px;
     font-weight: 800;
+    white-space: nowrap;
   }
 
-  .print-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 14px 0;
-    border-bottom: 1px dashed #e2e8f0;
+  .print-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 16px;
   }
 
-  .print-row span {
+  .print-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 12px 14px;
+    background: #fff;
+  }
+
+  .print-card span {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
     color: #64748b;
-    font-size: 12px;
+    font-weight: 800;
+    margin-bottom: 6px;
+  }
+
+  .print-card strong {
+    font-size: 15px;
+    color: #0f172a;
+    word-break: break-word;
+  }
+
+  .print-section-title {
+    margin: 16px 0 10px;
+    font-size: 13px;
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-weight: 800;
-  }
-
-  .print-row strong {
-    font-size: 16px;
+    color: #334155;
   }
 
   .print-text {
-    margin: 18px 0 0;
-    line-height: 1.7;
+    margin: 0 0 14px;
+    line-height: 1.65;
     color: #475569;
+    font-size: 14px;
+  }
+
+  .print-table {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .print-table-head,
+  .print-table-row {
+    display: grid;
+    grid-template-columns: 1fr 70px 120px;
+    gap: 10px;
+    padding: 12px 14px;
+    align-items: center;
+  }
+
+  .print-table-head {
+    background: #f8fafc;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+    font-weight: 800;
+  }
+
+  .print-table-row {
+    border-top: 1px solid #e2e8f0;
+    font-size: 14px;
+  }
+
+  .print-table-row span:last-child,
+  .print-table-head span:last-child {
+    text-align: right;
+  }
+
+  .print-total-box {
+    margin-left: auto;
+    margin-top: 16px;
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+
+  .print-total-box > div {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 14px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 14px;
+  }
+
+  .print-total-box > div:last-child {
+    border-bottom: 0;
+  }
+
+  .print-final {
+    background: rgba(37, 99, 235, 0.06);
+    font-weight: 800;
+  }
+
+  .print-footer {
+    margin: 14px 0 0;
+    font-size: 12px;
+    color: #64748b;
+    line-height: 1.5;
   }
 
   @media print {
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
     body * {
       visibility: hidden !important;
     }
@@ -733,11 +871,77 @@
     }
 
     .print-sheet {
-      padding: 0 !important;
       max-width: 100% !important;
+      padding: 14mm 14mm 12mm !important;
+    }
+
+    .tool-block {
+      display: none !important;
     }
   }
 </style>
+
+<script>
+  const companyName = document.getElementById("companyName");
+  const clientName = document.getElementById("clientName");
+  const projectName = document.getElementById("projectName");
+  const price = document.getElementById("price");
+
+  const printCompany = document.getElementById("printCompany");
+  const printClient = document.getElementById("printClient");
+  const printProject = document.getElementById("printProject");
+  const printDate = document.getElementById("printDate");
+  const printPrice = document.getElementById("printPrice");
+
+  const printLinePrice = document.getElementById("printLinePrice");
+  const printSubtotal = document.getElementById("printSubtotal");
+  const printVat = document.getElementById("printVat");
+  const printTotal = document.getElementById("printTotal");
+
+  function money(value) {
+    return new Intl.NumberFormat("nl-NL", {
+      style: "currency",
+      currency: "EUR"
+    }).format(Number(value || 0));
+  }
+
+  function pad(num) {
+    return String(num).padStart(2, "0");
+  }
+
+  function formatDateNL(date = new Date()) {
+    return `${pad(date.getDate())}-${pad(date.getMonth() + 1)}-${date.getFullYear()}`;
+  }
+
+  function updatePrintSheet() {
+    const subtotal = Number(price.value || 0);
+    const vat = subtotal * 0.21;
+    const total = subtotal + vat;
+
+    printCompany.textContent = companyName.value || "Bedrijfsnaam";
+    printClient.textContent = clientName.value || "Klantnaam";
+    printProject.textContent = projectName.value || "Titel";
+    printDate.textContent = formatDateNL(new Date());
+
+    printPrice.textContent = money(subtotal);
+    printLinePrice.textContent = money(subtotal);
+    printSubtotal.textContent = money(subtotal);
+    printVat.textContent = money(vat);
+    printTotal.textContent = money(total);
+  }
+
+  [companyName, clientName, projectName, price].forEach((field) => {
+    field.addEventListener("input", updatePrintSheet);
+    field.addEventListener("change", updatePrintSheet);
+  });
+
+  document.getElementById("downloadBtn").addEventListener("click", () => {
+    updatePrintSheet();
+    window.print();
+  });
+
+  updatePrintSheet();
+</script>
 <!-- END TOOL BLOCK -->
 
 
@@ -1096,45 +1300,7 @@
 
 </main>
 
-<script>
-  const companyName = document.getElementById("companyName");
-  const clientName = document.getElementById("clientName");
-  const projectName = document.getElementById("projectName");
-  const price = document.getElementById("price");
 
-  const printCompany = document.getElementById("printCompany");
-  const printClient = document.getElementById("printClient");
-  const printProject = document.getElementById("printProject");
-  const printPrice = document.getElementById("printPrice");
-
-  function money(value) {
-    return new Intl.NumberFormat("nl-NL", {
-      style: "currency",
-      currency: "EUR"
-    }).format(value || 0);
-  }
-
-  function updatePrintSheet() {
-    const priceValue = Number(price.value || 0);
-
-    printCompany.textContent = companyName.value || "Bedrijfsnaam";
-    printClient.textContent = clientName.value || "Klantnaam";
-    printProject.textContent = projectName.value || "Titel";
-    printPrice.textContent = money(priceValue);
-  }
-
-  [companyName, clientName, projectName, price].forEach((field) => {
-    field.addEventListener("input", updatePrintSheet);
-    field.addEventListener("change", updatePrintSheet);
-  });
-
-  document.getElementById("downloadBtn").addEventListener("click", () => {
-    updatePrintSheet();
-    window.print();
-  });
-
-  updatePrintSheet();
-</script>
 
 </body>
 </html>
