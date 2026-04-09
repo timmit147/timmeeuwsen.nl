@@ -848,21 +848,33 @@
     margin: 0;
   }
 
+  body {
+    margin: 0;
+  }
+
+  /* Verberg alles */
   body * {
-    display: none !important;
+    visibility: hidden;
+  }
+
+  /* Laat alleen print zien */
+  .print-only,
+  .print-only * {
+    visibility: visible;
   }
 
   .print-only {
-    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
   }
 
   .print-sheet {
-    display: block !important;
     width: 210mm;
-    height: 297mm;
+    min-height: 297mm;
     padding: 16mm;
     box-sizing: border-box;
-    overflow: hidden;
   }
 }
 </style>
