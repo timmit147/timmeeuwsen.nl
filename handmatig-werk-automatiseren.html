@@ -82,22 +82,25 @@
   .nav-block {
     position: sticky;
     top: 0;
+    left: 0;
     width: 100%;
     background: rgba(255, 255, 255, 0.88);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     z-index: 1000;
-    font-family: Arial, sans-serif;
   }
 
   .nav-container {
-    max-width: 1120px;
+    max-width: 1080px;
+    width: 100%;
     margin: 0 auto;
     padding: 14px 24px;
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    font-family: inherit;
   }
 
   .nav-logo,
@@ -105,7 +108,7 @@
     text-decoration: none;
     color: #0f172a;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1;
   }
 
@@ -128,12 +131,13 @@
   }
 </style>
 <!-- END NAV BLOCK -->
-
+  
 <main>
 
 <!-- START HERO BLOCK -->
 <header class="hero-block">
   <div class="hero-container">
+    <img src="images/automation.webp" alt="automation" class="hero-image">
     <div class="hero-content">
       <div class="hero-badge">Slimmere weboplossingen</div>
 
@@ -164,6 +168,14 @@
     max-width: 1120px;
     margin: 0 auto;
   }
+
+  .hero-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px; /* rounded corners */
+  display: block;
+  margin: 0; /* remove default margins */
+}
 
   .hero-badge {
     display: inline-flex;
