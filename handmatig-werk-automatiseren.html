@@ -809,139 +809,293 @@
   }
 
   .print-total-box {
-    margin-left: auto;
-    margin-top: 16px;
-    width: 100%;
-    max-width: 320px;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    overflow: hidden;
-  }
+<!-- START OFFERTEBLOCK -->
+<div id="offer-tool">
+  <div class="tool-card">
+    <div class="tool-kicker">Tool</div>
+    <h2>Automatisch je offerte genereren</h2>
+    <p>Vul de gegevens in en maak direct een nette offerte als 1 PDF op 1 pagina.</p>
 
-  .print-total-box > div {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 14px;
-    border-bottom: 1px solid #e2e8f0;
-    font-size: 14px;
-  }
+    <div class="field">
+      <label for="bedrijf">Bedrijfsnaam</label>
+      <input id="bedrijf" type="text" value="Test" oninput="updatePreview()" />
+    </div>
 
-  .print-total-box > div:last-child {
-    border-bottom: 0;
-  }
+    <div class="field">
+      <label for="klant">Klantnaam</label>
+      <input id="klant" type="text" value="Test" oninput="updatePreview()" />
+    </div>
 
-  .print-final {
-    background: rgba(37, 99, 235, 0.06);
-    font-weight: 800;
-  }
+    <div class="field">
+      <label for="titel">Titel</label>
+      <input id="titel" type="text" value="Hi" oninput="updatePreview()" />
+    </div>
 
-  .print-footer {
-    margin: 14px 0 0;
-    font-size: 12px;
-    color: #64748b;
-    line-height: 1.5;
-  }
+    <div class="field">
+      <label for="prijs">Prijs excl. btw (€)</label>
+      <input id="prijs" type="number" value="10" oninput="updatePreview()" />
+    </div>
 
-@media print {
-  @page {
-    size: A4;
-    margin: 0;
-  }
+    <button class="pdf-btn" type="button" onclick="downloadPdf()">PDF downloaden</button>
+  </div>
 
-  body {
-    margin: 0;
-  }
+  <div class="pdf-page" id="pdfPage">
+    <div class="pdf-header">
+      <div>
+        <div class="pdf-kicker">Offerte</div>
+        <h1 id="pdfBedrijf">Test</h1>
+        <p id="pdfTitel">Hi</p>
+      </div>
 
-  /* Verberg alles */
-  body * {
-    visibility: hidden;
-  }
+      <div class="pdf-meta">
+        <p><strong>Klant:</strong> <span id="pdfKlant">Test</span></p>
+        <p><strong>Prijs excl. btw:</strong> €<span id="pdfPrijs">10</span></p>
+      </div>
+    </div>
 
-  /* Laat alleen print zien */
-  .print-only,
-  .print-only * {
-    visibility: visible;
-  }
+    <div class="pdf-box">
+      <h2>Offerte</h2>
+      <table>
+        <tr>
+          <td>Bedrijfsnaam</td>
+          <td id="pdfBedrijf2">Test</td>
+        </tr>
+        <tr>
+          <td>Klantnaam</td>
+          <td id="pdfKlant2">Test</td>
+        </tr>
+        <tr>
+          <td>Titel</td>
+          <td id="pdfTitel2">Hi</td>
+        </tr>
+        <tr>
+          <td>Prijs excl. btw</td>
+          <td>€<span id="pdfPrijs2">10</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
 
-  .print-only {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
+  <style>
+    #offer-tool {
+      font-family: Arial, sans-serif;
+      color: #111827;
+    }
 
-  .print-sheet {
-    width: 210mm;
-    min-height: 297mm;
-    padding: 16mm;
-    box-sizing: border-box;
-  }
-}
-</style>
+    #offer-tool .tool-card {
+      max-width: 520px;
+      padding: 24px;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
 
-<script>
-  const companyName = document.getElementById("companyName");
-  const clientName = document.getElementById("clientName");
-  const projectName = document.getElementById("projectName");
-  const price = document.getElementById("price");
+    #offer-tool .tool-kicker {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 12px;
+      font-weight: 700;
+    }
 
-  const printCompany = document.getElementById("printCompany");
-  const printClient = document.getElementById("printClient");
-  const printProject = document.getElementById("printProject");
-  const printDate = document.getElementById("printDate");
-  const printPrice = document.getElementById("printPrice");
+    #offer-tool h2 {
+      margin: 0 0 8px 0;
+      font-size: 26px;
+      line-height: 1.2;
+    }
 
-  const printLinePrice = document.getElementById("printLinePrice");
-  const printSubtotal = document.getElementById("printSubtotal");
-  const printVat = document.getElementById("printVat");
-  const printTotal = document.getElementById("printTotal");
+    #offer-tool p {
+      margin: 0 0 18px 0;
+      color: #6b7280;
+      line-height: 1.5;
+    }
 
-  function money(value) {
-    return new Intl.NumberFormat("nl-NL", {
-      style: "currency",
-      currency: "EUR"
-    }).format(Number(value || 0));
-  }
+    #offer-tool .field {
+      margin-bottom: 14px;
+    }
 
-  function pad(num) {
-    return String(num).padStart(2, "0");
-  }
+    #offer-tool label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #374151;
+    }
 
-  function formatDateNL(date = new Date()) {
-    return `${pad(date.getDate())}-${pad(date.getMonth() + 1)}-${date.getFullYear()}`;
-  }
+    #offer-tool input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #d1d5db;
+      border-radius: 12px;
+      font-size: 15px;
+      outline: none;
+      background: #fff;
+      color: #111827;
+    }
 
-  function updatePrintSheet() {
-    const subtotal = Number(price.value || 0);
-    const vat = subtotal * 0.21;
-    const total = subtotal + vat;
+    #offer-tool input:focus {
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
 
-    printCompany.textContent = companyName.value || "Bedrijfsnaam";
-    printClient.textContent = clientName.value || "Klantnaam";
-    printProject.textContent = projectName.value || "Titel";
-    printDate.textContent = formatDateNL(new Date());
+    #offer-tool .pdf-btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 12px 18px;
+      border: 0;
+      border-radius: 12px;
+      background: #2563eb;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
 
-    printPrice.textContent = money(subtotal);
-    printLinePrice.textContent = money(subtotal);
-    printSubtotal.textContent = money(subtotal);
-    printVat.textContent = money(vat);
-    printTotal.textContent = money(total);
-  }
+    #offer-tool .pdf-btn:hover {
+      background: #1d4ed8;
+    }
 
-  [companyName, clientName, projectName, price].forEach((field) => {
-    field.addEventListener("input", updatePrintSheet);
-    field.addEventListener("change", updatePrintSheet);
-  });
+    /* PDF-pagina */
+    #offer-tool .pdf-page {
+      position: fixed;
+      left: -10000px;
+      top: 0;
+      width: 210mm;
+      min-height: 297mm;
+      padding: 18mm;
+      box-sizing: border-box;
+      background: #fff;
+      color: #111827;
+    }
 
-  document.getElementById("downloadBtn").addEventListener("click", () => {
-    updatePrintSheet();
-    window.print();
-  });
+    #offer-tool .pdf-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
 
-  updatePrintSheet();
-</script>
-<!-- END TOOL BLOCK -->
+    #offer-tool .pdf-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 12px;
+      font-weight: 700;
+    }
 
+    #offer-tool .pdf-header h1 {
+      margin: 0 0 6px 0;
+      font-size: 26px;
+      line-height: 1.2;
+    }
+
+    #offer-tool .pdf-header p {
+      margin: 0;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    #offer-tool .pdf-meta {
+      min-width: 180px;
+      text-align: right;
+      font-size: 13px;
+      color: #374151;
+    }
+
+    #offer-tool .pdf-meta p {
+      margin: 0 0 6px 0;
+      color: #374151;
+    }
+
+    #offer-tool .pdf-box {
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 18px;
+    }
+
+    #offer-tool .pdf-box h2 {
+      margin: 0 0 14px 0;
+      font-size: 18px;
+    }
+
+    #offer-tool table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+    #offer-tool td {
+      padding: 10px 0;
+      border-bottom: 1px solid #e5e7eb;
+      vertical-align: top;
+    }
+
+    #offer-tool td:first-child {
+      width: 45%;
+      color: #6b7280;
+    }
+
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+
+      #offer-tool .pdf-page,
+      #offer-tool .pdf-page * {
+        visibility: visible;
+      }
+
+      #offer-tool .pdf-page {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 210mm;
+        min-height: 297mm;
+        padding: 18mm;
+      }
+
+      @page {
+        size: A4;
+        margin: 0;
+      }
+    }
+  </style>
+
+  <script>
+    function updatePreview() {
+      const bedrijf = document.getElementById("bedrijf").value || "";
+      const klant = document.getElementById("klant").value || "";
+      const titel = document.getElementById("titel").value || "";
+      const prijs = document.getElementById("prijs").value || "";
+
+      document.getElementById("pdfBedrijf").textContent = bedrijf;
+      document.getElementById("pdfBedrijf2").textContent = bedrijf;
+
+      document.getElementById("pdfKlant").textContent = klant;
+      document.getElementById("pdfKlant2").textContent = klant;
+
+      document.getElementById("pdfTitel").textContent = titel;
+      document.getElementById("pdfTitel2").textContent = titel;
+
+      document.getElementById("pdfPrijs").textContent = prijs;
+      document.getElementById("pdfPrijs2").textContent = prijs;
+    }
+
+    function downloadPdf() {
+      updatePreview();
+      window.print();
+    }
+
+    updatePreview();
+  </script>
+</div>
+<!-- END OFFERTEBLOCK -->
 
 <!-- START RESULTAAT BLOCK -->
 <section class="result-block">
