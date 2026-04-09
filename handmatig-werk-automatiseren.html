@@ -466,15 +466,6 @@
 
 
 <!-- START TOOL BLOCK -->
-The reason you are getting extra blank pages is due to how visibility: hidden works in CSS. It hides the elements visually, but they **still take up space** in the document flow. This forces the browser to print empty pages for all the hidden content.
-To fix this, we can optimize the @media print CSS to completely collapse the body height and eliminate those ghost pages. We can also remove the clunky JavaScript that changes styles back and forth, as CSS can handle printing cleanly on its own.
-I have also upgraded the design to make it look like a **professional quotation**. Here are the improvements:
- * **Calculations:** It now automatically calculates 21% BTW (VAT) and the total price.
- * **Structure:** Added a standard layout with "From" and "To" address blocks, a proper line-item table, and an official totals section.
- * **Meta data:** Automatically grabs today's date.
- * **Styling:** Added a clean accent color, better typography, and a modern layout.
-Here is the complete, updated code:
-```html
 <div id="offer-tool">
   <div class="tool-card">
     <div class="tool-kicker">Tool</div>
@@ -885,9 +876,6 @@ Here is the complete, updated code:
   // Initialize on load
   updatePreview();
 </script>
-
-```
-
 <!-- END TOOL BLOCK -->
     
     
