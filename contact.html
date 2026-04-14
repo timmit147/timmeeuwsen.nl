@@ -208,18 +208,21 @@
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
   }
 
-  input, textarea {
+  input,
+  textarea {
     width: 100%;
     box-sizing: border-box;
-    padding: 14px 14px;
+    padding: 14px;
     border-radius: 12px;
     border: 1px solid #dbe3ef;
     font-size: 15px;
     outline: none;
     background: #fff;
+    font-family: inherit;
   }
 
-  input:focus, textarea:focus {
+  input:focus,
+  textarea:focus {
     border-color: #2563eb;
   }
 
@@ -254,6 +257,7 @@
     font-size: 14px;
     color: #475569;
     min-height: 20px;
+    word-break: break-word;
   }
 
   @media (max-width: 860px) {
@@ -296,8 +300,9 @@
       let data;
       try {
         data = JSON.parse(text);
+        console.log("JSON RESPONSE:", data);
       } catch {
-        throw new Error("Server gaf geen geldige JSON terug");
+        throw new Error("Server gaf geen geldige JSON terug: " + text.slice(0, 200));
       }
 
       if (!res.ok) {
