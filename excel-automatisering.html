@@ -1,0 +1,935 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Excel omzetten naar inzichten | Tim Meeuwsen</title>
+  <meta
+    name="description"
+    content="Laat je Excel-bestanden omzetten naar duidelijke inzichten, dashboards en overzicht. Minder handwerk, meer grip op je data."
+  />
+  <link rel="canonical" href="https://timmeeuwsen.nl/excel-omzetten-naar-inzichten" />
+
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="author" content="Tim Meeuwsen" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="color-scheme" content="light" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta property="og:site_name" content="Tim Meeuwsen" />
+  <meta property="og:title" content="Excel omzetten naar inzichten" />
+  <meta
+    property="og:description"
+    content="Heb je Excel-chaos? Ik help je om data om te zetten naar overzicht, inzichten en een duidelijke workflow."
+  />
+  <meta property="og:url" content="https://timmeeuwsen.nl/excel-omzetten-naar-inzichten" />
+  <meta property="og:image" content="https://timmeeuwsen.nl/images/excel-insights.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Excel data omgezet naar overzicht en inzichten" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Excel omzetten naar inzichten" />
+  <meta name="twitter:description" content="Van Excel-bestand naar overzicht, inzichten en rust in je werk." />
+  <meta name="twitter:image" content="https://timmeeuwsen.nl/images/excel-insights.webp" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://timmeeuwsen.nl/#website",
+        "url": "https://timmeeuwsen.nl/",
+        "name": "Tim Meeuwsen",
+        "publisher": { "@id": "https://timmeeuwsen.nl/#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://timmeeuwsen.nl/#person",
+        "name": "Tim Meeuwsen",
+        "jobTitle": "Freelance Web Developer & Automation Specialist",
+        "url": "https://timmeeuwsen.nl"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://timmeeuwsen.nl/excel-omzetten-naar-inzichten#webpage",
+        "url": "https://timmeeuwsen.nl/excel-omzetten-naar-inzichten",
+        "name": "Excel omzetten naar inzichten",
+        "description": "Van Excel-chaos naar overzicht, dashboards en heldere inzichten.",
+        "isPartOf": { "@id": "https://timmeeuwsen.nl/#website" },
+        "inLanguage": "nl-NL"
+      },
+      {
+        "@type": "Service",
+        "name": "Excel data omzetten naar inzichten",
+        "provider": { "@id": "https://timmeeuwsen.nl/#person" },
+        "description": "Het omzetten van Excel-bestanden naar duidelijke inzichten, dashboards en werkbare samenvattingen.",
+        "areaServed": "NL"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wat betekent Excel omzetten naar inzichten?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dat betekent dat je data uit Excel wordt omgezet naar overzicht, trends, samenvattingen en soms een dashboard."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Voor wie is dit handig?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Voor bedrijven die veel met Excel werken en sneller overzicht willen zonder alles handmatig te analyseren."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Maak je ook maatwerk tools?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, als het nodig is kan ik een simpele maatwerk oplossing bouwen die precies past bij jouw proces."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+
+<!-- START NAV BLOCK -->
+<nav class="nav-block" aria-label="Hoofdnavigatie">
+  <div class="nav-container">
+    <a href="https://timmeeuwsen.nl/" class="nav-logo" title="Terug naar de homepage van Tim Meeuwsen">
+      Tim Meeuwsen
+    </a>
+    <a href="/menu" class="nav-menu-text" title="Open het menu">menu</a>
+  </div>
+</nav>
+
+<style>
+  .nav-block {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    z-index: 1000;
+  }
+
+  .nav-container {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 14px 24px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: inherit;
+  }
+
+  .nav-logo,
+  .nav-menu-text {
+    text-decoration: none;
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .nav-menu-text {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+  }
+
+  .nav-menu-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+  }
+</style>
+<!-- END NAV BLOCK -->
+
+<main>
+
+<!-- START HERO BLOCK -->
+<header class="hero-block">
+  <div class="hero-container">
+    <div class="hero-badge">Excel • overzicht • automatisering</div>
+
+    <div class="hero-grid">
+      <div class="hero-content">
+        <h1>Excel omzetten naar inzichten, zonder gedoe</h1>
+        <p>
+          Heb je spreadsheets vol data, maar geen overzicht? Ik help bedrijven om Excel om te zetten naar duidelijke
+          inzichten, samenvattingen en een workflow die rust geeft.
+        </p>
+
+        <div class="hero-actions">
+          <a href="https://wa.me/31636589899" class="hero-cta" target="_blank" rel="noopener noreferrer">
+            Bespreek jouw Excel-probleem
+          </a>
+          <a href="#voor-wie" class="hero-link">Bekijk voor wie dit is</a>
+        </div>
+
+        <div class="hero-points">
+          <span>Meer overzicht</span>
+          <span>Minder handwerk</span>
+          <span>Sneller beslissen</span>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-top">Voorbeeld resultaat</div>
+        <div class="hero-card-title">Van ruwe data naar duidelijk overzicht</div>
+        <div class="hero-card-list">
+          <div><strong>Bestanden:</strong> Excel / CSV</div>
+          <div><strong>Output:</strong> inzichten + dashboard</div>
+          <div><strong>Voordeel:</strong> minder handmatige analyse</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .hero-block {
+    padding: 56px 24px 24px;
+    font-family: Arial, sans-serif;
+  }
+
+  .hero-container {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    width: fit-content;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 0.9fr;
+    gap: 22px;
+    align-items: stretch;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(40px, 5vw, 66px);
+    line-height: 1.02;
+    margin: 0;
+    letter-spacing: -0.05em;
+    color: #0f172a;
+  }
+
+  .hero-content p {
+    margin: 18px 0 0;
+    max-width: 60ch;
+    font-size: 18px;
+    line-height: 1.65;
+    color: #475569;
+  }
+
+  .hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .hero-cta,
+  .hero-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: auto;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.15s ease, background 0.15s ease;
+    font-size: 15px;
+  }
+
+  .hero-cta {
+    background: #2563eb;
+    color: #fff;
+    padding: 12px 18px;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+  }
+
+  .hero-link {
+    color: #0f172a;
+    background: transparent;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    padding: 12px 18px;
+  }
+
+  .hero-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+  }
+
+  .hero-points span {
+    display: inline-flex;
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #f8fafc;
+    color: #0f172a;
+    font-size: 13px;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+  }
+
+  .hero-card {
+    padding: 24px;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+    border: 1px solid rgba(37, 99, 235, 0.12);
+    box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+  }
+
+  .hero-card-top {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #fff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .hero-card-title {
+    margin-top: 16px;
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+    color: #0f172a;
+    font-weight: 700;
+  }
+
+  .hero-card-list {
+    margin-top: 18px;
+    display: grid;
+    gap: 12px;
+    color: #334155;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .hero-cta:hover,
+  .hero-link:hover {
+    transform: translateY(-1px);
+  }
+
+  @media (max-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .hero-block {
+      padding-top: 28px;
+    }
+
+    .hero-content p {
+      font-size: 17px;
+    }
+
+    .hero-actions {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .hero-cta,
+    .hero-link {
+      width: auto;
+    }
+  }
+</style>
+<!-- END HERO BLOCK -->
+
+<!-- START PROBLEEM BLOCK -->
+<section class="problem-block">
+  <div class="problem-inner">
+    <div class="problem-kicker">Probleem</div>
+    <h2>Veel bedrijven hebben data, maar geen overzicht</h2>
+    <p>
+      Excel-bestanden zijn handig, tot ze te groot, te rommelig of te handmatig worden. Dan kost het steeds meer tijd
+      om te zoeken, te vergelijken en te snappen wat er echt gebeurt.
+    </p>
+
+    <ul>
+      <li>Je moet steeds dezelfde analyses opnieuw doen</li>
+      <li>Data staat verspreid over meerdere sheets</li>
+      <li>Overzicht maken kost veel tijd</li>
+      <li>Je wilt sneller beslissingen kunnen nemen</li>
+    </ul>
+
+    <p><strong>Daarom werkt “meer Excel” vaak niet. Je hebt vooral meer overzicht nodig.</strong></p>
+  </div>
+</section>
+
+<style>
+  .problem-block {
+    padding: 8px 24px;
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+  }
+
+  .problem-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  .problem-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #fff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .problem-block h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.08;
+    margin: 0 0 14px;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+  }
+
+  .problem-block p {
+    margin: 0 0 14px;
+    line-height: 1.7;
+    color: #475569;
+    font-size: 17px;
+  }
+
+  .problem-block ul {
+    padding-left: 20px;
+    margin: 18px 0 22px;
+    line-height: 1.9;
+    color: #0f172a;
+  }
+
+  .problem-block li {
+    margin-bottom: 6px;
+  }
+</style>
+<!-- END PROBLEEM BLOCK -->
+
+<!-- START OPLOSSING BLOCK -->
+<section class="solution-block">
+  <div class="solution-inner">
+    <div class="solution-kicker">Oplossing</div>
+    <h2>Ik help je data om te zetten naar iets bruikbaars</h2>
+    <p>
+      Samen kijken we naar jouw bestanden, proces en doel. Daarna maak ik een oplossing die past bij jouw bedrijf:
+      van een simpele analyse-setup tot een nette interne tool of dashboard.
+    </p>
+
+    <div class="solution-grid">
+      <div class="solution-item">
+        <h3>1. Overzicht</h3>
+        <p>Sneller zien wat belangrijk is, zonder alles handmatig door te lopen.</p>
+      </div>
+      <div class="solution-item">
+        <h3>2. Inzicht</h3>
+        <p>Belangrijke trends, totalen of verschillen direct helder gemaakt.</p>
+      </div>
+      <div class="solution-item">
+        <h3>3. Rust</h3>
+        <p>Minder fouten, minder dubbel werk en minder tijd kwijt aan dezelfde taken.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .solution-block {
+    padding: 8px 24px;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+  .solution-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  .solution-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .solution-block h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.08;
+    margin: 0 0 14px;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+  }
+
+  .solution-block p {
+    margin: 0 0 14px;
+    line-height: 1.7;
+    color: #475569;
+    font-size: 17px;
+  }
+
+  .solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .solution-item {
+    padding: 20px;
+    border-radius: 18px;
+    background: #f8fafc;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+  }
+
+  .solution-item h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: #0f172a;
+  }
+
+  .solution-item p {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  @media (max-width: 800px) {
+    .solution-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<!-- END OPLOSSING BLOCK -->
+
+<!-- START VOOR WIE BLOCK -->
+<section class="audience-block" id="voor-wie">
+  <div class="audience-inner">
+    <div class="audience-kicker">Voor wie</div>
+    <h2>Voor bedrijven die werken met Excel en overzicht willen</h2>
+
+    <div class="audience-grid">
+      <div class="audience-card">MKB-bedrijven met veel spreadsheets</div>
+      <div class="audience-card">Teams die rapportages handmatig maken</div>
+      <div class="audience-card">Ondernemers die sneller inzicht willen</div>
+      <div class="audience-card">Bedrijven die data beter willen gebruiken</div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .audience-block {
+    padding: 8px 24px;
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+  }
+
+  .audience-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  .audience-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #fff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .audience-block h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.08;
+    margin: 0 0 14px;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+  }
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .audience-card {
+    padding: 18px 20px;
+    border-radius: 16px;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    color: #0f172a;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  @media (max-width: 700px) {
+    .audience-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+<!-- END VOOR WIE BLOCK -->
+
+<!-- START WERKWIJZE BLOCK -->
+<section class="process-block">
+  <div class="process-inner">
+    <div class="process-kicker">Werkwijze</div>
+    <h2>Zo werk ik het liefst</h2>
+
+    <ol>
+      <li>Je stuurt je vraag of voorbeeldbestand.</li>
+      <li>Ik kijk waar het probleem zit.</li>
+      <li>Ik geef aan wat slim is om te bouwen of aan te passen.</li>
+      <li>Pas daarna maken we iets dat echt past.</li>
+    </ol>
+
+    <div class="process-note">
+      Dit is expres eerst klein en simpel. Zo hoef je niet meteen te investeren in iets wat nog niet bewezen is.
+    </div>
+  </div>
+</section>
+
+<style>
+  .process-block {
+    padding: 8px 24px;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+  .process-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  .process-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .process-block h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.08;
+    margin: 0 0 14px;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+  }
+
+  .process-block ol {
+    padding-left: 20px;
+    margin: 18px 0 22px;
+    line-height: 1.9;
+    color: #0f172a;
+  }
+
+  .process-block li {
+    margin-bottom: 6px;
+  }
+
+  .process-note {
+    padding: 16px 18px;
+    border-radius: 14px;
+    background: #f8fafc;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    color: #475569;
+    line-height: 1.6;
+  }
+</style>
+<!-- END WERKWIJZE BLOCK -->
+
+<!-- START FAQ BLOCK -->
+<section class="faq-block">
+  <div class="faq-inner">
+    <div class="faq-kicker">FAQ</div>
+    <h2>Veelgestelde vragen</h2>
+
+    <div class="faq-list">
+      <button class="faq-item" type="button">
+        <span>Wat bedoel je met Excel omzetten naar inzichten?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-panel">
+        Dat is het omzetten van ruwe data naar overzicht, totalen, trends en een duidelijke samenvatting.
+      </div>
+
+      <button class="faq-item" type="button">
+        <span>Moet ik al een tool hebben?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-panel">
+        Nee. Ik kan juist eerst meekijken naar je proces en daarna bepalen wat slim is om te maken.
+      </div>
+
+      <button class="faq-item" type="button">
+        <span>Kun je ook iets op maat maken?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-panel">
+        Ja. Als standaard oplossingen niet passen, maak ik een simpele maatwerk oplossing die aansluit op jouw werk.
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq-block {
+    padding: 8px 24px;
+    background: #f5f7fb;
+    font-family: Arial, sans-serif;
+  }
+
+  .faq-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 60px 0;
+  }
+
+  .faq-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #fff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .faq-block h2 {
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.08;
+    margin: 0 0 18px;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+  }
+
+  .faq-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .faq-item {
+    width: 100%;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    background: #fff;
+    color: #0f172a;
+    padding: 18px 18px;
+    border-radius: 14px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .faq-panel {
+    display: none;
+    padding: 0 18px 18px;
+    color: #475569;
+    line-height: 1.7;
+    background: #fff;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    border-top: 0;
+    border-radius: 0 0 14px 14px;
+    margin-top: -10px;
+  }
+
+  .faq-item.active + .faq-panel {
+    display: block;
+  }
+
+  .faq-icon {
+    font-size: 20px;
+    line-height: 1;
+    color: #2563eb;
+    flex-shrink: 0;
+  }
+</style>
+
+<script>
+  document.querySelectorAll(".faq-item").forEach((button) => {
+    button.addEventListener("click", () => {
+      const isActive = button.classList.contains("active");
+
+      document.querySelectorAll(".faq-item").forEach((item) => item.classList.remove("active"));
+      document.querySelectorAll(".faq-icon").forEach((icon) => (icon.textContent = "+"));
+
+      if (!isActive) {
+        button.classList.add("active");
+        const icon = button.querySelector(".faq-icon");
+        if (icon) icon.textContent = "–";
+      }
+    });
+  });
+</script>
+<!-- END FAQ BLOCK -->
+
+<!-- START CTA BLOCK -->
+<section class="cta-block">
+  <div class="cta-inner">
+    <div class="cta-kicker">Contact</div>
+    <h2>Klaar om je Excel-probleem serieus aan te pakken?</h2>
+    <p>
+      Stuur me je vraag, bestand of situatie. Dan kijk ik met je mee en denk ik mee over de slimste oplossing.
+    </p>
+    <a href="https://wa.me/31636589899" class="cta-btn" target="_blank" rel="noopener noreferrer">
+      Neem contact op
+    </a>
+  </div>
+</section>
+
+<style>
+  .cta-block {
+    padding: 8px 24px 24px;
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+  }
+
+  .cta-inner {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 60px 0;
+    text-align: left;
+  }
+
+  .cta-kicker {
+    display: inline-flex;
+    margin-bottom: 14px;
+    padding: 7px 10px;
+    border-radius: 999px;
+    background: #eef2ff;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .cta-block h2 {
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.08;
+    margin: 0 0 12px;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+  }
+
+  .cta-block p {
+    margin: 0;
+    line-height: 1.7;
+    color: #475569;
+    font-size: 17px;
+    max-width: 62ch;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    margin-top: 18px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 12px 18px;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.22);
+    transition: transform 0.15s ease, background 0.15s ease;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-1px);
+    background: #1d4ed8;
+  }
+
+  @media (max-width: 600px) {
+    .cta-inner {
+      text-align: left;
+      padding: 60px 24px;
+    }
+  }
+</style>
+<!-- END CTA BLOCK -->
+
+</main>
+
+</body>
+</html>
