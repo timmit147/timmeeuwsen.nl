@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Contact | Tim Meeuwsen</title>
-  <meta name="description" content="Neem contact op met Tim Meeuwsen voor vragen, projecten of samenwerkingen." />
+  <meta name="description" content="Neem contact op met Tim Meeuwsen voor vragen of projecten." />
   <link rel="canonical" href="https://timmeeuwsen.nl/contact" />
 
   <meta name="robots" content="index, follow" />
@@ -51,17 +51,10 @@
 <!-- HERO -->
 <header class="hero">
   <div class="container">
-
     <span class="badge">Contact</span>
-
     <h1>Stuur een bericht</h1>
-
-    <p>
-      Heb je een vraag, idee of project? Stuur het door en ik reageer zo snel mogelijk.
-    </p>
-
+    <p>Heb je een vraag of project? Stuur het door en ik reageer zo snel mogelijk.</p>
     <a href="#form" class="btn">Naar formulier</a>
-
   </div>
 </header>
 
@@ -193,17 +186,27 @@ form.addEventListener("submit", async (e) => {
       body: JSON.stringify(payload)
     });
 
-    const data = await res.json();
-
-    if (data.ok) {
-      statusEl.textContent = "Bericht succesvol verstuurd!";
-      form.reset();
-    } else {
-      statusEl.textContent = "Er ging iets mis.";
+    let data;
+    try {
+      data = await res.json();
+    } catch {
+      throw new Error("Server gaf geen geldige response");
     }
 
+    if (!res.ok) {
+      throw new Error(data.error || "Server fout");
+    }
+
+    if (!data.ok) {
+      throw new Error(data.error || "Onbekende fout");
+    }
+
+    statusEl.textContent = "Bericht succesvol verstuurd!";
+    form.reset();
+
   } catch (err) {
-    statusEl.textContent = "Server fout.";
+    console.error("FULL ERROR:", err);
+    statusEl.textContent = "Error: " + err.message;
   }
 
   btn.disabled = false;
