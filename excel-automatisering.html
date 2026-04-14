@@ -336,14 +336,18 @@
   }
 
   @media (max-width: 900px) {
-    .hero-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .hero-image {
-      aspect-ratio: 16 / 10;
-    }
+  .hero-grid {
+    grid-template-columns: 1fr;
   }
+
+  .hero-image-wrap {
+    order: -1; /* zorgt dat afbeelding boven tekst komt */
+  }
+
+  .hero-image {
+    aspect-ratio: 16 / 10;
+  }
+}
 
   @media (max-width: 600px) {
     .hero-block {
