@@ -7,13 +7,11 @@
   <title>Contact | Tim Meeuwsen</title>
   <meta name="description" content="Neem contact op met Tim Meeuwsen voor vragen of projecten." />
   <link rel="canonical" href="https://timmeeuwsen.nl/contact" />
-
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#2563eb" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
 <!-- NAV -->
@@ -25,25 +23,34 @@
 </nav>
 
 <style>
-.nav {
-  position: sticky;
-  top: 0;
-  background: rgba(255,255,255,0.9);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #eee;
-}
-.nav-inner {
-  max-width: 1100px;
-  margin: auto;
-  padding: 14px 20px;
-  display: flex;
-  justify-content: space-between;
-}
-.logo, .menu {
-  text-decoration: none;
-  color: #0f172a;
-  font-weight: 600;
-}
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-inner {
+    max-width: 1100px;
+    margin: auto;
+    padding: 14px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo,
+  .menu {
+    text-decoration: none;
+    color: #0f172a;
+    font-weight: 600;
+  }
+
+  .menu {
+    text-transform: lowercase;
+  }
 </style>
 
 <main>
@@ -53,167 +60,265 @@
   <div class="container">
     <span class="badge">Contact</span>
     <h1>Stuur een bericht</h1>
-    <p>Heb je een vraag of project? Stuur het door en ik reageer zo snel mogelijk.</p>
+    <p>Heb je een vraag, idee of project? Stuur het door en ik reageer zo snel mogelijk.</p>
     <a href="#form" class="btn">Naar formulier</a>
   </div>
 </header>
 
 <style>
-.hero {
-  padding: 60px 20px 20px;
-  font-family: Arial;
-}
-.container {
-  max-width: 1000px;
-  margin: auto;
-}
-.badge {
-  display: inline-block;
-  padding: 6px 12px;
-  background: #eef2ff;
-  color: #1e40af;
-  border-radius: 999px;
-  font-size: 12px;
-  font-weight: 700;
-}
-h1 {
-  font-size: 42px;
-  margin: 16px 0;
-}
-p {
-  color: #475569;
-  max-width: 600px;
-}
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 18px;
-  background: #2563eb;
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-}
+  .hero {
+    padding: 70px 20px 30px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #eef2ff;
+    color: #1e40af;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+  }
+
+  h1 {
+    font-size: clamp(38px, 6vw, 56px);
+    line-height: 1.05;
+    margin: 16px 0;
+    color: #0f172a;
+  }
+
+  .hero p {
+    color: #475569;
+    max-width: 620px;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 18px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+
+  .btn:hover {
+    background: #1d4ed8;
+  }
 </style>
 
 <!-- FORM -->
 <section id="form" class="contact">
   <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Contact formulier</h2>
+        <p>
+          Vul het formulier in en stuur direct een bericht. Ik ontvang het op mijn mail.
+        </p>
 
-    <h2>Contact formulier</h2>
+        <div class="info-box">
+          <strong>Email</strong>
+          <span>timmeeuwsen.dev@gmail.com</span>
+        </div>
 
-    <form id="contactForm">
+        <div class="info-box">
+          <strong>Reactietijd</strong>
+          <span>Meestal binnen 1–2 dagen</span>
+        </div>
+      </div>
 
-      <input type="text" name="name" placeholder="Naam" required />
-      <input type="email" name="email" placeholder="E-mail" required />
-      <input type="text" name="subject" placeholder="Onderwerp" required />
-      <textarea name="message" placeholder="Bericht" required></textarea>
+      <form id="contactForm" class="form">
+        <input type="text" name="name" placeholder="Naam" required />
+        <input type="email" name="email" placeholder="E-mail" required />
+        <input type="text" name="subject" placeholder="Onderwerp" required />
+        <textarea name="message" placeholder="Bericht" required></textarea>
 
-      <button type="submit" id="submitBtn">Versturen</button>
+        <button type="submit" id="submitBtn">Versturen</button>
 
-      <p id="status"></p>
-
-    </form>
-
+        <p id="status"></p>
+      </form>
+    </div>
   </div>
 </section>
 
 <style>
-.contact {
-  padding: 60px 20px;
-  background: #f8fafc;
-  font-family: Arial;
-}
-.container {
-  max-width: 700px;
-  margin: auto;
-}
-form {
-  display: grid;
-  gap: 12px;
-}
-input, textarea {
-  padding: 12px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  font-size: 15px;
-}
-textarea {
-  min-height: 140px;
-}
-button {
-  padding: 12px;
-  background: #2563eb;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  font-weight: 600;
-}
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-#status {
-  font-size: 14px;
-  color: #475569;
-}
+  .contact {
+    padding: 60px 20px 90px;
+    background: #f8fafc;
+    font-family: Arial, sans-serif;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 30px;
+    align-items: start;
+  }
+
+  .contact-info h2 {
+    font-size: 30px;
+    margin: 0 0 12px;
+    color: #0f172a;
+  }
+
+  .contact-info p {
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .info-box {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: grid;
+    gap: 6px;
+  }
+
+  .info-box strong {
+    color: #0f172a;
+  }
+
+  .info-box span {
+    color: #475569;
+    font-size: 14px;
+  }
+
+  .form {
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 24px;
+    display: grid;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  }
+
+  input, textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 14px;
+    border-radius: 12px;
+    border: 1px solid #dbe3ef;
+    font-size: 15px;
+    outline: none;
+    background: #fff;
+  }
+
+  input:focus, textarea:focus {
+    border-color: #2563eb;
+  }
+
+  textarea {
+    min-height: 160px;
+    resize: vertical;
+    line-height: 1.6;
+  }
+
+  button {
+    padding: 13px 14px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  button:hover {
+    background: #1d4ed8;
+  }
+
+  button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  #status {
+    margin: 0;
+    font-size: 14px;
+    color: #475569;
+    min-height: 20px;
+  }
+
+  @media (max-width: 860px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 
 <script>
-const form = document.getElementById("contactForm");
-const statusEl = document.getElementById("status");
-const btn = document.getElementById("submitBtn");
+  const form = document.getElementById("contactForm");
+  const statusEl = document.getElementById("status");
+  const btn = document.getElementById("submitBtn");
 
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-  btn.disabled = true;
-  statusEl.textContent = "Versturen...";
+    btn.disabled = true;
+    statusEl.textContent = "Versturen...";
 
-  const payload = {
-    name: form.name.value.trim(),
-    email: form.email.value.trim(),
-    subject: form.subject.value.trim(),
-    message: form.message.value.trim()
-  };
+    const payload = {
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      subject: form.subject.value.trim(),
+      message: form.message.value.trim()
+    };
 
-  try {
-    const res = await fetch("https://cloud-run-148568431200.europe-west4.run.app/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(payload)
-    });
-
-    let data;
     try {
-      data = await res.json();
-    } catch {
-      throw new Error("Server gaf geen geldige response");
+      const res = await fetch("https://cloud-run-148568431200.europe-west4.run.app/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(payload)
+      });
+
+      const text = await res.text();
+      console.log("RAW RESPONSE:", text);
+
+      let data;
+      try {
+        data = JSON.parse(text);
+      } catch {
+        throw new Error("Server gaf geen geldige JSON terug");
+      }
+
+      if (!res.ok) {
+        throw new Error(data.error || "Server fout");
+      }
+
+      if (!data.ok) {
+        throw new Error(data.error || "Onbekende fout");
+      }
+
+      statusEl.textContent = "Bericht succesvol verstuurd!";
+      form.reset();
+    } catch (err) {
+      console.error("FULL ERROR:", err);
+      statusEl.textContent = "Error: " + err.message;
     }
 
-    if (!res.ok) {
-      throw new Error(data.error || "Server fout");
-    }
-
-    if (!data.ok) {
-      throw new Error(data.error || "Onbekende fout");
-    }
-
-    statusEl.textContent = "Bericht succesvol verstuurd!";
-    form.reset();
-
-  } catch (err) {
-    console.error("FULL ERROR:", err);
-    statusEl.textContent = "Error: " + err.message;
-  }
-
-  btn.disabled = false;
-});
+    btn.disabled = false;
+  });
 </script>
 
 </main>
-
 </body>
 </html>
