@@ -4,11 +4,32 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Contact | Tim Meeuwsen</title>
-  <meta name="description" content="Neem contact op met Tim Meeuwsen voor vragen of projecten." />
+  <title>Contact | Tim Meeuwsen – Webdesigner Utrecht</title>
+  <meta name="description" content="Neem contact op met Tim Meeuwsen, webdesigner in Utrecht. Stuur een bericht via het formulier of start direct een WhatsApp. Reactie binnen 1 werkdag." />
   <link rel="canonical" href="https://timmeeuwsen.nl/contact" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#2563eb" />
+
+  <meta property="og:title" content="Contact | Tim Meeuwsen – Webdesigner Utrecht" />
+  <meta property="og:description" content="Stuur een bericht of start een WhatsApp. Ik reageer binnen 1 werkdag." />
+  <meta property="og:url" content="https://timmeeuwsen.nl/contact" />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Tim Meeuwsen Webdesign",
+    "url": "https://timmeeuwsen.nl",
+    "telephone": "+31636589899",
+    "email": "tim@timmeeuwsen.nl",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Utrecht",
+      "addressCountry": "NL"
+    }
+  }
+  </script>
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -46,6 +67,7 @@
     text-decoration: none;
     color: #0f172a;
     font-weight: 600;
+    font-family: Arial, sans-serif;
   }
 
   .menu {
@@ -59,16 +81,27 @@
 <header class="hero">
   <div class="container">
     <span class="badge">Contact</span>
-    <h1>Stuur een bericht</h1>
-    <p>Heb je een vraag, idee of project? Stuur het door en ik reageer zo snel mogelijk.</p>
-    <a href="#form" class="btn">Naar formulier</a>
+    <h1>Neem contact op</h1>
+    <p>Heb je een vraag of wil je weten wat ik voor jouw bedrijf kan betekenen? Stuur een bericht of WhatsApp — ik reageer binnen 1 werkdag.</p>
+    <div class="hero-btns">
+      <a href="#formulier" class="btn btn-primary">Stuur een bericht</a>
+      <a href="https://wa.me/31636589899" target="_blank" rel="noopener noreferrer" class="btn btn-outline">WhatsApp</a>
+    </div>
   </div>
 </header>
 
 <style>
-  .hero {
-    padding: 70px 20px 30px;
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
     font-family: Arial, sans-serif;
+    background: #ffffff;
+    color: #0f172a;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .hero {
+    padding: 70px 20px 60px;
     background: linear-gradient(to bottom, #ffffff, #f8fafc);
   }
 
@@ -86,182 +119,209 @@
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.02em;
+    margin-bottom: 16px;
   }
 
   h1 {
     font-size: clamp(38px, 6vw, 56px);
     line-height: 1.05;
-    margin: 16px 0;
+    margin-bottom: 16px;
     color: #0f172a;
   }
 
   .hero p {
     color: #475569;
-    max-width: 620px;
+    max-width: 560px;
     font-size: 18px;
     line-height: 1.7;
+    margin-bottom: 28px;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
   }
 
   .btn {
     display: inline-block;
-    margin-top: 24px;
     padding: 12px 18px;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
     border-radius: 12px;
     font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: background 0.18s, border-color 0.18s;
+    font-family: Arial, sans-serif;
   }
 
-  .btn:hover {
+  .btn-primary {
+    background: #2563eb;
+    color: #ffffff;
+  }
+
+  .btn-primary:hover {
     background: #1d4ed8;
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: #0f172a;
+    border: 1.5px solid #cbd5e1;
+  }
+
+  .btn-outline:hover {
+    border-color: #94a3b8;
+    background: #f8fafc;
   }
 </style>
 
-<!-- FORM -->
-<section id="form" class="contact">
+<!-- FORMULIER -->
+<section id="formulier" class="section-white">
   <div class="container">
-    <div class="contact-grid">
-      <div class="contact-info">
-        <h2>Contact formulier</h2>
-        <p>
-          Vul het formulier in en stuur direct een bericht. Ik ontvang het op mijn mail.
-        </p>
+    <span class="section-badge">Formulier</span>
+    <h2>Stuur een bericht</h2>
+    <p class="section-sub">Vul het formulier in en ik neem zo snel mogelijk contact op.</p>
 
-        <div class="info-box">
-          <strong>Email</strong>
-          <span>timmeeuwsen.dev@gmail.com</span>
-        </div>
-
-        <div class="info-box">
-          <strong>Reactietijd</strong>
-          <span>Meestal binnen 1–2 dagen</span>
-        </div>
-      </div>
-
-      <form id="contactForm" class="form">
-        <input type="text" name="name" placeholder="Naam" required />
-        <input type="email" name="email" placeholder="E-mail" required />
-        <input type="text" name="subject" placeholder="Onderwerp" required />
-        <textarea name="message" placeholder="Bericht" required></textarea>
-
-        <button type="submit" id="submitBtn">Versturen</button>
-
-        <p id="status"></p>
+    <div class="form-layout">
+      <form id="contactForm" class="form" novalidate>
+        <input type="text" name="name" placeholder="Jouw naam" required autocomplete="name" />
+        <input type="email" name="email" placeholder="E-mailadres" required autocomplete="email" />
+        <textarea name="message" placeholder="Vertel kort over je bedrijf en wat je nodig hebt." required></textarea>
+        <button type="submit" id="submitBtn">Verstuur bericht</button>
+        <p id="status" role="status" aria-live="polite"></p>
       </form>
     </div>
   </div>
 </section>
 
 <style>
-  .contact {
-    padding: 60px 20px 90px;
-    background: #f8fafc;
-    font-family: Arial, sans-serif;
+  .section-white {
+    padding: 70px 20px;
+    background: #ffffff;
   }
 
-  .contact-grid {
+  .section-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #eef2ff;
+    color: #1e40af;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+  }
+
+  .section-white h2 {
+    font-size: clamp(26px, 4vw, 36px);
+    color: #0f172a;
+    margin-bottom: 10px;
+  }
+
+  .section-sub {
+    color: #475569;
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 500px;
+    margin-bottom: 36px;
+  }
+
+  .form-layout {
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: 30px;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 40px;
     align-items: start;
   }
 
-  .contact-info h2 {
-    font-size: 30px;
-    margin: 0 0 12px;
-    color: #0f172a;
-  }
-
-  .contact-info p {
-    color: #475569;
-    line-height: 1.7;
-    margin-bottom: 24px;
-  }
-
-  .info-box {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 16px;
-    margin-bottom: 12px;
-    display: grid;
-    gap: 6px;
-  }
-
-  .info-box strong {
-    color: #0f172a;
-  }
-
-  .info-box span {
-    color: #475569;
-    font-size: 14px;
-  }
-
   .form {
-    background: white;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    padding: 24px;
     display: grid;
     gap: 12px;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
   }
 
-  input,
-  textarea {
+  .form input,
+  .form textarea {
     width: 100%;
-    box-sizing: border-box;
-    padding: 14px;
-    border-radius: 12px;
+    padding: 13px 16px;
     border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    font-family: Arial, sans-serif;
     font-size: 15px;
-    outline: none;
+    color: #0f172a;
     background: #fff;
-    font-family: inherit;
+    outline: none;
+    transition: border-color 0.18s;
+    resize: none;
   }
 
-  input:focus,
-  textarea:focus {
+  .form input:focus,
+  .form textarea:focus {
     border-color: #2563eb;
   }
 
-  textarea {
-    min-height: 160px;
-    resize: vertical;
+  .form textarea {
+    min-height: 140px;
     line-height: 1.6;
   }
 
-  button {
-    padding: 13px 14px;
+  .form button {
+    padding: 13px 18px;
     background: #2563eb;
     color: white;
     border: none;
     border-radius: 12px;
-    cursor: pointer;
+    font-family: Arial, sans-serif;
     font-weight: 700;
     font-size: 15px;
+    cursor: pointer;
+    transition: background 0.18s;
+    text-align: left;
+    width: fit-content;
   }
 
-  button:hover {
+  .form button:hover:not(:disabled) {
     background: #1d4ed8;
   }
 
-  button:disabled {
-    opacity: 0.6;
+  .form button:disabled {
+    opacity: 0.55;
     cursor: not-allowed;
   }
 
   #status {
-    margin: 0;
-    font-size: 14px;
+    font-size: 13px;
     color: #475569;
-    min-height: 20px;
-    word-break: break-word;
+    min-height: 18px;
   }
 
-  @media (max-width: 860px) {
-    .contact-grid {
+  #status.success { color: #16a34a; }
+  #status.error   { color: #dc2626; }
+
+  .form-aside {
+    display: grid;
+    gap: 12px;
+  }
+
+  .aside-item {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 16px 20px;
+    display: grid;
+    gap: 4px;
+  }
+
+  .aside-item strong {
+    font-size: 14px;
+    color: #0f172a;
+  }
+
+  .aside-item span {
+    font-size: 14px;
+    color: #475569;
+  }
+
+  @media (max-width: 760px) {
+    .form-layout {
       grid-template-columns: 1fr;
     }
   }
@@ -274,55 +334,90 @@
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     btn.disabled = true;
-    statusEl.textContent = "Versturen...";
+    btn.textContent = "Versturen...";
+    statusEl.textContent = "";
+    statusEl.className = "";
 
     const payload = {
       name: form.name.value.trim(),
       email: form.email.value.trim(),
-      subject: form.subject.value.trim(),
+      subject: "Contact via website",
       message: form.message.value.trim()
     };
 
     try {
       const res = await fetch("https://cloud-run-148568431200.europe-west4.run.app/contact", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload)
       });
 
       const text = await res.text();
-      console.log("RAW RESPONSE:", text);
-
       let data;
-      try {
-        data = JSON.parse(text);
-        console.log("JSON RESPONSE:", data);
-      } catch {
-        throw new Error("Server gaf geen geldige JSON terug: " + text.slice(0, 200));
-      }
+      try { data = JSON.parse(text); }
+      catch { throw new Error("Ongeldige serverreactie."); }
 
-      if (!res.ok) {
-        throw new Error(data.error || "Server fout");
-      }
+      if (!res.ok || !data.ok) throw new Error(data.error || "Er ging iets mis.");
 
-      if (!data.ok) {
-        throw new Error(data.error || "Onbekende fout");
-      }
-
-      statusEl.textContent = "Bericht succesvol verstuurd!";
+      statusEl.textContent = "✓ Bericht verstuurd! Ik neem zo snel mogelijk contact op.";
+      statusEl.className = "success";
       form.reset();
-    } catch (err) {
-      console.error("FULL ERROR:", err);
-      statusEl.textContent = "Error: " + err.message;
-    }
+      btn.textContent = "Verstuur bericht";
 
-    btn.disabled = false;
+    } catch (err) {
+      statusEl.textContent = err.message || "Er ging iets mis. Probeer het opnieuw.";
+      statusEl.className = "error";
+      btn.disabled = false;
+      btn.textContent = "Verstuur bericht";
+    }
   });
 </script>
+
+<!-- WHATSAPP -->
+<section class="section-gray">
+  <div class="container">
+    <span class="wa-badge">WhatsApp</span>
+    <h2 class="wa-title">Liever direct chatten?</h2>
+    <p class="wa-sub">Stuur me een WhatsApp-bericht. Snel, makkelijk en persoonlijk. Ik reageer doorgaans binnen een paar uur.</p>
+    <a href="https://wa.me/31636589899" target="_blank" rel="noopener noreferrer" class="btn btn-primary" aria-label="Start een WhatsApp chat met Tim Meeuwsen">
+      Stuur een WhatsApp
+    </a>
+  </div>
+</section>
+
+<style>
+  .section-gray {
+    padding: 70px 20px;
+    background: #f8fafc;
+  }
+
+  .wa-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    background: #dcfce7;
+    color: #15803d;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+  }
+
+  .wa-title {
+    font-size: clamp(26px, 4vw, 36px);
+    color: #0f172a;
+    margin-bottom: 10px;
+  }
+
+  .wa-sub {
+    color: #475569;
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 480px;
+    margin-bottom: 28px;
+  }
+</style>
 
 </main>
 </body>
