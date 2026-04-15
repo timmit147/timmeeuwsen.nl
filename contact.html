@@ -35,146 +35,68 @@
 </head>
 <body>
 
-<!-- START NAV -->
-<nav class="nav" aria-label="Hoofdnavigatie">
-  <div class="nav-inner">
-
-    <!-- Logo -->
-    <a href="https://timmeeuwsen.nl/" class="logo">
-      Tim Meeuwsen
-    </a>
-
-    <!-- Hamburger (mobile) -->
-    <button class="hamburger" aria-label="Menu openen" onclick="toggleMenu()">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Menu -->
-    <div class="nav-links" id="navLinks">
-      <a href="javascript:history.back()">Menu</a>
-      <a href="/over-mij">Over mij</a>
-      <a href="/contact">Contact</a>
-    </div>
-
+<!-- START NAV BLOCK -->
+<nav class="nav-block" aria-label="Hoofdnavigatie">
+  <div class="nav-container">
+    <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
+    <a href="javascript:history.back()" class="nav-menu-text">menu</a>
   </div>
 </nav>
 
 <style>
-/* NAV WRAPPER */
-.nav {
-  position: sticky;
-  top: 0;
-  width: 100%;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  z-index: 999;
-}
-
-/* INNER */
-.nav-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* LOGO (donker + premium look) */
-.logo {
-  text-decoration: none;
-  color: #0b0f19;
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 0.2px;
-}
-
-/* LINKS DESKTOP */
-.nav-links {
-  display: flex;
-  gap: 24px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #0f172a;
-  font-size: 15px;
-  font-weight: 500;
-  position: relative;
-}
-
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 1px;
-  background: currentColor;
-  transition: 0.25s ease;
-}
-
-.nav-links a:hover::after {
-  width: 100%;
-}
-
-/* HAMBURGER (hidden desktop) */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.hamburger span {
-  width: 22px;
-  height: 2px;
-  background: #0f172a;
-  display: block;
-  transition: 0.3s;
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-
-  .hamburger {
-    display: flex;
-  }
-
-  .nav-links {
-    position: absolute;
-    top: 60px;
+  .nav-block {
+    position: sticky;
+    top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255,255,255,0.98);
-    backdrop-filter: blur(14px);
-    flex-direction: column;
-    padding: 20px;
-    gap: 16px;
-
-    display: none;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    z-index: 1000;
   }
 
-  .nav-links.active {
+  .nav-container {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 14px 24px;
+    box-sizing: border-box;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: inherit;
   }
-}
-</style>
 
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("navLinks");
-  menu.classList.toggle("active");
-}
-</script>
-<!-- END NAV -->
+  .nav-logo,
+  .nav-menu-text {
+    text-decoration: none;
+    color: #0f172a;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  .nav-menu-text {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 4px;
+    letter-spacing: 0.04em;
+    text-transform: lowercase;
+  }
+
+  .nav-menu-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+  }
+</style>
+<!-- END NAV BLOCK -->
+
 
 <main>
 
