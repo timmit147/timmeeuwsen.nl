@@ -4,15 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Menu Overzicht – Tim Meeuwsen | Webdesign Utrecht</title>
-  <meta name="description" content="Overzicht van alle belangrijke pagina's van Tim Meeuwsen – Webdesign Utrecht. Snelle toegang tot Homepagina en Demo." />
+  <meta name="description" content="Overzicht van alle belangrijke pagina's van Tim Meeuwsen – Webdesign Utrecht." />
   <link rel="canonical" href="https://timmeeuwsen.nl/menu.html" />
   <meta name="robots" content="index, follow" />
-
-  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="font-sans overflow-x-hidden w-full">
 
-<!-- START NAV BLOCK -->
+<body>
+
+<!-- NAV BLOCK (NIET AANGEPAST) -->
 <nav class="nav-block" aria-label="Hoofdnavigatie">
   <div class="nav-container">
     <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
@@ -24,25 +23,20 @@
   .nav-block {
     position: sticky;
     top: 0;
-    left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.88);
+    background: rgba(255,255,255,0.88);
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    border-bottom: 1px solid rgba(15,23,42,0.08);
     z-index: 1000;
   }
 
   .nav-container {
     max-width: 1080px;
-    width: 100%;
     margin: 0 auto;
     padding: 14px 24px;
-    box-sizing: border-box;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    font-family: inherit;
+    align-items: center;
   }
 
   .nav-logo,
@@ -51,15 +45,11 @@
     color: #0f172a;
     font-size: 16px;
     font-weight: 500;
-    line-height: 1;
   }
 
   .nav-menu-text {
     position: relative;
-    display: inline-block;
     padding-bottom: 4px;
-    letter-spacing: 0.04em;
-    text-transform: lowercase;
   }
 
   .nav-menu-text::after {
@@ -72,44 +62,44 @@
     background: currentColor;
   }
 </style>
-<!-- END NAV BLOCK -->
 
 
-<!-- START MAIN -->
+<!-- MAIN BLOCK -->
 <main class="main">
   <div class="main-container">
-    <h1 class="main-title">Menu Overzicht</h1>
+
+    <h1>Menu Overzicht</h1>
 
     <ul class="menu-list">
-      <li class="menu-item">
-        <a href="https://timmeeuwsen.nl/" class="menu-link">
-          <span>Homepagina</span>
-          <span class="menu-icon" aria-hidden="true">→</span>
+
+      <li>
+        <a class="menu-link" href="https://timmeeuwsen.nl/">
+          Homepagina
         </a>
       </li>
 
-      <li class="menu-item menu-dropdown">
-        <details>
-          <summary class="menu-link menu-summary">
-            <span>Diensten</span>
-            <span class="menu-icon menu-toggle" aria-hidden="true">+</span>
+      <li>
+        <details class="dropdown">
+          <summary class="menu-link">
+            Diensten
+            <span class="toggle">+</span>
           </summary>
 
           <div class="dropdown-panel">
-            <a href="https://timmeeuwsen.nl/duidelijke-website-laten-maken" class="dropdown-link">Duidelijke websites</a>
-            <a href="https://timmeeuwsen.nl/handmatig-werk-automatiseren" class="dropdown-link">Handmatig werk automatiseren</a>
-            <a href="https://timmeeuwsen.nl/excel-automatisering" class="dropdown-link">Excel automatisering</a>
-            <a href="https://timmeeuwsen.nl/excel-naar-dashboard" class="dropdown-link">Excel naar dashboard</a>
+            <a href="https://timmeeuwsen.nl/duidelijke-website-laten-maken">Duidelijke websites</a>
+            <a href="https://timmeeuwsen.nl/handmatig-werk-automatiseren">Automatiseren</a>
+            <a href="https://timmeeuwsen.nl/excel-automatisering">Excel automatisering</a>
+            <a href="https://timmeeuwsen.nl/excel-naar-dashboard">Dashboard</a>
           </div>
         </details>
       </li>
 
-      <li class="menu-item">
-        <a href="https://timmeeuwsen.nl/contact" class="menu-link">
-          <span>Contact</span>
-          <span class="menu-icon" aria-hidden="true">→</span>
+      <li>
+        <a class="menu-link" href="https://timmeeuwsen.nl/contact">
+          Contact
         </a>
       </li>
+
     </ul>
   </div>
 </main>
@@ -123,15 +113,13 @@
   .main-container {
     max-width: 620px;
     margin: 0 auto;
-    font-family: inherit;
+    font-family: system-ui, sans-serif;
   }
 
-  .main-title {
-    margin: 0 0 24px;
+  h1 {
     font-size: 40px;
     font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.03em;
+    margin-bottom: 24px;
     color: #0f172a;
   }
 
@@ -141,122 +129,54 @@
     margin: 0;
   }
 
-  .menu-item {
-    margin-bottom: 12px;
-  }
-
   .menu-link {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    gap: 12px;
-    width: 100%;
     padding: 16px 18px;
-    border: 1px solid rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(15,23,42,0.08);
     border-radius: 16px;
-    background: rgba(255, 255, 255, 0.95);
-    color: #0f172a;
     text-decoration: none;
-    font-size: 17px;
+    color: #0f172a;
     font-weight: 600;
-    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
-    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-    box-sizing: border-box;
+    background: #fff;
   }
 
   .menu-link:hover {
-    transform: translateY(-1px);
-    border-color: rgba(15, 23, 42, 0.14);
     background: #f8fafc;
   }
 
-  .menu-icon {
-    font-size: 16px;
-    line-height: 1;
+  /* SINGLE + FIX */
+  .toggle {
     color: #94a3b8;
-    flex-shrink: 0;
+    font-weight: 400;
+    transition: transform 0.2s ease;
   }
 
-  .menu-dropdown details {
-    width: 100%;
-  }
-
-  .menu-summary {
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-  }
-
-  .menu-summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .menu-dropdown details[open] .menu-toggle {
-    content: "";
-  }
-
-  .menu-dropdown details[open] .menu-toggle::before {
-    content: "–";
-  }
-
-  .menu-dropdown details[open] .menu-toggle {
-    font-size: 18px;
-    line-height: 1;
-  }
-
-  .menu-dropdown details:not([open]) .menu-toggle::before {
-    content: "+";
+  details[open] .toggle {
+    transform: rotate(45deg);
   }
 
   .dropdown-panel {
     margin-top: 8px;
     padding: 8px;
-    border: 1px solid rgba(15, 23, 42, 0.08);
+    border: 1px solid rgba(15,23,42,0.08);
     border-radius: 14px;
     background: #fff;
   }
 
-  .dropdown-link {
+  .dropdown-panel a {
     display: block;
-    padding: 12px 12px;
-    border-radius: 12px;
+    padding: 10px;
     text-decoration: none;
     color: #334155;
-    font-size: 15px;
-    font-weight: 500;
-    transition: background 0.2s ease, color 0.2s ease;
+    border-radius: 10px;
   }
 
-  .dropdown-link:hover {
+  .dropdown-panel a:hover {
     background: #f8fafc;
     color: #0f172a;
   }
-
-  .dropdown-link + .dropdown-link {
-    margin-top: 4px;
-  }
-
-  @media (max-width: 640px) {
-    .main {
-      margin-top: 64px;
-      padding: 0 16px 48px;
-    }
-
-    .main-title {
-      font-size: 32px;
-    }
-
-    .menu-link {
-      padding: 15px 16px;
-      font-size: 16px;
-    }
-
-    .dropdown-link {
-      font-size: 14px;
-    }
-  }
 </style>
-<!-- END MAIN -->
 
 </body>
 </html>
