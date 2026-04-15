@@ -7,233 +7,294 @@
   <meta name="description" content="Overzicht van alle belangrijke pagina's van Tim Meeuwsen – Webdesign Utrecht. Snelle toegang tot Homepagina, Diensten en Contact." />
   <link rel="canonical" href="https://timmeeuwsen.nl/menu.html" />
   <meta name="robots" content="index, follow" />
-
-  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="font-sans overflow-x-hidden w-full">
+<body>
 
-<!-- START NAV BLOCK -->
-<nav class="nav-block" aria-label="Hoofdnavigatie">
-  <div class="nav-container">
-    <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
-    <a href="javascript:history.back()" class="nav-menu-text">menu</a>
-  </div>
-</nav>
+  <!-- START NAV BLOCK -->
+  <nav class="nav-block" aria-label="Hoofdnavigatie">
+    <div class="nav-container">
+      <a href="https://timmeeuwsen.nl/" class="nav-logo">Tim Meeuwsen</a>
+      <a href="javascript:history.back()" class="nav-back">Terug</a>
+    </div>
+  </nav>
 
-<style>
-  .nav-block {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    z-index: 1000;
-  }
+  <style>
+    .nav-block {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.10);
+    }
 
-  .nav-container {
-    max-width: 1080px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 14px 24px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-family: inherit;
-  }
+    .nav-container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+    }
 
-  .nav-logo,
-  .nav-menu-text {
-    text-decoration: none;
-    color: #0f172a;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1;
-  }
+    .nav-logo {
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      color: #0f172a;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-  .nav-menu-text {
-    position: relative;
-    display: inline-block;
-    padding-bottom: 4px;
-    letter-spacing: 0.04em;
-    text-transform: lowercase;
-  }
+    .nav-back {
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      color: #64748b;
+      padding: 8px 10px;
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
 
-  .nav-menu-text::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 1px;
-    background: currentColor;
-  }
-</style>
-<!-- END NAV BLOCK -->
+    .nav-back:hover {
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    @media (max-width: 640px) {
+      .nav-container {
+        padding: 12px 16px;
+      }
+    }
+  </style>
+  <!-- END NAV BLOCK -->
 
 
-<!-- START MAIN -->
-<main class="main">
-  <div class="main-container">
-    <h1 class="main-title">Menu Overzicht</h1>
+  <!-- START MAIN BLOCK -->
+  <main class="main">
+    <div class="main-container">
+      <span class="eyebrow">Menu</span>
+      <h1 class="main-title">Menu Overzicht</h1>
+      <p class="main-subtitle">
+        Snel naar de belangrijkste pagina’s van de website.
+      </p>
 
-    <ul class="menu-list">
-      <li>
-        <a href="https://timmeeuwsen.nl/">Homepagina</a>
-      </li>
+      <ul class="menu-list">
+        <li>
+          <a href="https://timmeeuwsen.nl/" class="menu-link">
+            <span class="menu-label">Homepagina</span>
+            <span class="menu-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
 
-      <li class="menu-dropdown">
-        <details>
-          <summary>
-            <span>Diensten</span>
-            <span class="chevron" aria-hidden="true">⌄</span>
-          </summary>
+        <li class="menu-dropdown">
+          <details>
+            <summary class="menu-summary">
+              <span class="menu-label">Diensten</span>
+              <span class="menu-arrow" aria-hidden="true">⌄</span>
+            </summary>
 
-          <div class="dropdown-panel">
-            <a href="https://timmeeuwsen.nl/duidelijke-website-laten-maken">Duidelijke websites</a>
-            <a href="https://timmeeuwsen.nl/handmatig-werk-automatiseren">Handmatig werk automatiseren</a>
-            <a href="https://timmeeuwsen.nl/excel-automatisering">Excel automatisering</a>
-            <a href="https://timmeeuwsen.nl/excel-naar-dashboard">Excel naar dashboard</a>
-          </div>
-        </details>
-      </li>
+            <div class="dropdown-panel">
+              <a href="https://timmeeuwsen.nl/duidelijke-website-laten-maken" class="dropdown-link">
+                <span>Duidelijke websites</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="https://timmeeuwsen.nl/handmatig-werk-automatiseren" class="dropdown-link">
+                <span>Handmatig werk automatiseren</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="https://timmeeuwsen.nl/excel-automatisering" class="dropdown-link">
+                <span>Excel automatisering</span>
+                <span aria-hidden="true">→</span>
+              </a>
+              <a href="https://timmeeuwsen.nl/excel-naar-dashboard" class="dropdown-link">
+                <span>Excel naar dashboard</span>
+                <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          </details>
+        </li>
 
-      <li>
-        <a href="https://timmeeuwsen.nl/contact">Contact</a>
-      </li>
-    </ul>
-  </div>
-</main>
+        <li>
+          <a href="https://timmeeuwsen.nl/contact" class="menu-link">
+            <span class="menu-label">Contact</span>
+            <span class="menu-arrow" aria-hidden="true">→</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
 
-<style>
-  .main {
-    margin-top: 80px;
-    padding: 0 20px;
-  }
-
-  .main-container {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-
-  .main-title {
-    margin-bottom: 24px;
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 1.2;
-    color: #0f172a;
-  }
-
-  .menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .menu-list li {
-    margin-bottom: 14px;
-  }
-
-  .menu-list > li > a,
-  .menu-dropdown summary {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-    width: 100%;
-    padding: 16px 18px;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 18px;
-    background: rgba(255, 255, 255, 0.9);
-    color: #0f172a;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.04);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    box-sizing: border-box;
-  }
-
-  .menu-list > li > a:hover,
-  .menu-dropdown summary:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 12px 36px rgba(15, 23, 42, 0.08);
-    border-color: rgba(15, 23, 42, 0.14);
-  }
-
-  .menu-dropdown details {
-    width: 100%;
-  }
-
-  .menu-dropdown summary {
-    cursor: pointer;
-    list-style: none;
-    user-select: none;
-  }
-
-  .menu-dropdown summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .chevron {
-    font-size: 18px;
-    line-height: 1;
-    transition: transform 0.25s ease;
-    opacity: 0.7;
-  }
-
-  .menu-dropdown details[open] .chevron {
-    transform: rotate(180deg);
-  }
-
-  .dropdown-panel {
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 18px;
-    background: linear-gradient(180deg, rgba(248, 250, 252, 0.95), rgba(255, 255, 255, 0.98));
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
-  }
-
-  .dropdown-panel a {
-    display: block;
-    padding: 13px 14px;
-    margin: 4px 0;
-    border-radius: 12px;
-    text-decoration: none;
-    color: #334155;
-    font-size: 16px;
-    font-weight: 500;
-    transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
-  }
-
-  .dropdown-panel a:hover {
-    background: rgba(15, 23, 42, 0.04);
-    color: #0f172a;
-    transform: translateX(2px);
-  }
-
-  @media (max-width: 640px) {
+  <style>
     .main {
-      margin-top: 64px;
-      padding: 0 16px;
+      padding: 72px 20px 48px;
+    }
+
+    .main-container {
+      max-width: 620px;
+      margin: 0 auto;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #64748b;
     }
 
     .main-title {
-      font-size: 32px;
+      margin: 0 0 10px;
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.1;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: #0f172a;
     }
 
-    .menu-list > li > a,
-    .menu-dropdown summary {
-      font-size: 17px;
-      padding: 15px 16px;
+    .main-subtitle {
+      margin: 0 0 28px;
+      font-size: 16px;
+      line-height: 1.6;
+      color: #64748b;
+      max-width: 52ch;
     }
-  }
-</style>
-<!-- END MAIN -->
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .menu-list > li {
+      margin: 0;
+    }
+
+    .menu-link,
+    .menu-summary {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 16px 18px;
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      border-radius: 16px;
+      background: #fff;
+      text-decoration: none;
+      color: #0f172a;
+      transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      box-sizing: border-box;
+    }
+
+    .menu-link:hover,
+    .menu-summary:hover {
+      background: #f8fafc;
+      border-color: rgba(15, 23, 42, 0.16);
+      transform: translateY(-1px);
+    }
+
+    .menu-label {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .menu-arrow {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 28px;
+      border-radius: 999px;
+      background: #f8fafc;
+      color: #64748b;
+      font-size: 16px;
+      line-height: 1;
+      transition: transform 0.25s ease, background 0.2s ease;
+    }
+
+    .menu-dropdown details[open] .menu-arrow {
+      transform: rotate(180deg);
+      background: #e2e8f0;
+    }
+
+    .menu-dropdown details {
+      width: 100%;
+    }
+
+    .menu-summary {
+      cursor: pointer;
+      list-style: none;
+      user-select: none;
+    }
+
+    .menu-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .dropdown-panel {
+      margin-top: 10px;
+      padding: 8px;
+      border: 1px solid rgba(15, 23, 42, 0.10);
+      border-radius: 14px;
+      background: #fff;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+    }
+
+    .dropdown-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      color: #64748b;
+      font-size: 15px;
+      font-weight: 500;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .dropdown-link:hover {
+      background: #f8fafc;
+      color: #0f172a;
+      transform: translateX(2px);
+    }
+
+    .dropdown-link + .dropdown-link {
+      margin-top: 4px;
+    }
+
+    @media (max-width: 640px) {
+      .main {
+        padding: 60px 16px 40px;
+      }
+
+      .menu-link,
+      .menu-summary {
+        padding: 15px 16px;
+      }
+
+      .menu-label {
+        font-size: 15px;
+      }
+
+      .dropdown-link {
+        font-size: 14px;
+      }
+    }
+  </style>
+  <!-- END MAIN BLOCK -->
 
 </body>
 </html>
